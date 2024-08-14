@@ -1,6 +1,5 @@
 package com.sehkmet.microservices.productservice.query.controller;
 
-import com.sehkmet.microservices.productservice.model.Product;
 import com.sehkmet.microservices.productservice.query.dto.ProductResponse;
 import com.sehkmet.microservices.productservice.query.service.ProductQueryService;
 import lombok.RequiredArgsConstructor;
