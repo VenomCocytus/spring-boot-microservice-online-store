@@ -1,22 +1,22 @@
 package com.sehkmet.microservices.productservice.command.controller;
 
 import com.sehkmet.microservices.productservice.command.dto.CreateProductRequestDTO;
-import com.sehkmet.microservices.productservice.command.service.ProductService;
+import com.sehkmet.microservices.productservice.command.service.ProductCommandService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/product")
 @RequiredArgsConstructor
+@RequestMapping("/api/product")
 public class ProductCommandController {
 
-    private final ProductService productService;
+    private final ProductCommandService productCommandService;
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public String createProduct(@RequestBody CreateProductRequestDTO createProductRequest) {
 
-        return productService.createProduct(createProductRequest);
+        return productCommandService.createProduct(createProductRequest);
     }
 }
