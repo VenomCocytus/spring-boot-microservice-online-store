@@ -8,5 +8,5 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: mysql
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ../../Databases/mysql-order-service:/var/lib/mysql
       - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql

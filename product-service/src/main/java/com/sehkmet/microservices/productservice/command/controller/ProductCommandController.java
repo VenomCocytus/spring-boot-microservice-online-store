@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.productservice.command.controller;
 
-import com.sehkmet.microservices.productservice.command.dto.CreateProductRequestDTO;
+import com.sehkmet.microservices.productservice.command.dto.CreateProductRequestRecord;
 import com.sehkmet.microservices.productservice.command.service.ProductCommandService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,7 @@ public class ProductCommandController {
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public String createProduct(@RequestBody CreateProductRequestDTO createProductRequest) {
+    public String createProduct(@RequestBody CreateProductRequestRecord createProductRequest) {
 
         return productCommandService.createProduct(createProductRequest);
     }

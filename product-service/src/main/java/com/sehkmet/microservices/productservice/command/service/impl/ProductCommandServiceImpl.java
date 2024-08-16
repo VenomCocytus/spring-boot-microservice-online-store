@@ -1,7 +1,7 @@
 package com.sehkmet.microservices.productservice.command.service.impl;
 
 import com.github.f4b6a3.uuid.UuidCreator;
-import com.sehkmet.microservices.productservice.command.dto.CreateProductRequestDTO;
+import com.sehkmet.microservices.productservice.command.dto.CreateProductRequestRecord;
 import com.sehkmet.microservices.productservice.command.service.ProductCommandService;
 import com.sehkmet.microservices.productservice.model.Product;
 import com.sehkmet.microservices.productservice.repository.ProductRepository;
@@ -21,19 +21,19 @@ public class ProductCommandServiceImpl implements ProductCommandService {
     /**
      * Creates a new product.
      *
-     * @param createProductRequestDTO the data transfer object containing the product details
+     * @param createProductRequestRecord the data transfer object containing the product details
      */
     @Override
-    public String createProduct(CreateProductRequestDTO createProductRequestDTO) {
+    public String createProduct(CreateProductRequestRecord createProductRequestRecord) {
 
-        ProductValidator.create(createProductRequestDTO);
+        ProductValidator.create(createProductRequestRecord);
 
-        String commandId = String.valueOf(UuidCreator.getTimeOrderedEpoch());
+        String productCommandId = String.valueOf(UuidCreator.getTimeOrderedEpoch());
 
         Product product = Product.builder()
-                .name(createProductRequestDTO.name())
-                .description(createProductRequestDTO.description())
-                .price(createProductRequestDTO.price())
+                .name(createProductRequestRecord.name())
+                .description(createProductRequestRecord.description())
+                .price(createProductRequestRecord.price())
                 .build();
 
         // Saving to the product into the database
@@ -42,6 +42,6 @@ public class ProductCommandServiceImpl implements ProductCommandService {
         // Logging the data
         log.info("Product created successfully");
 
-        return commandId;
+        return productCommandId;
     }
 }
