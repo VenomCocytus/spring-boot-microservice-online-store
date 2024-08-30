@@ -6,6 +6,7 @@ import com.sehkmet.microservices.productservice.command.service.ProductCommandSe
 import com.sehkmet.microservices.productservice.model.Product;
 import com.sehkmet.microservices.productservice.repository.ProductRepository;
 import com.sehkmet.microservices.productservice.validator.ProductValidator;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class ProductCommandServiceImpl implements ProductCommandService {
      * @param createProductRequestRecord the data transfer object containing the product details
      */
     @Override
-    public String createProduct(CreateProductRequestRecord createProductRequestRecord) {
+    public String createProduct(@Valid CreateProductRequestRecord createProductRequestRecord) {
 
         ProductValidator.create(createProductRequestRecord);
 

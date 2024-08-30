@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.productservice.query.service.impl;
 
-import com.sehkmet.microservices.productservice.query.dto.ProductResponse;
+import com.sehkmet.microservices.productservice.query.dto.CreateProductResponse;
 import com.sehkmet.microservices.productservice.query.service.ProductQueryService;
 import com.sehkmet.microservices.productservice.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,10 +19,10 @@ public class ProductQueryServiceImpl implements ProductQueryService {
      * @return a list of all products
      */
     @Override
-    public List<ProductResponse> getAllProducts() {
+    public List<CreateProductResponse> getAllProducts() {
         return productRepository.findAll()
                 .stream()
-                .map(product -> new ProductResponse(
+                .map(product -> new CreateProductResponse(
                         product.getId(),
                         product.getName(),
                         product.getDescription(),

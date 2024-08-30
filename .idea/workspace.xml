@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/common/ProductServiceApiSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/ProductCommandServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/services/ProductCommandServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/TestProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/TestProductServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/TestcontainersConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/config/TestcontainersConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +119,7 @@
       <workItem from="1723803676522" duration="28000" />
       <workItem from="1724924591255" duration="9092000" />
       <workItem from="1724935917933" duration="37000" />
+      <workItem from="1724940921470" duration="601000" />
     </task>
     <servers />
   </component>
