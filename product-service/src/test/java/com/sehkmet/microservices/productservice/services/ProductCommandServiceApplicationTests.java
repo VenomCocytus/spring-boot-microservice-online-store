@@ -20,8 +20,6 @@ import org.springframework.boot.testcontainers.service.connection.ServiceConnect
 import org.springframework.context.annotation.Import;
 import org.testcontainers.containers.MongoDBContainer;
 
-import java.math.BigDecimal;
-
 import static com.sehkmet.microservices.productservice.common.ProductServiceApiSpecification.createProductRequestSpec;
 import static com.sehkmet.microservices.productservice.common.ProductServiceApiSpecification.createProductResponseSpec;
 

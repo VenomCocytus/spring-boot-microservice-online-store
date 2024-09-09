@@ -2,12 +2,10 @@ package com.sehkmet.microservices.productservice.query.controller;
 
 import com.sehkmet.microservices.productservice.query.dto.GetProductResponse;
 import com.sehkmet.microservices.productservice.query.service.ProductQueryService;
+import com.sehkmet.microservices.productservice.validation.annotation.ProductIdPathVariableExists;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,6 +21,16 @@ public class ProductQueryController {
     public List<GetProductResponse> getAllProduct() {
 
         return productQueryService.getAllProducts();
+    }
+
+    @GetMapping("/{productId}")
+    @ResponseStatus(HttpStatus.FOUND)
+    public GetProductResponse getProductDetails(
+            @ProductIdPathVariableExists
+            @PathVariable
+            String productId) {
+
+        return productQueryService.getProductDetails(productId);
     }
 
 }

@@ -1,5 +1,7 @@
 package com.sehkmet.microservices.productservice.query.service.impl;
 
+import com.sehkmet.microservices.productservice.exception.ProductNotFoundException;
+import com.sehkmet.microservices.productservice.mapper.ProductMapper;
 import com.sehkmet.microservices.productservice.model.Product;
 import com.sehkmet.microservices.productservice.query.dto.GetProductResponse;
 import com.sehkmet.microservices.productservice.query.service.ProductQueryService;
@@ -15,19 +17,15 @@ import java.util.List;
 public class ProductQueryServiceImpl implements ProductQueryService {
 
     private final ProductRepository productRepository;
+    private final ProductMapper productMapper;
 
     @Override
     public GetProductResponse getProductDetails(String productId) {
         Product productDetails = productRepository.findById(productId).orElseThrow(
-                () -> new IllegalArgumentException("exception.illegal-argument-on-product-id")
+                () -> new ProductNotFoundException("exception.product-not-found-with-id")
         );
 
-        return new GetProductResponse(
-                productDetails.getId(),
-                productDetails.getName(),
-                productDetails.getDescription(),
-                productDetails.getPrice()
-        );
+        return productMapper.productToGetProductResponse(productDetails);
     }
 
     /**
@@ -37,11 +35,7 @@ public class ProductQueryServiceImpl implements ProductQueryService {
     public List<GetProductResponse> getAllProducts() {
         return productRepository.findAll()
                 .stream()
-                .map(product -> new GetProductResponse(
-                        product.getId(),
-                        product.getName(),
-                        product.getDescription(),
-                        product.getPrice()
-                )).toList();
+                .map(productMapper::productToGetProductResponse)
+                .toList();
     }
 }

@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface ProductQueryService {
 
-    public GetProductResponse getProductDetails(String productId);
-    public List<GetProductResponse> getAllProducts();
+    GetProductResponse getProductDetails(String productId);
+    List<GetProductResponse> getAllProducts();
 }

@@ -5,8 +5,9 @@ import com.sehkmet.microservices.productservice.command.service.ProductCommandSe
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
+@Validated
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/product")
@@ -16,7 +17,10 @@ public class ProductCommandController {
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public String createProduct(@RequestBody @Valid CreateProductRequestRecord createProductRequest) {
+    public String createProduct(
+            @Valid
+            @RequestBody
+            CreateProductRequestRecord createProductRequest) {
 
         return productCommandService.createProduct(createProductRequest);
     }
