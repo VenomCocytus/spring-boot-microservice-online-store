@@ -8,8 +8,6 @@ import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 
 public record CreateProductRequestRecord(
-        @Null
-        String id,
         @NotNull(message = "messages.product-name-validation-not-null-alert")
         @NotEmpty(message = "messages.product-name-validation-not-empty-alert")
         @Size(min = 3, max = 50,

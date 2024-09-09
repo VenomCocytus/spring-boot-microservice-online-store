@@ -1,5 +1,6 @@
 package com.sehkmet.microservices.productservice.common;
 
+import com.sehkmet.microservices.productservice.command.dto.CreateProductRequestRecord;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -15,7 +16,7 @@ public class ProductServiceApiSpecification {
     private static final String basePath = "/api/product";
 
     public static RequestSpecification createProductRequestSpec(int port,
-                                                                String body) {
+                                                                CreateProductRequestRecord body) {
         return new RequestSpecBuilder()
                 .setBasePath(basePath)
                 .setPort(port)

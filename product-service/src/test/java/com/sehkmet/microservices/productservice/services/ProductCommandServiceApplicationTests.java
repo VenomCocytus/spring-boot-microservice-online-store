@@ -1,5 +1,7 @@
 package com.sehkmet.microservices.productservice.services;
 
+import com.sehkmet.microservices.productservice.command.dto.CreateProductRequestRecord;
+import com.sehkmet.microservices.productservice.common.request.CommandRequests;
 import com.sehkmet.microservices.productservice.config.TestcontainersConfiguration;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -17,6 +19,8 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.context.annotation.Import;
 import org.testcontainers.containers.MongoDBContainer;
+
+import java.math.BigDecimal;
 
 import static com.sehkmet.microservices.productservice.common.ProductServiceApiSpecification.createProductRequestSpec;
 import static com.sehkmet.microservices.productservice.common.ProductServiceApiSpecification.createProductResponseSpec;
@@ -42,6 +46,9 @@ class ProductCommandServiceApplicationTests {
 
         // Register a custom parser for plain text
         RestAssured.registerParser("text/plain", Parser.TEXT);
+
+        RestAssured.urlEncodingEnabled = false;
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
     }
 
     static {
@@ -57,20 +64,12 @@ class ProductCommandServiceApplicationTests {
     @Description("Testing the creation of a new product")
     void shouldCreateProduct() {
         String createProductPath = "/create";
-        String requestBody = """
-                {
-                    "name": "Pokedex",
-                    "description": "A tool register data about encountered pokemon",
-                    "price": 2000
-                }
-                """;
+        CreateProductRequestRecord createProductRequestRecord = CommandRequests.getProductRequest();
 
-        RestAssured.given(createProductRequestSpec(port, requestBody))
-                    .log().ifValidationFails()
+        RestAssured.given(createProductRequestSpec(port, createProductRequestRecord))
                 .when()
                     .post(createProductPath)
                 .then()
-                    .log().ifValidationFails()
                     .spec(createProductResponseSpec())
                     .body(Matchers.notNullValue());
     }

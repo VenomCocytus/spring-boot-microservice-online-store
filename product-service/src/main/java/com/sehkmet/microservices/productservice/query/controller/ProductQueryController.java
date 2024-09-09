@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.productservice.query.controller;
 
-import com.sehkmet.microservices.productservice.query.dto.CreateProductResponse;
+import com.sehkmet.microservices.productservice.query.dto.GetProductResponse;
 import com.sehkmet.microservices.productservice.query.service.ProductQueryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,7 +20,7 @@ public class ProductQueryController {
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
-    public List<CreateProductResponse> getAllProduct() {
+    public List<GetProductResponse> getAllProduct() {
 
         return productQueryService.getAllProducts();
     }

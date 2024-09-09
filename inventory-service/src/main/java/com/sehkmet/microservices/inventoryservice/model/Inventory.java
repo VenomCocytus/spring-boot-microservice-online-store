@@ -7,6 +7,7 @@ import lombok.*;
 @Table(name = "t_inventory")
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Getter
 @Setter
 public class Inventory {
