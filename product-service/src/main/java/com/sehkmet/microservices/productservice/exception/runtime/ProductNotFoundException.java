@@ -1,4 +1,4 @@
-package com.sehkmet.microservices.productservice.exception;
+package com.sehkmet.microservices.productservice.exception.runtime;
 
 public class ProductNotFoundException extends RuntimeException{
 

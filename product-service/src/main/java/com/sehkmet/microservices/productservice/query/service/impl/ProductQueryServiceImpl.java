@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.productservice.query.service.impl;
 
-import com.sehkmet.microservices.productservice.exception.ProductNotFoundException;
+import com.sehkmet.microservices.productservice.exception.runtime.ProductNotFoundException;
 import com.sehkmet.microservices.productservice.mapper.ProductMapper;
 import com.sehkmet.microservices.productservice.model.Product;
 import com.sehkmet.microservices.productservice.query.dto.GetProductResponse;
