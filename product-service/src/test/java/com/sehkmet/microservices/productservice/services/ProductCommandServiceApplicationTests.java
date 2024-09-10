@@ -72,4 +72,37 @@ class ProductCommandServiceApplicationTests {
                     .body(Matchers.notNullValue());
     }
 
+    // TODO Test the get product details methods
+    @Test
+    @Description("Testing the retrieval of a product details")
+    void shouldCreateAndRetrieveProductDetails() {
+        // Create the product inside the database
+        String createProductPath = "/create";
+        CreateProductRequestRecord createProductRequestRecord = CommandRequests.getProductRequest();
+
+        RestAssured.given(createProductRequestSpec(port, createProductRequestRecord))
+                .when()
+                .post(createProductPath)
+                .then()
+                .spec(createProductResponseSpec())
+                .body(Matchers.notNullValue());
+
+        // Retrieve his details
+        String retrieveProductDetailsPath= "/";
+        RestAssured.when();
+    }
+
+
+    // TODO Test the get All product method
+
+    // TODO Test file Not Found exception
+
+    // TODO Test Method Argument exception
+
+    // TODO Test Contraint Violation Exception
+
+    // TODO Test UserPathVariable doesn't exists
+
+    // TODO Product not found exception
+
 }

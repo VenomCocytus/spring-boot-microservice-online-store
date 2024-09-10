@@ -15,10 +15,7 @@ import java.math.BigDecimal;
 @Builder
 @Getter
 @Setter
-public class Product {
-
-    @Id
-    private String Id;
+public class Product extends BaseDocument {
 
     @NotBlank(message = "messages.product-name-validation-not-blank-alert")
     @Size(min = 3, max = 50,
