@@ -1,11 +1,13 @@
 package com.sehkmet.microservices.productservice.exception;
 
 import com.sehkmet.microservices.productservice.mapper.ErrorMapper;
+import com.sehkmet.microservices.productservice.response.GenericResponse;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import org.apache.catalina.connector.ClientAbortException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -22,23 +24,32 @@ public class GlobalExceptionHandler {
     private final ErrorMapper errorMapper;
 
     @ExceptionHandler(Throwable.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public Object handleThrowableException(Throwable throwable){
+    public ResponseEntity<GenericResponse<Object>> handleThrowableException(Throwable throwable){
 
         // Socket is closed, cannot return any response
-        if(throwable instanceof ClientAbortException) return null;
-        else return errorMapper.createErrorMap(throwable);
+        if(throwable instanceof ClientAbortException)
+            return ResponseEntity
+                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .build();
+
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(GenericResponse.error(
+                        errorMapper.createErrorMap(throwable),
+                        "exception.general-content"));
     }
 
     @ExceptionHandler(RuntimeException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public Object handleRuntimeException(String errorMessage) {
+    public ResponseEntity<GenericResponse<Object>> handleRuntimeException(String errorMessage) {
 
-        return errorMapper.createErrorMap(errorMessage);
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(GenericResponse.error(
+                        errorMapper.createErrorMap(errorMessage),
+                        "exception.general-content"));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public Object handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -58,12 +69,16 @@ public class GlobalExceptionHandler {
                     stringBuilder.append(String.format("%s: %s\n", fieldName, errorMessage));
                 });
 
-        return errorMapper.createErrorMap(stringBuilder.substring(0, stringBuilder.length()-1));
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(GenericResponse.error(
+                        errorMapper.createErrorMap(
+                                stringBuilder.substring(0, stringBuilder.length()-1)),
+                        "exception.general-content"));
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Object handleConstraintViolationException(ConstraintViolationException exception) {
+    public ResponseEntity<GenericResponse<Object>> handleConstraintViolationException(ConstraintViolationException exception) {
 
         Set<ConstraintViolation<?>> constraintViolations = exception.getConstraintViolations();
         StringBuilder stringBuilder = new StringBuilder();
@@ -74,13 +89,22 @@ public class GlobalExceptionHandler {
             stringBuilder.append(String.format("%s: %s\n", fieldName, errorMessage));
         }));
 
-        return errorMapper.createErrorMap(stringBuilder.substring(0, stringBuilder.length()-1));
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(GenericResponse.error(
+                        errorMapper.createErrorMap(
+                                stringBuilder.substring(0, stringBuilder.length()-1)),
+                        "exception.general-content"));
     }
 
     @ExceptionHandler(FileNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public Object handleFileNotFoundException(FileNotFoundException exception) {
+    public ResponseEntity<GenericResponse<Object>> handleFileNotFoundException(FileNotFoundException exception) {
 
-        return errorMapper.createErrorMap(exception.getMessage());
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(GenericResponse.error(
+                        errorMapper.createErrorMap(
+                                exception.getMessage()),
+                        "exception.file-not-found"));
     }
 }

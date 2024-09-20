@@ -1,4 +1,4 @@
-package com.sehkmet.microservices.productservice.command.dto;
+package com.sehkmet.microservices.productservice.command.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
 
-public record CreateProductRequestRecord(
+public record CreateProductRequestDTO(
         @NotBlank(message = "messages.product-name-validation-not-blank-alert")
         @Size(min = 3, max = 50,
                 message = "messages.product-name-validation-size-alert")

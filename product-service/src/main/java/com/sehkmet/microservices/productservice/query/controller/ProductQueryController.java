@@ -2,9 +2,11 @@ package com.sehkmet.microservices.productservice.query.controller;
 
 import com.sehkmet.microservices.productservice.query.dto.GetProductResponse;
 import com.sehkmet.microservices.productservice.query.service.ProductQueryService;
+import com.sehkmet.microservices.productservice.response.GenericResponse;
 import com.sehkmet.microservices.productservice.validation.annotation.ProductIdPathVariableExists;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,20 +19,27 @@ public class ProductQueryController {
     private final ProductQueryService productQueryService;
 
     @GetMapping("/all")
-    @ResponseStatus(HttpStatus.OK)
-    public List<GetProductResponse> getAllProduct() {
+    public ResponseEntity<GenericResponse<List<GetProductResponse>>> getAllProduct() {
 
-        return productQueryService.getAllProducts();
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(GenericResponse.success(
+                        productQueryService.getAllProducts(),
+                        "success.products-retrieved-successfully"));
     }
 
     @GetMapping("/{productId}")
     @ResponseStatus(HttpStatus.FOUND)
-    public GetProductResponse getProductDetails(
+    public ResponseEntity<GenericResponse<GetProductResponse>> getProductDetails(
             @ProductIdPathVariableExists
             @PathVariable
             String productId) {
 
-        return productQueryService.getProductDetails(productId);
+        return ResponseEntity
+                .status(HttpStatus.FOUND)
+                .body(GenericResponse.success(
+                        productQueryService.getProductDetails(productId),
+                        "success.product-retrieved-successfully"));
     }
 
 }
