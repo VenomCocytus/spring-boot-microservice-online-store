@@ -1,5 +1,6 @@
 package com.sehkmet.microservices.productservice.exception;
 
+import com.sehkmet.microservices.productservice.exception.runtime.ProductNotFoundException;
 import com.sehkmet.microservices.productservice.mapper.ErrorMapper;
 import com.sehkmet.microservices.productservice.response.GenericResponse;
 import jakarta.validation.ConstraintViolation;
@@ -96,14 +97,14 @@ public class GlobalExceptionHandler {
                         "exception.general-content"));
     }
 
-    @ExceptionHandler(FileNotFoundException.class)
-    public ResponseEntity<GenericResponse<Object>> handleFileNotFoundException(FileNotFoundException exception) {
+    @ExceptionHandler(ProductNotFoundException.class)
+    public ResponseEntity<GenericResponse<Object>> handleProductNotFoundException(ProductNotFoundException exception) {
 
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
                 .body(GenericResponse.error(
                         errorMapper.createErrorMap(
                                 exception.getMessage()),
-                        "exception.file-not-found"));
+                        "exception.product-not-found"));
     }
 }

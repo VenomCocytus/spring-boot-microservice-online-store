@@ -1,6 +1,8 @@
 package com.sehkmet.microservices.productservice.exception.runtime;
 
-public class ProductNotFoundException extends RuntimeException{
+import java.io.FileNotFoundException;
+
+public class ProductNotFoundException extends FileNotFoundException {
 
     public ProductNotFoundException(String message) {
         super(message);

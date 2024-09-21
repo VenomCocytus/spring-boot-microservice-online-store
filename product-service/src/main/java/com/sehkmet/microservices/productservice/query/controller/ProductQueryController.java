@@ -1,5 +1,6 @@
 package com.sehkmet.microservices.productservice.query.controller;
 
+import com.sehkmet.microservices.productservice.exception.runtime.ProductNotFoundException;
 import com.sehkmet.microservices.productservice.query.dto.GetProductResponse;
 import com.sehkmet.microservices.productservice.query.service.ProductQueryService;
 import com.sehkmet.microservices.productservice.response.GenericResponse;
@@ -29,11 +30,10 @@ public class ProductQueryController {
     }
 
     @GetMapping("/{productId}")
-    @ResponseStatus(HttpStatus.FOUND)
     public ResponseEntity<GenericResponse<GetProductResponse>> getProductDetails(
-            @ProductIdPathVariableExists
             @PathVariable
-            String productId) {
+            @ProductIdPathVariableExists
+            String productId) throws ProductNotFoundException {
 
         return ResponseEntity
                 .status(HttpStatus.FOUND)

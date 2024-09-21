@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.nio.file.FileSystemNotFoundException;
 import java.util.List;
 @Service
 @Slf4j
@@ -20,7 +21,7 @@ public class ProductQueryServiceImpl implements ProductQueryService {
     private final ProductMapper productMapper;
 
     @Override
-    public GetProductResponse getProductDetails(String productId) {
+    public GetProductResponse getProductDetails(String productId) throws ProductNotFoundException {
         Product productDetails = productRepository.findById(productId).orElseThrow(
                 () -> new ProductNotFoundException("exception.product-not-found-with-id")
         );
