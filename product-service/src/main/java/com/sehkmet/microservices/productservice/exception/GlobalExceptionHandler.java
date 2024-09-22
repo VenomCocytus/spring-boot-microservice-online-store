@@ -14,7 +14,11 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
+
+import static com.sehkmet.microservices.productservice.utils.Utils.translate;
 
 @RestControllerAdvice
 @RequiredArgsConstructor
@@ -35,7 +39,7 @@ public class GlobalExceptionHandler {
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(GenericResponse.error(
                         errorMapper.createErrorMap(throwable),
-                        "exception.general-content"));
+                        translate("exception.general-content")));
     }
 
     @ExceptionHandler(RuntimeException.class)
@@ -45,13 +49,13 @@ public class GlobalExceptionHandler {
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(GenericResponse.error(
                         errorMapper.createErrorMap(errorMessage),
-                        "exception.general-content"));
+                        translate("exception.general-content")));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Object handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
 
-        StringBuilder stringBuilder = new StringBuilder();
+        List<String> errorMessages = new ArrayList<>();
 
         exception.getBindingResult()
                 .getAllErrors()
@@ -65,35 +69,33 @@ public class GlobalExceptionHandler {
                     }
 
                     String errorMessage = error.getDefaultMessage();
-                    stringBuilder.append(String.format("%s: %s\n", fieldName, errorMessage));
+                    errorMessages.add(String.format("%s: %s", fieldName, errorMessage));
                 });
 
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(GenericResponse.error(
-                        errorMapper.createErrorMap(
-                                stringBuilder.substring(0, stringBuilder.length()-1)),
-                        "exception.general-content"));
+                        errorMapper.createErrorMap(errorMessages),
+                        translate("exception.general-content")));
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<GenericResponse<Object>> handleConstraintViolationException(ConstraintViolationException exception) {
 
         Set<ConstraintViolation<?>> constraintViolations = exception.getConstraintViolations();
-        StringBuilder stringBuilder = new StringBuilder();
+        List<String> errorMessages = new ArrayList<>();
 
         constraintViolations.forEach((constraintViolation -> {
             String fieldName =  String.format("%s", constraintViolation.getPropertyPath());
             String errorMessage = constraintViolation.getMessage();
-            stringBuilder.append(String.format("%s: %s\n", fieldName, errorMessage));
+            errorMessages.add(String.format("%s: %s", fieldName, errorMessage));
         }));
 
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(GenericResponse.error(
-                        errorMapper.createErrorMap(
-                                stringBuilder.substring(0, stringBuilder.length()-1)),
-                        "exception.general-content"));
+                        errorMapper.createErrorMap(errorMessages),
+                        translate("exception.general-content")));
     }
 
     @ExceptionHandler(ProductNotFoundException.class)
@@ -104,6 +106,6 @@ public class GlobalExceptionHandler {
                 .body(GenericResponse.error(
                         errorMapper.createErrorMap(
                                 exception.getMessage()),
-                        "exception.product-not-found"));
+                        translate("exception.product-not-found")));
     }
 }
