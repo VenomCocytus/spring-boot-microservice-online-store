@@ -12,7 +12,7 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = {ProductIdPathVariableExistsValidator.class})
 public @interface ProductIdPathVariableExists {
 
-    String message() default "default.product-not-found-path-variable";
+    String message() default "{default.product-not-found-path-variable}";
 
     Class<?>[] groups() default {};
 

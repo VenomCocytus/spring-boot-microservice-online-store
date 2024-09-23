@@ -38,12 +38,12 @@ public class ErrorMapper {
     /**
      * Creates map with key: "message" and value: exception's message.
      *
-     * @param messages - A list of thrown exception
+     * @param messagesMap - A map of thrown exception
      * @return the created map
      */
-    public Map<String, Object> createErrorMap(List<String> messages) {
+    public Map<String, Object> createErrorMap(Map<String, String> messagesMap) {
         Map<String, Object> errorMessageMap = new HashMap<>();
-        errorMessageMap.put("messages", messages);
+        errorMessageMap.put("message", messagesMap);
 
         return errorMessageMap;
     }

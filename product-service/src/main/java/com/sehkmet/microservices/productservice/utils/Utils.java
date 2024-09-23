@@ -13,4 +13,7 @@ public abstract class Utils {
     public static String translate(String key) {
         return Translator.toLocale(key);
     }
+    public static String translate(String key, Object[] args) {
+        return Translator.toLocale(key, args);
+    }
 }

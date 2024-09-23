@@ -39,7 +39,7 @@ public class ProductCommandServiceImpl implements ProductCommandService {
         productRepository.save(product);
 
         // Logging the data
-        log.info("success.product-created-successfully");
+        log.info("{success.product-created-successfully}");
 
         return productMapper
                 .productToCreateProductResponse(product);

@@ -1,5 +1,6 @@
 package com.sehkmet.microservices.productservice.exception;
 
+import com.sehkmet.microservices.productservice.component.Translator;
 import com.sehkmet.microservices.productservice.exception.runtime.ProductNotFoundException;
 import com.sehkmet.microservices.productservice.mapper.ErrorMapper;
 import com.sehkmet.microservices.productservice.response.GenericResponse;
@@ -7,6 +8,7 @@ import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import org.apache.catalina.connector.ClientAbortException;
+import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -14,8 +16,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 import static com.sehkmet.microservices.productservice.utils.Utils.translate;
@@ -53,9 +55,11 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public Object handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
+    public ResponseEntity<GenericResponse<Object>> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
 
-        List<String> errorMessages = new ArrayList<>();
+        Map<String, String> errorMessagesMap = new HashMap<>();
+
+        exception.getFieldErrors();
 
         exception.getBindingResult()
                 .getAllErrors()
@@ -69,13 +73,13 @@ public class GlobalExceptionHandler {
                     }
 
                     String errorMessage = error.getDefaultMessage();
-                    errorMessages.add(String.format("%s: %s", fieldName, errorMessage));
+                    errorMessagesMap.put(fieldName, errorMessage);
                 });
 
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(GenericResponse.error(
-                        errorMapper.createErrorMap(errorMessages),
+                        errorMapper.createErrorMap(errorMessagesMap),
                         translate("exception.general-content")));
     }
 
@@ -83,18 +87,18 @@ public class GlobalExceptionHandler {
     public ResponseEntity<GenericResponse<Object>> handleConstraintViolationException(ConstraintViolationException exception) {
 
         Set<ConstraintViolation<?>> constraintViolations = exception.getConstraintViolations();
-        List<String> errorMessages = new ArrayList<>();
+        Map<String, String> errorMessagesMap = new HashMap<>();
 
         constraintViolations.forEach((constraintViolation -> {
             String fieldName =  String.format("%s", constraintViolation.getPropertyPath());
             String errorMessage = constraintViolation.getMessage();
-            errorMessages.add(String.format("%s: %s", fieldName, errorMessage));
+            errorMessagesMap.put(fieldName, errorMessage);
         }));
 
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(GenericResponse.error(
-                        errorMapper.createErrorMap(errorMessages),
+                        errorMapper.createErrorMap(errorMessagesMap),
                         translate("exception.general-content")));
     }
 
@@ -106,6 +110,6 @@ public class GlobalExceptionHandler {
                 .body(GenericResponse.error(
                         errorMapper.createErrorMap(
                                 exception.getMessage()),
-                        translate("exception.product-not-found")));
+                        translate("exception.general-content")));
     }
 }

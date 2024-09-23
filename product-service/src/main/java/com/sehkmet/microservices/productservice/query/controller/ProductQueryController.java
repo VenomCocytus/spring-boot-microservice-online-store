@@ -26,7 +26,7 @@ public class ProductQueryController {
                 .status(HttpStatus.OK)
                 .body(GenericResponse.success(
                         productQueryService.getAllProducts(),
-                        "success.products-retrieved-successfully"));
+                        "{success.products-retrieved-successfully}"));
     }
 
     @GetMapping("/{productId}")
@@ -39,7 +39,7 @@ public class ProductQueryController {
                 .status(HttpStatus.FOUND)
                 .body(GenericResponse.success(
                         productQueryService.getProductDetails(productId),
-                        "success.product-retrieved-successfully"));
+                        "{success.product-retrieved-successfully}"));
     }
 
 }

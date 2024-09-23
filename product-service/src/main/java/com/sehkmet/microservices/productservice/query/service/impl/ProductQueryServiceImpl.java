@@ -22,7 +22,7 @@ public class ProductQueryServiceImpl implements ProductQueryService {
     @Override
     public GetProductResponse getProductDetails(String productId) throws ProductNotFoundException {
         Product productDetails = productRepository.findById(productId).orElseThrow(
-                () -> new ProductNotFoundException("exception.product-not-found-with-id")
+                () -> new ProductNotFoundException("{exception.product-not-found-with-id}")
         );
 
         return productMapper.productToGetProductResponse(productDetails);

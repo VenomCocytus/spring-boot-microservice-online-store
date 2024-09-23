@@ -29,6 +29,6 @@ public class ProductCommandController {
                 .status(HttpStatus.CREATED)
                 .body(GenericResponse.success(
                         productCommandService.createProduct(createProductRequest),
-                        "success.product-created-successfully"));
+                        "{success.product-created-successfully}"));
     }
 }

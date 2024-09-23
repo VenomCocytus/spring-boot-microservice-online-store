@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      uri: mongodb://root:password@localhost:27017/product-service?authSource=admin
+  messages:
+    basename: lang/messages,config.i18n.messages
+    fallback-to-system-locale: false
+    encoding: UTF-8
+    cache-duration: 5

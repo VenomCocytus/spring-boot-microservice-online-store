@@ -16,16 +16,16 @@ import java.math.BigDecimal;
 @Setter
 public class Product extends BaseDocument {
 
-    @NotBlank(message = "messages.product-name-validation-not-blank-alert")
+    @NotBlank(message = "{messages.product-name-validation-not-blank-alert}")
     @Size(min = 3, max = 50,
-            message = "messages.product-name-validation-size-alert")
+            message = "{messages.product-name-validation-size-alert}")
     private String name;
 
-    @NotBlank(message = "messages.product-description-validation-not-blank-alert")
+    @NotBlank(message = "{messages.product-description-validation-not-blank-alert}")
     @Size(min = 3, max = 500,
-            message = "messages.product-description-validation-size-alert")
+            message = "{messages.product-description-validation-size-alert}")
     private String description;
 
-    @NotNull(message = "messages.product-price-validation-not-null-alert")
+    @NotNull(message = "{messages.product-price-validation-not-null-alert}")
     private BigDecimal price;
 }
