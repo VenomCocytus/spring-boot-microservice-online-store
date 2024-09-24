@@ -1,6 +1,5 @@
 package com.sehkmet.microservices.productservice.exception;
 
-import com.sehkmet.microservices.productservice.component.Translator;
 import com.sehkmet.microservices.productservice.exception.runtime.ProductNotFoundException;
 import com.sehkmet.microservices.productservice.mapper.ErrorMapper;
 import com.sehkmet.microservices.productservice.response.GenericResponse;
@@ -8,7 +7,6 @@ import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import org.apache.catalina.connector.ClientAbortException;
-import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
