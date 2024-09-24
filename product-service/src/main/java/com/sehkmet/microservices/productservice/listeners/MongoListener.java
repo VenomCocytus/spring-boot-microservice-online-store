@@ -13,7 +13,11 @@ public class MongoListener extends AbstractMongoEventListener<BaseModel> {
     public void onBeforeConvert(BeforeConvertEvent<BaseModel> beforeConvertEvent) {
         super.onBeforeConvert(beforeConvertEvent);
 
-        beforeConvertEvent.getSource().setCreatedAt(LocalDateTime.now());
-        beforeConvertEvent.getSource().setUpdatedAt(LocalDateTime.now());
+        BaseModel baseModel = beforeConvertEvent.getSource();
+
+        if(baseModel.getId().isBlank()){
+            baseModel.setCreatedAt(LocalDateTime.now());
+            baseModel.setUpdatedAt(LocalDateTime.now());
+        } else baseModel.setUpdatedAt(LocalDateTime.now());
     }
 }
