@@ -59,8 +59,6 @@ public class GlobalExceptionHandler {
 
         Map<String, String> errorMessagesMap = new HashMap<>();
 
-        exception.getFieldErrors();
-
         exception.getBindingResult()
                 .getAllErrors()
                 .forEach((error) -> {

@@ -1,0 +1,19 @@
+package com.sehkmet.microservices.productservice.listeners;
+
+import com.sehkmet.microservices.productservice.model.BaseModel;
+import org.springframework.data.mongodb.core.mapping.event.AbstractMongoEventListener;
+import org.springframework.data.mongodb.core.mapping.event.BeforeConvertEvent;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDateTime;
+
+@Component
+public class MongoListener extends AbstractMongoEventListener<BaseModel> {
+    @Override
+    public void onBeforeConvert(BeforeConvertEvent<BaseModel> beforeConvertEvent) {
+        super.onBeforeConvert(beforeConvertEvent);
+
+        beforeConvertEvent.getSource().setCreatedAt(LocalDateTime.now());
+        beforeConvertEvent.getSource().setUpdatedAt(LocalDateTime.now());
+    }
+}

@@ -11,6 +11,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import static com.sehkmet.microservices.productservice.utils.Utils.translate;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -39,7 +41,7 @@ public class ProductCommandServiceImpl implements ProductCommandService {
         productRepository.save(product);
 
         // Logging the data
-        log.info("{success.product-created-successfully}");
+        log.info(translate("success.product-created-successfully"));
 
         return productMapper
                 .productToCreateProductResponse(product);

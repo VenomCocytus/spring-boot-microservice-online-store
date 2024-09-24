@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import static com.sehkmet.microservices.productservice.utils.Utils.translate;
+
 @Validated
 @RestController
 @RequiredArgsConstructor
@@ -29,6 +31,6 @@ public class ProductCommandController {
                 .status(HttpStatus.CREATED)
                 .body(GenericResponse.success(
                         productCommandService.createProduct(createProductRequest),
-                        "{success.product-created-successfully}"));
+                        translate("success.product-created-successfully")));
     }
 }
