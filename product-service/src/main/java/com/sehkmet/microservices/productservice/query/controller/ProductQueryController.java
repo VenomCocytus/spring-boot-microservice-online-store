@@ -8,10 +8,13 @@ import com.sehkmet.microservices.productservice.validation.annotation.ProductIdP
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static com.sehkmet.microservices.productservice.utils.Utils.translate;
+@Validated
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/product")
@@ -26,7 +29,7 @@ public class ProductQueryController {
                 .status(HttpStatus.OK)
                 .body(GenericResponse.success(
                         productQueryService.getAllProducts(),
-                        "{success.products-retrieved-successfully}"));
+                        translate("success.products-retrieved-successfully}")));
     }
 
     @GetMapping("/{productId}")
@@ -39,7 +42,7 @@ public class ProductQueryController {
                 .status(HttpStatus.FOUND)
                 .body(GenericResponse.success(
                         productQueryService.getProductDetails(productId),
-                        "{success.product-retrieved-successfully}"));
+                        translate("success.product-retrieved-successfully}")));
     }
 
 }

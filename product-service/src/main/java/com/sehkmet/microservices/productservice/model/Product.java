@@ -20,7 +20,7 @@ public class Product extends BaseModel {
     @NotBlank(message = "{messages.product-name-validation-not-blank-alert}")
     @Size(min = 3, max = 50,
             message = "{messages.product-name-validation-size-alert}")
-    @Indexed
+    @Indexed(unique = true)
     private String name;
 
     @NotBlank(message = "{messages.product-description-validation-not-blank-alert}")

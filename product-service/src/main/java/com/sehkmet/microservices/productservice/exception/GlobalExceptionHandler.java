@@ -104,8 +104,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
                 .body(GenericResponse.error(
-                        errorMapper.createErrorMap(
-                                exception.getMessage()),
+                        errorMapper.createErrorMap(exception.getMessage()),
                         translate("exception.general-content")));
     }
 }

@@ -11,6 +11,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+import static com.sehkmet.microservices.productservice.utils.Utils.translate;
+
 @Service
 @Slf4j
 @RequiredArgsConstructor
@@ -22,7 +25,7 @@ public class ProductQueryServiceImpl implements ProductQueryService {
     @Override
     public GetProductResponse getProductDetails(String productId) throws ProductNotFoundException {
         Product productDetails = productRepository.findById(productId).orElseThrow(
-                () -> new ProductNotFoundException("{exception.product-not-found-with-id}")
+                () -> new ProductNotFoundException(translate("exception.product-not-found-with-id", productId))
         );
 
         return productMapper.productToGetProductResponse(productDetails);
