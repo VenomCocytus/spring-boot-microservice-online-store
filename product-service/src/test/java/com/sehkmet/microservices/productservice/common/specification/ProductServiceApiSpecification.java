@@ -1,4 +1,4 @@
-package com.sehkmet.microservices.productservice.common;
+package com.sehkmet.microservices.productservice.common.specification;
 
 import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequestDTO;
 import io.restassured.builder.RequestSpecBuilder;
@@ -30,7 +30,13 @@ public class ProductServiceApiSpecification {
                 .expectStatusCode(HttpStatus.CREATED.value())
                 .expectContentType(ContentType.TEXT)
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
-//                .expectBody("size()", Matchers.greaterThan(0))
+                .expectBody("timestamp", Matchers.notNullValue())
+                .expectBody("success", Matchers.equalTo("true"))
+                .expectBody("message", Matchers.is("Product created successfully."))
+                .expectBody("data.id", Matchers.notNullValue())
+                .expectBody("data.name", Matchers.is("Pokedex"))
+                .expectBody("data.description", Matchers.equalTo("A tool register data about encountered pokemon"))
+                .expectBody("data.price", Matchers.equalTo(2000f))
                 .build();
     }
 }

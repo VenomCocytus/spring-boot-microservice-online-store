@@ -20,8 +20,8 @@ import org.springframework.boot.testcontainers.service.connection.ServiceConnect
 import org.springframework.context.annotation.Import;
 import org.testcontainers.containers.MongoDBContainer;
 
-import static com.sehkmet.microservices.productservice.common.ProductServiceApiSpecification.createProductRequestSpec;
-import static com.sehkmet.microservices.productservice.common.ProductServiceApiSpecification.createProductResponseSpec;
+import static com.sehkmet.microservices.productservice.common.specification.ProductServiceApiSpecification.createProductRequestSpec;
+import static com.sehkmet.microservices.productservice.common.specification.ProductServiceApiSpecification.createProductResponseSpec;
 
 @Import(TestcontainersConfiguration.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

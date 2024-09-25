@@ -28,7 +28,7 @@ public class ProductQueryServiceImpl implements ProductQueryService {
                 () -> new ProductNotFoundException(translate("exception.product-not-found-with-id", productId))
         );
 
-        return productMapper.productToGetProductResponse(productDetails);
+        return productMapper.mapToGetProductResponse(productDetails);
     }
 
     /**
@@ -38,7 +38,7 @@ public class ProductQueryServiceImpl implements ProductQueryService {
     public List<GetProductResponse> getAllProducts() {
         return productRepository.findAll()
                 .stream()
-                .map(productMapper::productToGetProductResponse)
+                .map(productMapper::mapToGetProductResponse)
                 .toList();
     }
 }

@@ -4,6 +4,7 @@ import com.sehkmet.microservices.productservice.command.dto.request.CreateProduc
 import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponseDTO;
 import com.sehkmet.microservices.productservice.command.service.ProductCommandService;
 import com.sehkmet.microservices.productservice.response.GenericResponse;
+import com.sehkmet.microservices.productservice.validation.annotation.ProductIdPathVariableExists;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -31,6 +32,20 @@ public class ProductCommandController {
                 .status(HttpStatus.CREATED)
                 .body(GenericResponse.success(
                         productCommandService.createProduct(createProductRequest),
-                        translate("success.product-created-successfully")));
+                        translate("success.product-created-successfully")
+                ));
     }
+
+//    @DeleteMapping("/{id}")
+//    public ResponseEntity<GenericResponse<>> deleteProduct(
+//            @ProductIdPathVariableExists
+//            String id) {
+//
+//        return ResponseEntity
+//                .status(HttpStatus.OK)
+//                .body(GenericResponse.success(
+//                        productCommandService.deleteProduct(id),
+//                        translate("success.product-deleted-successfully")
+//                ));
+//    }
 }

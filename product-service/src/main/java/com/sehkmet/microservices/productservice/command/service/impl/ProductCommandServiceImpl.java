@@ -31,11 +31,7 @@ public class ProductCommandServiceImpl implements ProductCommandService {
             @Valid
             CreateProductRequestDTO createProductRequestDTO) {
 
-        Product product = Product.builder()
-                .name(createProductRequestDTO.name())
-                .description(createProductRequestDTO.description())
-                .price(createProductRequestDTO.price())
-                .build();
+        Product product = productMapper.mapToProduct(createProductRequestDTO);
 
         // Saving to the product into the database
         productRepository.save(product);
@@ -44,6 +40,11 @@ public class ProductCommandServiceImpl implements ProductCommandService {
         log.info(translate("success.product-created-successfully"));
 
         return productMapper
-                .productToCreateProductResponse(product);
+                .mapToCreateProductResponse(product);
+    }
+
+    @Override
+    public void deleteProduct(String id) {
+        productRepository.deleteById(id);
     }
 }

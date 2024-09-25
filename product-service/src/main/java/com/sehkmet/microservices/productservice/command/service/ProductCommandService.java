@@ -6,4 +6,5 @@ import com.sehkmet.microservices.productservice.command.dto.response.CreateProdu
 public interface ProductCommandService {
 
     CreateProductResponseDTO createProduct(CreateProductRequestDTO createProductRequestDTO);
+    void deleteProduct(String id);
 }
