@@ -7,10 +7,12 @@ import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import org.apache.catalina.connector.ClientAbortException;
+import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -18,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import static com.sehkmet.microservices.productservice.utils.Utils.getStackTraceAsString;
 import static com.sehkmet.microservices.productservice.utils.Utils.translate;
 
 @RestControllerAdvice
@@ -50,6 +53,28 @@ public class GlobalExceptionHandler {
                 .body(GenericResponse.error(
                         errorMapper.createErrorMap(errorMessage),
                         translate("exception.general-content")));
+    }
+
+    @ExceptionHandler(ServletRequestBindingException.class)
+    public ResponseEntity<GenericResponse<Object>> handleServletRequestBindingException(ServletRequestBindingException exception) {
+
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(GenericResponse.error(
+                        errorMapper.createErrorMap(exception.getMessage()),
+                        getStackTraceAsString(exception)
+                ));
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<GenericResponse<Object>> handleException(Exception exception) {
+
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(GenericResponse.error(
+                        errorMapper.createErrorMap(exception.getMessage()),
+                        getStackTraceAsString(exception)
+                ));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

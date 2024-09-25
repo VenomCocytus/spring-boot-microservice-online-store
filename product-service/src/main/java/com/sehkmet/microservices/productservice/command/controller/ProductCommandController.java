@@ -37,7 +37,7 @@ public class ProductCommandController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<GenericResponse<String>> deleteProduct(
+    public ResponseEntity<GenericResponse<?>> deleteProduct(
             @ProductIdPathVariableExists
             @PathVariable
             String id) {
@@ -45,7 +45,7 @@ public class ProductCommandController {
         productCommandService.deleteProduct(id);
 
         return ResponseEntity
-                .status(HttpStatus.OK)
+                .status(HttpStatus.NO_CONTENT)
                 .body(GenericResponse.success(
                         translate("success.product-deleted-successfully")
                 ));

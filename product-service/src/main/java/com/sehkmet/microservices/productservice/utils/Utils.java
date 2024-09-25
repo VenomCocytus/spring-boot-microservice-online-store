@@ -2,6 +2,9 @@ package com.sehkmet.microservices.productservice.utils;
 
 import com.sehkmet.microservices.productservice.component.Translator;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 public abstract class Utils {
 
     /**
@@ -15,5 +18,14 @@ public abstract class Utils {
     }
     public static String translate(String key, Object... args) {
         return Translator.toLocale(key, args);
+    }
+
+    public static String getStackTraceAsString(Exception exception) {
+
+        StringWriter stringWriter = new StringWriter();
+        PrintWriter printWriter = new PrintWriter(stringWriter);
+        exception.printStackTrace(printWriter);
+
+        return stringWriter.toString();
     }
 }
