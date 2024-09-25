@@ -45,6 +45,7 @@ public class ProductCommandServiceImpl implements ProductCommandService {
 
     @Override
     public void deleteProduct(String id) {
+
         productRepository.deleteById(id);
     }
 }

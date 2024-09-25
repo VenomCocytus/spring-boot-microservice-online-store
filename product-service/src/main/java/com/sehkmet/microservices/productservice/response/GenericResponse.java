@@ -34,6 +34,15 @@ public class GenericResponse<T> {
                 .build();
     }
 
+    public static <T> GenericResponse<T> success(String message) {
+        return GenericResponse.<T>builder()
+                .timestamp(LocalDateTime.now())
+                .success(true)
+                .message(message)
+                .data(null)
+                .build();
+    }
+
     public static <T> GenericResponse<T> success(T data,
                                                  String message) {
         return GenericResponse.<T>builder()

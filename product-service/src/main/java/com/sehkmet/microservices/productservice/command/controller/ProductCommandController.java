@@ -36,16 +36,18 @@ public class ProductCommandController {
                 ));
     }
 
-//    @DeleteMapping("/{id}")
-//    public ResponseEntity<GenericResponse<>> deleteProduct(
-//            @ProductIdPathVariableExists
-//            String id) {
-//
-//        return ResponseEntity
-//                .status(HttpStatus.OK)
-//                .body(GenericResponse.success(
-//                        productCommandService.deleteProduct(id),
-//                        translate("success.product-deleted-successfully")
-//                ));
-//    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<GenericResponse<String>> deleteProduct(
+            @ProductIdPathVariableExists
+            @PathVariable
+            String id) {
+
+        productCommandService.deleteProduct(id);
+
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(GenericResponse.success(
+                        translate("success.product-deleted-successfully")
+                ));
+    }
 }
