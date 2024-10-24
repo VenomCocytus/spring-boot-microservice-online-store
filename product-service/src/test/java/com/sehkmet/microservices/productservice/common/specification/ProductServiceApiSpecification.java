@@ -36,7 +36,7 @@ public class ProductServiceApiSpecification {
                 .expectBody("data.id", Matchers.notNullValue())
                 .expectBody("data.name", Matchers.is("Pokedex"))
                 .expectBody("data.description", Matchers.equalTo("A tool register data about encountered pokemon"))
-                .expectBody("data.price", Matchers.equalTo(2000f))
+                .expectBody("data.price", Matchers.equalTo(2000.0F))
                 .build();
     }
 }
