@@ -32,6 +32,9 @@ build/
 ### VS Code ###
 .vscode/
 
+### Allure ###
+.allure
+
 ### Mac OS ###
 .DS_Store
 /mysql/

@@ -1,14 +1,17 @@
 package com.sehkmet.microservices.productservice.command.service.impl;
 
-import com.github.f4b6a3.uuid.UuidCreator;
-import com.sehkmet.microservices.productservice.command.dto.CreateProductRequestRecord;
+import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequestDTO;
+import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponseDTO;
 import com.sehkmet.microservices.productservice.command.service.ProductCommandService;
+import com.sehkmet.microservices.productservice.mapper.ProductMapper;
 import com.sehkmet.microservices.productservice.model.Product;
 import com.sehkmet.microservices.productservice.repository.ProductRepository;
-import com.sehkmet.microservices.productservice.validator.ProductValidator;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import static com.sehkmet.microservices.productservice.utils.Utils.translate;
 
 @Service
 @RequiredArgsConstructor
@@ -16,32 +19,33 @@ import org.springframework.stereotype.Service;
 public class ProductCommandServiceImpl implements ProductCommandService {
 
     private final ProductRepository productRepository;
-
+    private final ProductMapper productMapper;
 
     /**
      * Creates a new product.
      *
-     * @param createProductRequestRecord the data transfer object containing the product details
+     * @param createProductRequestDTO the data transfer object containing the product details
      */
     @Override
-    public String createProduct(CreateProductRequestRecord createProductRequestRecord) {
+    public CreateProductResponseDTO createProduct(
+            @Valid
+            CreateProductRequestDTO createProductRequestDTO) {
 
-        ProductValidator.create(createProductRequestRecord);
-
-        String productCommandId = String.valueOf(UuidCreator.getTimeOrderedEpoch());
-
-        Product product = Product.builder()
-                .name(createProductRequestRecord.name())
-                .description(createProductRequestRecord.description())
-                .price(createProductRequestRecord.price())
-                .build();
+        Product product = productMapper.mapToProduct(createProductRequestDTO);
 
         // Saving to the product into the database
         productRepository.save(product);
 
         // Logging the data
-        log.info("Product created successfully");
+        log.info(translate("success.product-created-successfully"));
 
-        return productCommandId;
+        return productMapper
+                .mapToCreateProductResponse(product);
+    }
+
+    @Override
+    public void deleteProduct(String id) {
+
+        productRepository.deleteById(id);
     }
 }

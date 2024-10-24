@@ -1,5 +1,6 @@
 package com.sehkmet.microservices.productservice;
 
+import com.sehkmet.microservices.productservice.config.TestcontainersConfiguration;
 import org.springframework.boot.SpringApplication;
 
 public class TestProductServiceApplication {

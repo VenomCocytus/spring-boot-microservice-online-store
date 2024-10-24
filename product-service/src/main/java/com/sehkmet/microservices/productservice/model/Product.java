@@ -1,10 +1,10 @@
 package com.sehkmet.microservices.productservice.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.*;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
@@ -13,13 +13,21 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Data
-public class Product {
+@Getter
+@Setter
+public class Product extends BaseModel {
 
-    @Id
-    private String Id;
-
+    @NotBlank(message = "{messages.product-name-validation-not-blank-alert}")
+    @Size(min = 3, max = 50,
+            message = "{messages.product-name-validation-size-alert}")
+    @Indexed(unique = true)
     private String name;
+
+    @NotBlank(message = "{messages.product-description-validation-not-blank-alert}")
+    @Size(min = 3, max = 500,
+            message = "{messages.product-description-validation-size-alert}")
     private String description;
+
+    @NotNull(message = "{messages.product-price-validation-not-null-alert}")
     private BigDecimal price;
 }

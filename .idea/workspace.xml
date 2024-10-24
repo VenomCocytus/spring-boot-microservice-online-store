@@ -4,38 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spring-boot-microservices-store.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/data/WiredTiger.turtle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/data/WiredTiger.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/data/diagnostic.data/metrics.2024-08-14T08-09-17Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/data/diagnostic.data/metrics.2024-08-14T08-09-17Z-00000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/data/diagnostic.data/metrics.interim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/data/journal/WiredTigerLog.0000000008" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/data/journal/WiredTigerLog.0000000008" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/data/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/data/mongod.lock" afterDir="false" />
+    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Fixing commit warnings">
+      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/common/specification/ProductServiceApiSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/common/specification/ProductServiceApiSpecification.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2kjj2qjO2Sdxd9IbM7DBe9vtXL1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,12 +49,64 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/adding__generic__response",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Sehkmet/Web App/Online Store/spring-boot-microservices-store/inventory-service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.splitter.proportion": "0.21761219",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn allure:report" />
+      <command value="mvn clean compile" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+    <configuration name="ProductCommandServiceApplicationTests.shouldCreateProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="product-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sehkmet.microservices.productservice.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sehkmet.microservices.productservice.services" />
+      <option name="MAIN_CLASS_NAME" value="com.sehkmet.microservices.productservice.services.ProductCommandServiceApplicationTests" />
+      <option name="METHOD_NAME" value="shouldCreateProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="inventory-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.microservices.inventoryservice.InventoryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.microservices.orderservice.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="product-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.microservices.productservice.ProductServiceApplication" />
@@ -59,6 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProductCommandServiceApplicationTests.shouldCreateProduct" />
+        <item itemvalue="JUnit.ProductCommandServiceApplicationTests.shouldCreateProduct" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,10 +130,125 @@
       <option name="presentableId" value="Default" />
       <updated>1723803675440</updated>
       <workItem from="1723803676522" duration="28000" />
+      <workItem from="1724924591255" duration="9092000" />
+      <workItem from="1724935917933" duration="37000" />
+      <workItem from="1724940921470" duration="601000" />
+      <workItem from="1725141174709" duration="981000" />
+      <workItem from="1725287182534" duration="1318000" />
+      <workItem from="1725361990740" duration="5567000" />
+      <workItem from="1725536056938" duration="1627000" />
+      <workItem from="1725547426316" duration="9000" />
+      <workItem from="1725612763142" duration="1234000" />
+      <workItem from="1725872932429" duration="17232000" />
+      <workItem from="1725954946474" duration="10262000" />
+      <workItem from="1726045927890" duration="820000" />
+      <workItem from="1726068858305" duration="68000" />
+      <workItem from="1726389875879" duration="604000" />
+      <workItem from="1726477931657" duration="596000" />
+      <workItem from="1726590096159" duration="600000" />
+      <workItem from="1726645885051" duration="501000" />
+      <workItem from="1726822914773" duration="12978000" />
+      <workItem from="1726875005189" duration="4166000" />
+      <workItem from="1726879390854" duration="447000" />
     </task>
+    <task id="LOCAL-00001" summary="Updating - Removing idea folder from the repository">
+      <option name="closed" value="true" />
+      <created>1725141443455</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725141443455</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updating - updating code readability">
+      <option name="closed" value="true" />
+      <created>1725875678417</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725875678417</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updating - Adding validation annotation, adding mapstruct to the code and suppress ProductValidator">
+      <option name="closed" value="true" />
+      <created>1725899932661</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725899932661</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updating - Fixing commit warnings">
+      <option name="closed" value="true" />
+      <created>1725900039369</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725900039369</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updating - Adding a global advice controller">
+      <option name="closed" value="true" />
+      <created>1725961530718</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725961530718</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updating - Adding complementary test">
+      <option name="closed" value="true" />
+      <created>1725988370009</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725988370009</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updating - Fixing commit warnings">
+      <option name="closed" value="true" />
+      <created>1725988451089</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725988451089</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updating - Adding a general api response and making all endpoints of the product service to return a response entity">
+      <option name="closed" value="true" />
+      <created>1726842311962</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726842311962</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update - Fixing commit warnings">
+      <option name="closed" value="true" />
+      <created>1726842358694</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726842358694</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updating - Removing idea folder from the repository" />
+    <MESSAGE value="Updating - updating code readability" />
+    <MESSAGE value="Updating - Adding validation annotation, adding mapstruct to the code and suppress ProductValidator" />
+    <MESSAGE value="Updating - Adding a global advice controller" />
+    <MESSAGE value="Updating - Adding complementary test" />
+    <MESSAGE value="Updating - Fixing commit warnings" />
+    <MESSAGE value="Updating - Adding a general api response and making all endpoints of the product service to return a response entity" />
+    <MESSAGE value="Update - Fixing commit warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing commit warnings" />
   </component>
 </project>
