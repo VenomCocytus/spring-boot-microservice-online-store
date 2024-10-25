@@ -29,7 +29,7 @@ public class InventoryServiceApiSpecification {
                 .expectStatusCode(HttpStatus.OK.value())
                 .expectContentType("application/json")
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
-                .expectBody(Matchers.equalTo(true))
+                .expectBody(Matchers.equalTo("true"))
                 .build();
     }
 
@@ -38,7 +38,7 @@ public class InventoryServiceApiSpecification {
                 .expectStatusCode(HttpStatus.OK.value())
                 .expectContentType("application/json")
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
-                .expectBody(Matchers.equalTo(false))
+                .expectBody(Matchers.equalTo("false"))
                 .build();
     }
 }

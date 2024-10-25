@@ -17,8 +17,7 @@ import org.springframework.boot.testcontainers.service.connection.ServiceConnect
 import org.springframework.context.annotation.Import;
 import org.testcontainers.containers.MySQLContainer;
 
-import static com.sehkmet.microservices.inventoryservice.common.specification.InventoryServiceApiSpecification.isInStockRequestSpec;
-import static com.sehkmet.microservices.inventoryservice.common.specification.InventoryServiceApiSpecification.isInStockResponseSpec;
+import static com.sehkmet.microservices.inventoryservice.common.specification.InventoryServiceApiSpecification.*;
 
 @Slf4j
 @Epic("Inventory Service API")
@@ -57,10 +56,9 @@ class InventoryServiceApplicationTests {
     void shouldBeInStock() {
         RestAssured.given(isInStockRequestSpec(port, "iphone_15", 1))
                 .when()
-                .post()
+                .get()
                 .then()
-                .spec(isInStockResponseSpec())
-                .body(Matchers.equalTo(true));
+                .spec(isInStockResponseSpec());
     }
 
     @Test
@@ -68,10 +66,9 @@ class InventoryServiceApplicationTests {
     void shouldNotBeInStock() {
         RestAssured.given(isInStockRequestSpec(port, "iphone_15", 1000))
                 .when()
-                .post()
+                .get()
                 .then()
-                .spec(isInStockResponseSpec())
-                .body(Matchers.equalTo(false));
+                .spec(isNotInStockResponseSpec());
     }
 
 }

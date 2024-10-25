@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Fixing dependency issues">
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/common/specification/InventoryServiceApiSpecification.java" afterDir="false" />
+    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Improving the inventory service">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/docker/mysql/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/docker/mysql/init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/InventoryServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/InventoryCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/InventoryCommandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/model/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/model/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/db/migration/V1__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/InventoryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/service/InventoryServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/TestInventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/TestInventoryServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/TestcontainersConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/config/TestcontainersConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/common/specification/InventoryServiceApiSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/common/specification/InventoryServiceApiSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/service/InventoryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/service/InventoryServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +86,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InventoryServiceApplicationTests.shouldBeInStock">
+  <component name="RunManager" selected="JUnit.InventoryServiceApplicationTests.shouldNotBeInStock">
     <configuration name="InventoryServiceApplicationTests.shouldBeInStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="inventory-service" />
       <extension name="coverage">
@@ -107,6 +98,22 @@
       <option name="PACKAGE_NAME" value="com.sehkmet.microservices.inventoryservice.service" />
       <option name="MAIN_CLASS_NAME" value="com.sehkmet.microservices.inventoryservice.service.InventoryServiceApplicationTests" />
       <option name="METHOD_NAME" value="shouldBeInStock" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceApplicationTests.shouldNotBeInStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sehkmet.microservices.inventoryservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sehkmet.microservices.inventoryservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sehkmet.microservices.inventoryservice.service.InventoryServiceApplicationTests" />
+      <option name="METHOD_NAME" value="shouldNotBeInStock" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,6 +174,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InventoryServiceApplicationTests.shouldNotBeInStock" />
         <item itemvalue="JUnit.InventoryServiceApplicationTests.shouldBeInStock" />
         <item itemvalue="JUnit.OrderCommandServiceApplicationTests.shouldPlaceAnOrder" />
         <item itemvalue="JUnit.ProductCommandServiceApplicationTests.shouldCreateProduct" />
@@ -203,7 +211,7 @@
       <workItem from="1726822914773" duration="12978000" />
       <workItem from="1726875005189" duration="4166000" />
       <workItem from="1726879390854" duration="447000" />
-      <workItem from="1729850727426" duration="12258000" />
+      <workItem from="1729850727426" duration="13236000" />
     </task>
     <task id="LOCAL-00001" summary="Updating - Removing idea folder from the repository">
       <option name="closed" value="true" />
@@ -365,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729869812304</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update - Improving the inventory service">
+      <option name="closed" value="true" />
+      <created>1729871989831</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1729871989831</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +414,7 @@
     <MESSAGE value="Update - Adding basic test to place an order" />
     <MESSAGE value="Update - Cleaning code" />
     <MESSAGE value="Update - Fixing dependency issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing dependency issues" />
+    <MESSAGE value="Update - Improving the inventory service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Improving the inventory service" />
   </component>
 </project>
