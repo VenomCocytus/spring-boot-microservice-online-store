@@ -31,47 +31,45 @@ import static com.sehkmet.microservices.orderservice.common.specification.OrderS
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class OrderCommandServiceApplicationTests {
 
-	@ServiceConnection
-	static MySQLContainer mySQLContainer = new MySQLContainer("mysql:8.3.0");
+    @ServiceConnection
+    static MySQLContainer mySQLContainer = new MySQLContainer("mysql:8.3.0");
 
-	@LocalServerPort
-	Integer port;
+    @LocalServerPort
+    Integer port;
 
-	@BeforeEach
-	void setup() {
-		RestAssured.baseURI = "http://localhost";
-		RestAssured.port = port;
+    @BeforeEach
+    void setup() {
+        RestAssured.baseURI = "http://localhost";
+        RestAssured.port = port;
 
-		// Register a custom parser for plain text
-		RestAssured.registerParser("text/plain", Parser.TEXT);
+        // Register a custom parser for plain text
+        RestAssured.registerParser("text/plain", Parser.TEXT);
 
         RestAssured.urlEncodingEnabled = false;
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
-
-        log.info("Starting Order Command Service on port {}", port);
     }
 
-	static {
-		mySQLContainer.start();
-	}
+    static {
+        mySQLContainer.start();
+    }
 
-	@AfterEach
-	void reset() {
+    @AfterEach
+    void reset() {
         RestAssured.reset();
     }
 
-	@Test
-	@Description("Test the place order endpoint")
-	void shouldPlaceAnOrder() {
-		// Create the order request
-		PlaceOrderRequest placeOrderRequest = CommandRequests.getPlaceOrderRequest();
+    @Test
+    @Description("Test the place order endpoint")
+    void shouldPlaceAnOrder() {
+        // Create the order request
+        PlaceOrderRequest placeOrderRequest = CommandRequests.getPlaceOrderRequest();
 
-		RestAssured.given(placeOrderRequestSpec(port, placeOrderRequest))
-				.when()
-				.post()
-				.then()
-				.spec(placeOrderResponseSpec())
-				.body(Matchers.notNullValue());
-	}
+        RestAssured.given(placeOrderRequestSpec(port, placeOrderRequest))
+                .when()
+                .post()
+                .then()
+                .spec(placeOrderResponseSpec())
+                .body(Matchers.notNullValue());
+    }
 
 }

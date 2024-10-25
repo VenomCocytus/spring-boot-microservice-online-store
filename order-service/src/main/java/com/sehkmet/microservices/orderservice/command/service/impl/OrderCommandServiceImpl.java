@@ -30,7 +30,7 @@ public class OrderCommandServiceImpl implements OrderCommandService {
         var isProductInStock = inventoryClient.isInStock(placeOrderRequest.skuCode(),
                 placeOrderRequest.quantity());
 
-        if(isProductInStock) {
+        if (isProductInStock) {
 
             String orderCommandId = String.valueOf(UuidCreator.getTimeOrderedEpoch());
             Order orderToSave = orderMapper.mapToOrder(placeOrderRequest);
@@ -41,8 +41,7 @@ public class OrderCommandServiceImpl implements OrderCommandService {
             log.info("Order placed successfully");
 
             return orderCommandId;
-        }
-        else {
+        } else {
             throw new RuntimeException("Product with skuCode " + placeOrderRequest.skuCode() + " is not in stock");
         }
     }

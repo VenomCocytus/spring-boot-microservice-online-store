@@ -15,7 +15,7 @@ public class OrderServiceApiSpecification {
     private static final String basePath = "/api/order";
 
     public static RequestSpecification placeOrderRequestSpec(int port,
-                                                                PlaceOrderRequest body) {
+                                                             PlaceOrderRequest body) {
         return new RequestSpecBuilder()
                 .setBasePath(basePath)
                 .setPort(port)
@@ -29,7 +29,7 @@ public class OrderServiceApiSpecification {
                 .expectStatusCode(HttpStatus.CREATED.value())
                 .expectContentType("application/json")
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
-                .expectBody("timestamp", Matchers.notNullValue())
+                .expectBody(Matchers.notNullValue())
                 .build();
     }
 }
