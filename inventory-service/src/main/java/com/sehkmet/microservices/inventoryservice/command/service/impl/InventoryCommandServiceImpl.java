@@ -5,6 +5,7 @@ import com.sehkmet.microservices.inventoryservice.repository.InventoryRepository
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Slf4j
@@ -13,6 +14,7 @@ public class InventoryCommandServiceImpl implements InventoryCommandService {
 
     private final InventoryRepository inventoryRepository;
 
+    @Transactional(readOnly = true)
     public boolean isInStock(String skuCode, Integer quantity) {
 
         // Find an inventory for a given skuCode where quantity <= max available quantity
