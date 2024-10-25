@@ -1,7 +1,7 @@
 package com.sehkmet.microservices.productservice.command.service.impl;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequestDTO;
-import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponseDTO;
+import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
+import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponse;
 import com.sehkmet.microservices.productservice.command.service.ProductCommandService;
 import com.sehkmet.microservices.productservice.mapper.ProductMapper;
 import com.sehkmet.microservices.productservice.model.Product;
@@ -24,14 +24,14 @@ public class ProductCommandServiceImpl implements ProductCommandService {
     /**
      * Creates a new product.
      *
-     * @param createProductRequestDTO the data transfer object containing the product details
+     * @param createProductRequest the data transfer object containing the product details
      */
     @Override
-    public CreateProductResponseDTO createProduct(
+    public CreateProductResponse createProduct(
             @Valid
-            CreateProductRequestDTO createProductRequestDTO) {
+            CreateProductRequest createProductRequest) {
 
-        Product product = productMapper.mapToProduct(createProductRequestDTO);
+        Product product = productMapper.mapToProduct(createProductRequest);
 
         // Saving to the product into the database
         productRepository.save(product);

@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.productservice.services;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequestDTO;
+import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
 import com.sehkmet.microservices.productservice.common.request.CommandRequests;
 import com.sehkmet.microservices.productservice.config.TestcontainersConfiguration;
 import io.qameta.allure.Description;
@@ -62,9 +62,9 @@ class ProductCommandServiceApplicationTests {
     @Description("Testing the creation of a new product")
     void shouldCreateProduct() {
         String createProductPath = "/create";
-        CreateProductRequestDTO createProductRequestDTO = CommandRequests.getProductRequest();
+        CreateProductRequest createProductRequest = CommandRequests.getProductRequest();
 
-        RestAssured.given(createProductRequestSpec(port, createProductRequestDTO))
+        RestAssured.given(createProductRequestSpec(port, createProductRequest))
                 .when()
                     .post(createProductPath)
                 .then()
@@ -78,9 +78,9 @@ class ProductCommandServiceApplicationTests {
     void shouldCreateAndRetrieveProductDetails() {
         // Create the product inside the database
         String createProductPath = "/create";
-        CreateProductRequestDTO createProductRequestDTO = CommandRequests.getProductRequest();
+        CreateProductRequest createProductRequest = CommandRequests.getProductRequest();
 
-        RestAssured.given(createProductRequestSpec(port, createProductRequestDTO))
+        RestAssured.given(createProductRequestSpec(port, createProductRequest))
                 .when()
                 .post(createProductPath)
                 .then()

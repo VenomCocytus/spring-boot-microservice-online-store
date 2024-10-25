@@ -1,10 +1,10 @@
 package com.sehkmet.microservices.productservice.command.service;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequestDTO;
-import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponseDTO;
+import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
+import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponse;
 
 public interface ProductCommandService {
 
-    CreateProductResponseDTO createProduct(CreateProductRequestDTO createProductRequestDTO);
+    CreateProductResponse createProduct(CreateProductRequest createProductRequest);
     void deleteProduct(String id);
 }

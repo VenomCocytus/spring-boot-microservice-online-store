@@ -1,7 +1,7 @@
 package com.sehkmet.microservices.productservice.command.controller;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequestDTO;
-import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponseDTO;
+import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
+import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponse;
 import com.sehkmet.microservices.productservice.command.service.ProductCommandService;
 import com.sehkmet.microservices.productservice.response.GenericResponse;
 import com.sehkmet.microservices.productservice.validation.annotation.ProductIdPathVariableExists;
@@ -23,10 +23,10 @@ public class ProductCommandController {
     private final ProductCommandService productCommandService;
 
     @PostMapping("/create")
-    public ResponseEntity<GenericResponse<CreateProductResponseDTO>> createProduct(
+    public ResponseEntity<GenericResponse<CreateProductResponse>> createProduct(
             @Valid
             @RequestBody
-            CreateProductRequestDTO createProductRequest) {
+            CreateProductRequest createProductRequest) {
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)

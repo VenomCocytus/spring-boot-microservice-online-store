@@ -1,17 +1,17 @@
-package com.sehkmet.microservices.productservice.command.dto.response;
+package com.sehkmet.microservices.productservice.command.dto.request;
 
+import com.sehkmet.microservices.productservice.validation.annotation.ProductNameNotAlreadyExists;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
 
-public record CreateProductResponseDTO(
-        @NotBlank(message = "{messages.product-id-validation-not-blank-alert}")
-        String id,
+public record CreateProductRequest(
         @NotBlank(message = "{messages.product-name-validation-not-blank-alert}")
         @Size(min = 3, max = 50,
                 message = "{messages.product-name-validation-size-alert}")
+        @ProductNameNotAlreadyExists
         String name,
         @NotBlank(message="{messages.product-description-validation-not-blank-alert}")
         @Size(min = 3, max = 500,

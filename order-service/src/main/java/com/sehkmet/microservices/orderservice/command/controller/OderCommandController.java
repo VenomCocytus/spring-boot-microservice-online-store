@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.orderservice.command.controller;
 
-import com.sehkmet.microservices.orderservice.command.dto.PlaceOrderRequestRecord;
+import com.sehkmet.microservices.orderservice.command.dto.PlaceOrderRequest;
 import com.sehkmet.microservices.orderservice.command.service.OrderCommandService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +16,7 @@ public class OderCommandController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public String placeOrder(@RequestBody @Valid PlaceOrderRequestRecord placeOrderRequestRecord) {
-        return orderCommandService.placeOrder(placeOrderRequestRecord);
+    public String placeOrder(@RequestBody @Valid PlaceOrderRequest placeOrderRequest) {
+        return orderCommandService.placeOrder(placeOrderRequest);
     }
 }

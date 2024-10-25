@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.productservice.common.specification;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequestDTO;
+import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;
@@ -15,7 +15,7 @@ public class ProductServiceApiSpecification {
     private static final String basePath = "/api/product";
 
     public static RequestSpecification createProductRequestSpec(int port,
-                                                                CreateProductRequestDTO body) {
+                                                                CreateProductRequest body) {
         return new RequestSpecBuilder()
                 .setBasePath(basePath)
                 .setPort(port)
