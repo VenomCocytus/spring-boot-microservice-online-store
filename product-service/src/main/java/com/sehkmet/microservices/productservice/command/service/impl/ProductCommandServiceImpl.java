@@ -43,9 +43,18 @@ public class ProductCommandServiceImpl implements ProductCommandService {
                 .mapToCreateProductResponse(product);
     }
 
+    /**
+     * Delete a selected product.
+     *
+     * @param id the identifier of the product we want to delete
+     */
     @Override
     public void deleteProduct(String id) {
 
         productRepository.deleteById(id);
+
+        // Logging the data
+        log.info(translate("success.product-deleted-successfully"));
+
     }
 }

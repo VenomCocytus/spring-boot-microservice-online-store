@@ -28,15 +28,15 @@ public class ProductServiceApiSpecification {
     public static ResponseSpecification createProductResponseSpec() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(HttpStatus.CREATED.value())
-                .expectContentType(ContentType.TEXT)
+                .expectContentType("application/json")
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
                 .expectBody("timestamp", Matchers.notNullValue())
-                .expectBody("success", Matchers.equalTo("true"))
+                .expectBody("success", Matchers.equalTo(true))
                 .expectBody("message", Matchers.is("Product created successfully."))
                 .expectBody("data.id", Matchers.notNullValue())
                 .expectBody("data.name", Matchers.is("Pokedex"))
                 .expectBody("data.description", Matchers.equalTo("A tool register data about encountered pokemon"))
-                .expectBody("data.price", Matchers.equalTo(2000.0F))
+                .expectBody("data.price", Matchers.equalTo(2000))
                 .build();
     }
 }

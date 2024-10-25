@@ -23,12 +23,12 @@ import org.testcontainers.containers.MongoDBContainer;
 import static com.sehkmet.microservices.productservice.common.specification.ProductServiceApiSpecification.createProductRequestSpec;
 import static com.sehkmet.microservices.productservice.common.specification.ProductServiceApiSpecification.createProductResponseSpec;
 
-@Import(TestcontainersConfiguration.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Slf4j
 @Epic("Product Service API")
 @Feature("Product Management")
 @Story("CRUD on products")
+@Import(TestcontainersConfiguration.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ProductCommandServiceApplicationTests {
 
     @ServiceConnection
