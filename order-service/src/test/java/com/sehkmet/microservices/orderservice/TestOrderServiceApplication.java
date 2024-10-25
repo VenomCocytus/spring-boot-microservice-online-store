@@ -1,5 +1,6 @@
 package com.sehkmet.microservices.orderservice;
 
+import com.sehkmet.microservices.orderservice.config.TestcontainersConfiguration;
 import org.springframework.boot.SpringApplication;
 
 public class TestOrderServiceApplication {

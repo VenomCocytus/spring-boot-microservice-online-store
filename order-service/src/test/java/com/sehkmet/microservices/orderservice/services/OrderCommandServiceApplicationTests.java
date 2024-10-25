@@ -24,51 +24,54 @@ import static com.sehkmet.microservices.orderservice.common.specification.OrderS
 import static com.sehkmet.microservices.orderservice.common.specification.OrderServiceApiSpecification.placeOrderResponseSpec;
 
 @Slf4j
-@Epic("Product Service API")
-@Feature("Product Management")
-@Story("CRUD on products")
+@Epic("Order Service API")
+@Feature("Order Management")
+@Story("Place Order")
 @Import(TestcontainersConfiguration.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class ProductCommandServiceApplicationTests {
+class OrderCommandServiceApplicationTests {
 
-    @ServiceConnection
-    static MySQLContainer mongoDBContainer = new MySQLContainer("mysql:7.0.5");
+	@ServiceConnection
+	static MySQLContainer mySQLContainer = new MySQLContainer("mysql:8.3.0");
 
-    @LocalServerPort
-    private Integer port;
+	@LocalServerPort
+	Integer port;
 
-    @BeforeEach
-    void setup() {
-        RestAssured.baseURI = "http://localhost";
-        RestAssured.port = port;
+	@BeforeEach
+	void setup() {
+		RestAssured.baseURI = "http://localhost";
+		RestAssured.port = port;
 
-        // Register a custom parser for plain text
-        RestAssured.registerParser("text/plain", Parser.TEXT);
+		// Register a custom parser for plain text
+		RestAssured.registerParser("text/plain", Parser.TEXT);
 
         RestAssured.urlEncodingEnabled = false;
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+
+        log.info("Starting Order Command Service on port {}", port);
     }
 
-    static {
-        mongoDBContainer.start();
-    }
+	static {
+		mySQLContainer.start();
+	}
 
-    @AfterEach
-    void reset() {
+	@AfterEach
+	void reset() {
         RestAssured.reset();
     }
 
-    @Test
-    @Description("Testing the creation of a new product")
-    void shouldCreateProduct() {
-        PlaceOrderRequest placeOrderRequest = CommandRequests.getPlaceOrderRequest();
+	@Test
+	@Description("Test the place order endpoint")
+	void shouldPlaceAnOrder() {
+		// Create the order request
+		PlaceOrderRequest placeOrderRequest = CommandRequests.getPlaceOrderRequest();
 
-        RestAssured.given(placeOrderRequestSpec(port, placeOrderRequest))
-                .when()
-                    .post()
-                .then()
-                    .spec(placeOrderResponseSpec())
-                    .body(Matchers.notNullValue());
-    }
+		RestAssured.given(placeOrderRequestSpec(port, placeOrderRequest))
+				.when()
+				.post()
+				.then()
+				.spec(placeOrderResponseSpec())
+				.body(Matchers.notNullValue());
+	}
 
 }

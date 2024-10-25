@@ -8,9 +8,10 @@ public class CommandRequests {
 
     public static PlaceOrderRequest getPlaceOrderRequest() {
         return new PlaceOrderRequest(
-                "",
-                "A tool register data about encountered pokemon",
-                BigDecimal.valueOf(2000)
+                "iphone_15",
+                BigDecimal.valueOf(1000),
+                1
+
         );
     }
 }
