@@ -3,7 +3,6 @@ package com.sehkmet.microservices.productservice.common.specification;
 import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequestDTO;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.hamcrest.Matchers;
