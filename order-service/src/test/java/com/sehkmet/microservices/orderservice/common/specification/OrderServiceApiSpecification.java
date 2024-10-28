@@ -27,7 +27,7 @@ public class OrderServiceApiSpecification {
     public static ResponseSpecification placeOrderResponseSpec() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(HttpStatus.CREATED.value())
-                .expectContentType("application/json")
+                .expectContentType("text/plain;charset=UTF-8")
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
                 .expectBody(Matchers.notNullValue())
                 .build();

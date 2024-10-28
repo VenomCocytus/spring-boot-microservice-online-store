@@ -17,6 +17,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.context.annotation.Import;
 import org.testcontainers.containers.MySQLContainer;
 
@@ -27,6 +28,7 @@ import static com.sehkmet.microservices.orderservice.common.specification.OrderS
 @Epic("Order Service API")
 @Feature("Order Management")
 @Story("Place Order")
+@AutoConfigureWireMock(port = 0)
 @Import(TestcontainersConfiguration.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class OrderCommandServiceApplicationTests {
