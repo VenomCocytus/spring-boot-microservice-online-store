@@ -31,7 +31,6 @@ public class OrderCommandServiceImpl implements OrderCommandService {
                 placeOrderRequest.quantity());
 
         if (isProductInStock) {
-
             String orderCommandId = String.valueOf(UuidCreator.getTimeOrderedEpoch());
             Order orderToSave = orderMapper.mapToOrder(placeOrderRequest);
             orderToSave.setOrderNumber(UUID.randomUUID().toString());

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Improving the inventory service">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Adding unversioned files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/common/specification/InventoryServiceApiSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/common/specification/InventoryServiceApiSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/service/InventoryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/service/InventoryServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,24 +48,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/code__revision",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Sehkmet/Web App/Online Store/spring-boot-microservices-store/order-service/src/test/java/com/sehkmet/microservices/orderservice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "settings.editor.splitter.proportion": "0.21761219",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/code__revision&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Sehkmet/Web App/Online Store/spring-boot-microservices-store/order-service/src/test/java/com/sehkmet/microservices/orderservice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.21761219&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservices-store\order-service\src\test\java\com\sehkmet\microservices\orderservice" />
@@ -211,7 +210,9 @@
       <workItem from="1726822914773" duration="12978000" />
       <workItem from="1726875005189" duration="4166000" />
       <workItem from="1726879390854" duration="447000" />
-      <workItem from="1729850727426" duration="13236000" />
+      <workItem from="1729850727426" duration="13884000" />
+      <workItem from="1729873339586" duration="15000" />
+      <workItem from="1730105028628" duration="2857000" />
     </task>
     <task id="LOCAL-00001" summary="Updating - Removing idea folder from the repository">
       <option name="closed" value="true" />
@@ -381,7 +382,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729871989831</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update - Finalizing basic test for the inventory service">
+      <option name="closed" value="true" />
+      <created>1729872784492</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1729872784492</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Update - Adding unversioned files">
+      <option name="closed" value="true" />
+      <created>1729872975144</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1729872975144</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +424,6 @@
     <MESSAGE value="Updating - Fixing commit warnings" />
     <MESSAGE value="Updating - Adding a general api response and making all endpoints of the product service to return a response entity" />
     <MESSAGE value="Update - Code revision" />
-    <MESSAGE value="Update - Adding unversioned files" />
     <MESSAGE value="Update - Refractoring some classes" />
     <MESSAGE value="Update - Fixing commit warnings" />
     <MESSAGE value="Update - Adding basic tests and adjusting dto to place an order" />
@@ -415,6 +431,8 @@
     <MESSAGE value="Update - Cleaning code" />
     <MESSAGE value="Update - Fixing dependency issues" />
     <MESSAGE value="Update - Improving the inventory service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Improving the inventory service" />
+    <MESSAGE value="Update - Finalizing basic test for the inventory service" />
+    <MESSAGE value="Update - Adding unversioned files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Adding unversioned files" />
   </component>
 </project>

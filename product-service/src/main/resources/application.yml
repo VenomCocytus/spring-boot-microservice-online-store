@@ -9,3 +9,5 @@ spring:
     fallback-to-system-locale: false
     encoding: UTF-8
     cache-duration: 5
+server:
+  port: 8080
