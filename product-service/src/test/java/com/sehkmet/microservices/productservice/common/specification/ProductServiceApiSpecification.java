@@ -10,7 +10,6 @@ import org.springframework.http.HttpStatus;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 public class ProductServiceApiSpecification {
