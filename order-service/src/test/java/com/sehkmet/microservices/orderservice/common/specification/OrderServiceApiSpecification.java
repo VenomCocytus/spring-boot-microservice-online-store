@@ -10,6 +10,9 @@ import org.springframework.http.HttpStatus;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.springframework.cloud.contract.spec.internal.MediaTypes.APPLICATION_JSON;
+import static org.springframework.cloud.contract.spec.internal.MediaTypes.TEXT_PLAIN;
+
 public class OrderServiceApiSpecification {
 
     private static final String basePath = "/api/order";
@@ -19,17 +22,25 @@ public class OrderServiceApiSpecification {
         return new RequestSpecBuilder()
                 .setBasePath(basePath)
                 .setPort(port)
-                .setContentType("application/json")
+                .setContentType(APPLICATION_JSON)
                 .setBody(body)
                 .build();
     }
 
-    public static ResponseSpecification placeOrderResponseSpec() {
+    public static ResponseSpecification placeOrderWithStockResponseSpec() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(HttpStatus.CREATED.value())
-                .expectContentType("text/plain;charset=UTF-8")
+                .expectContentType(TEXT_PLAIN)
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
                 .expectBody(Matchers.notNullValue())
+                .build();
+    }
+
+    public static ResponseSpecification placeOrderWithoutStockResponseSpec() {
+        return new ResponseSpecBuilder()
+                .expectStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value())
+                .expectContentType(APPLICATION_JSON)
+                .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
                 .build();
     }
 }

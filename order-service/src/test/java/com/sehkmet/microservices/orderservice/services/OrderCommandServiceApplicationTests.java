@@ -1,5 +1,6 @@
 package com.sehkmet.microservices.orderservice.services;
 
+import com.sehkmet.microservices.orderservice.client.InventoryClientStub;
 import com.sehkmet.microservices.orderservice.command.dto.PlaceOrderRequest;
 import com.sehkmet.microservices.orderservice.common.request.CommandRequests;
 import com.sehkmet.microservices.orderservice.config.TestcontainersConfiguration;
@@ -21,8 +22,7 @@ import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.context.annotation.Import;
 import org.testcontainers.containers.MySQLContainer;
 
-import static com.sehkmet.microservices.orderservice.common.specification.OrderServiceApiSpecification.placeOrderRequestSpec;
-import static com.sehkmet.microservices.orderservice.common.specification.OrderServiceApiSpecification.placeOrderResponseSpec;
+import static com.sehkmet.microservices.orderservice.common.specification.OrderServiceApiSpecification.*;
 
 @Slf4j
 @Epic("Order Service API")
@@ -61,16 +61,36 @@ class OrderCommandServiceApplicationTests {
     }
 
     @Test
-    @Description("Test the place order endpoint")
+    @Description("Test if we can submit an order")
     void shouldPlaceAnOrder() {
         // Create the order request
-        PlaceOrderRequest placeOrderRequest = CommandRequests.getPlaceOrderRequest();
+        PlaceOrderRequest placeOrderWithStockRequest = CommandRequests.placeOrderWithStockRequest();
 
-        RestAssured.given(placeOrderRequestSpec(port, placeOrderRequest))
+        // Calling the inventory stub
+        InventoryClientStub.stubInventoryCallIsInStock(placeOrderWithStockRequest);
+
+        RestAssured.given(placeOrderRequestSpec(port, placeOrderWithStockRequest))
                 .when()
                 .post()
                 .then()
-                .spec(placeOrderResponseSpec())
+                .spec(placeOrderWithStockResponseSpec())
+                .body(Matchers.notNullValue());
+    }
+
+    @Test
+    @Description("Test if we cannot submit an order")
+    void shouldNotPlaceAnOrder() {
+        // Create the order request
+        PlaceOrderRequest placeOrderWithoutStockRequest = CommandRequests.placeOrderWithoutStockRequest();
+
+        // Calling the inventory stub
+        InventoryClientStub.stubInventoryCallIsNotInStock(placeOrderWithoutStockRequest);
+
+        RestAssured.given(placeOrderRequestSpec(port, placeOrderWithoutStockRequest))
+                .when()
+                .post()
+                .then()
+                .spec(placeOrderWithoutStockResponseSpec())
                 .body(Matchers.notNullValue());
     }
 

@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
+
 public class InventoryServiceApiSpecification {
 
     private static final String basePath = "/api/inventory";
@@ -27,7 +29,7 @@ public class InventoryServiceApiSpecification {
     public static ResponseSpecification isInStockResponseSpec() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(HttpStatus.OK.value())
-                .expectContentType("application/json")
+                .expectContentType(APPLICATION_JSON_VALUE)
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
                 .expectBody(Matchers.equalTo("true"))
                 .build();
@@ -36,7 +38,7 @@ public class InventoryServiceApiSpecification {
     public static ResponseSpecification isNotInStockResponseSpec() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(HttpStatus.OK.value())
-                .expectContentType("application/json")
+                .expectContentType(APPLICATION_JSON_VALUE)
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
                 .expectBody(Matchers.equalTo("false"))
                 .build();

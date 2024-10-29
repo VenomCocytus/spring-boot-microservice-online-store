@@ -10,6 +10,9 @@ import org.springframework.http.HttpStatus;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+
 public class ProductServiceApiSpecification {
 
     private static final String basePath = "/api/product";
@@ -19,7 +22,7 @@ public class ProductServiceApiSpecification {
         return new RequestSpecBuilder()
                 .setBasePath(basePath)
                 .setPort(port)
-                .setContentType("application/json")
+                .setContentType(APPLICATION_JSON_VALUE)
                 .setBody(body)
                 .build();
     }

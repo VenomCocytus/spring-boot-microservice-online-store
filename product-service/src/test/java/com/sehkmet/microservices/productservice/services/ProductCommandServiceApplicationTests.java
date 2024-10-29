@@ -23,6 +23,8 @@ import org.testcontainers.containers.MongoDBContainer;
 import static com.sehkmet.microservices.productservice.common.specification.ProductServiceApiSpecification.createProductRequestSpec;
 import static com.sehkmet.microservices.productservice.common.specification.ProductServiceApiSpecification.createProductResponseSpec;
 
+import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
+
 @Slf4j
 @Epic("Product Service API")
 @Feature("Product Management")
@@ -43,7 +45,7 @@ class ProductCommandServiceApplicationTests {
         RestAssured.port = port;
 
         // Register a custom parser for plain text
-        RestAssured.registerParser("text/plain", Parser.TEXT);
+        RestAssured.registerParser(TEXT_PLAIN_VALUE, Parser.TEXT);
 
         RestAssured.urlEncodingEnabled = false;
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
