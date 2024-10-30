@@ -29,7 +29,7 @@ public class ProductServiceApiSpecification {
     public static ResponseSpecification createProductResponseSpec() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(HttpStatus.CREATED.value())
-                .expectContentType("application/json")
+                .expectContentType(APPLICATION_JSON_VALUE)
                 .expectResponseTime(Matchers.lessThan(5000L), TimeUnit.MILLISECONDS)
                 .expectBody("timestamp", Matchers.notNullValue())
                 .expectBody("success", Matchers.equalTo(true))

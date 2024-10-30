@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Starting integration test with wiremock">
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Fixing commit warnings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/common/specification/InventoryServiceApiSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/common/specification/InventoryServiceApiSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/client/InventoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/client/InventoryClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/client/InventoryClientStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/client/InventoryClientStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/common/request/CommandRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/common/request/CommandRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/common/specification/OrderServiceApiSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/common/specification/OrderServiceApiSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/services/OrderCommandServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/services/OrderCommandServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/common/specification/ProductServiceApiSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/common/specification/ProductServiceApiSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/services/ProductCommandServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/services/ProductCommandServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +237,9 @@
       <workItem from="1729873339586" duration="15000" />
       <workItem from="1730105028628" duration="5371000" />
       <workItem from="1730119527183" duration="16000" />
-      <workItem from="1730193466002" duration="3394000" />
+      <workItem from="1730193466002" duration="7819000" />
+      <workItem from="1730212966179" duration="42000" />
+      <workItem from="1730276751811" duration="660000" />
     </task>
     <task id="LOCAL-00001" summary="Updating - Removing idea folder from the repository">
       <option name="closed" value="true" />
@@ -449,7 +441,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730119005677</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Update - Fixing all the tests">
+      <option name="closed" value="true" />
+      <created>1730197924543</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1730197924543</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Update - Fixing commit warnings">
+      <option name="closed" value="true" />
+      <created>1730198002176</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1730198002176</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +484,6 @@
     <MESSAGE value="Updating - Adding a general api response and making all endpoints of the product service to return a response entity" />
     <MESSAGE value="Update - Code revision" />
     <MESSAGE value="Update - Refractoring some classes" />
-    <MESSAGE value="Update - Fixing commit warnings" />
     <MESSAGE value="Update - Adding basic tests and adjusting dto to place an order" />
     <MESSAGE value="Update - Adding basic test to place an order" />
     <MESSAGE value="Update - Cleaning code" />
@@ -486,6 +493,8 @@
     <MESSAGE value="Update - Adding unversioned files" />
     <MESSAGE value="Update - Code review" />
     <MESSAGE value="Update - Starting integration test with wiremock" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Starting integration test with wiremock" />
+    <MESSAGE value="Update - Fixing all the tests" />
+    <MESSAGE value="Update - Fixing commit warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing commit warnings" />
   </component>
 </project>
