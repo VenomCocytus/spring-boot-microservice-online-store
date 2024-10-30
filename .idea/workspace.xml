@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Fixing commit warnings">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Improving gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/Routes.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/Routes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/query/controller/ProductQueryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/query/controller/ProductQueryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +248,7 @@
       <workItem from="1730193466002" duration="7819000" />
       <workItem from="1730212966179" duration="42000" />
       <workItem from="1730276751811" duration="660000" />
-      <workItem from="1730297600810" duration="234000" />
+      <workItem from="1730297600810" duration="2191000" />
     </task>
     <task id="LOCAL-00001" summary="Updating - Removing idea folder from the repository">
       <option name="closed" value="true" />
@@ -469,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730198002176</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Update - Improving gitignore">
+      <option name="closed" value="true" />
+      <created>1730297892021</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1730297892021</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,6 +512,7 @@
     <MESSAGE value="Update - Starting integration test with wiremock" />
     <MESSAGE value="Update - Fixing all the tests" />
     <MESSAGE value="Update - Fixing commit warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing commit warnings" />
+    <MESSAGE value="Update - Improving gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Improving gitignore" />
   </component>
 </project>

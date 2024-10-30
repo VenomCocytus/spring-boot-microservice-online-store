@@ -12,7 +12,7 @@ import org.springframework.web.servlet.function.ServerResponse;
 public class Routes {
 
     @Bean
-    public RouterFunction<ServerResponse> productServiceRoute() {
+    public RouterFunction<ServerResponse> productServiceRoute(){
 
         return GatewayRouterFunctions.route("product_service")
                 .route(RequestPredicates.path("/api/product"),

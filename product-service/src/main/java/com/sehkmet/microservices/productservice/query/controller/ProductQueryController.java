@@ -29,7 +29,7 @@ public class ProductQueryController {
                 .status(HttpStatus.OK)
                 .body(GenericResponse.success(
                         productQueryService.getAllProducts(),
-                        translate("success.products-retrieved-successfully}")));
+                        translate("success.products-retrieved-successfully")));
     }
 
     @GetMapping("/{productId}")
@@ -42,7 +42,7 @@ public class ProductQueryController {
                 .status(HttpStatus.FOUND)
                 .body(GenericResponse.success(
                         productQueryService.getProductDetails(productId),
-                        translate("success.product-retrieved-successfully}")));
+                        translate("success.product-retrieved-successfully")));
     }
 
 }
