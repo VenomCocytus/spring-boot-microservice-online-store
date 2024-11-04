@@ -15,14 +15,10 @@ public class Routes {
     public RouterFunction<ServerResponse> productServiceRoute(){
 
         return GatewayRouterFunctions.route("product_service")
-                .route(RequestPredicates.path("/api/product"),
-                        HandlerFunctions.http("http://localhost:8080/api/product"))
-                .route(RequestPredicates.GET("/api/product/*"),
-                        HandlerFunctions.http("http://localhost:8080/api/product/*"))
-                .route(RequestPredicates.POST("/api/product/create"),
-                        HandlerFunctions.http("http://localhost:8080/api/product/create"))
-                .route(RequestPredicates.DELETE("/api/product/*"),
-                        HandlerFunctions.http("http://localhost:8080/api/product/*"))
+                .route(RequestPredicates.path("/api/product"), HandlerFunctions.http("http://localhost:8080/api/product"))
+                .route(RequestPredicates.GET("/api/product/*"), HandlerFunctions.http("http://localhost:8080/api/product/*"))
+                .route(RequestPredicates.POST("/api/product/create"), HandlerFunctions.http("http://localhost:8080/api/product/create"))
+                .route(RequestPredicates.DELETE("/api/product/*"), HandlerFunctions.http("http://localhost:8080/api/product/*"))
                 .build();
     }
 
@@ -30,10 +26,8 @@ public class Routes {
     public RouterFunction<ServerResponse> orderServiceRoute(){
 
         return GatewayRouterFunctions.route("order_service")
-                .route(RequestPredicates.path("/api/order"),
-                        HandlerFunctions.http("http://localhost:8080/api/order"))
-                .route(RequestPredicates.POST("/api/order"),
-                        HandlerFunctions.http("http://localhost:8080/api/order"))
+                .route(RequestPredicates.path("/api/order"), HandlerFunctions.http("http://localhost:8081/api/order"))
+                .route(RequestPredicates.POST("/api/order"), HandlerFunctions.http("http://localhost:8081/api/order"))
                 .build();
     }
 
@@ -41,10 +35,8 @@ public class Routes {
     public RouterFunction<ServerResponse> inventoryServiceRoute(){
 
         return GatewayRouterFunctions.route("inventory_service")
-                .route(RequestPredicates.path("/api/inventory"),
-                        HandlerFunctions.http("http://localhost:8080/api/inventory"))
-                .route(RequestPredicates.GET("/api/inventory"),
-                        HandlerFunctions.http("http://localhost:8080/api/inventory"))
+                .route(RequestPredicates.path("/api/inventory"), HandlerFunctions.http("http://localhost:8082/api/inventory"))
+                .route(RequestPredicates.GET("/api/inventory"), HandlerFunctions.http("http://localhost:8082/api/inventory"))
                 .build();
     }
 }

@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Route management per service">
+    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Route management per service - Adding order and inventory service">
+      <change afterPath="$PROJECT_DIR$/api-gateway/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/Routes.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/Routes.java" afterDir="false" />
     </list>
@@ -248,7 +249,10 @@
       <workItem from="1730212966179" duration="42000" />
       <workItem from="1730276751811" duration="660000" />
       <workItem from="1730297600810" duration="2234000" />
-      <workItem from="1730302049916" duration="750000" />
+      <workItem from="1730302049916" duration="3792000" />
+      <workItem from="1730364279787" duration="1599000" />
+      <workItem from="1730734728208" duration="375000" />
+      <workItem from="1730735120220" duration="2340000" />
     </task>
     <task id="LOCAL-00001" summary="Updating - Removing idea folder from the repository">
       <option name="closed" value="true" />
@@ -482,7 +486,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730300747282</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Update - Route management per service - Adding order and inventory service">
+      <option name="closed" value="true" />
+      <created>1730302830841</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1730302830841</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,6 +534,7 @@
     <MESSAGE value="Update - Fixing commit warnings" />
     <MESSAGE value="Update - Improving gitignore" />
     <MESSAGE value="Update - Route management per service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Route management per service" />
+    <MESSAGE value="Update - Route management per service - Adding order and inventory service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Route management per service - Adding order and inventory service" />
   </component>
 </project>
