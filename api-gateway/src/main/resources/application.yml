@@ -1,4 +1,10 @@
 spring:
-  application.name: api-gateway
+  application:
+    name: api-gateway
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "http://localhost:8181/realms/online-store-security-realm"
 server:
   port: 9000

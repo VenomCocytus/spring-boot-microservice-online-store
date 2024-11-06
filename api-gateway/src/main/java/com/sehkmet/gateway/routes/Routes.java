@@ -1,4 +1,4 @@
-package com.sehkmet.gateway;
+package com.sehkmet.gateway.routes;
 
 import org.springframework.cloud.gateway.server.mvc.handler.GatewayRouterFunctions;
 import org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions;

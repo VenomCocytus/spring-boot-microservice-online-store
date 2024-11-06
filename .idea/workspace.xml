@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Route management per service - Adding order and inventory service">
-      <change afterPath="$PROJECT_DIR$/api-gateway/docker-compose.yml" afterDir="false" />
+    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Adding a docker-compose.yml for keycloak and postgres">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/config/KeycloakSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/Routes.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/Routes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/Routes.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/routes/Routes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +256,10 @@
       <workItem from="1730302049916" duration="3792000" />
       <workItem from="1730364279787" duration="1599000" />
       <workItem from="1730734728208" duration="375000" />
-      <workItem from="1730735120220" duration="2340000" />
+      <workItem from="1730735120220" duration="2679000" />
+      <workItem from="1730794535993" duration="1406000" />
+      <workItem from="1730817582664" duration="6189000" />
+      <workItem from="1730881107298" duration="3999000" />
     </task>
     <task id="LOCAL-00001" summary="Updating - Removing idea folder from the repository">
       <option name="closed" value="true" />
@@ -494,11 +501,22 @@
       <option name="project" value="LOCAL" />
       <updated>1730302830841</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Update - Adding a docker-compose.yml for keycloak and postgres">
+      <option name="closed" value="true" />
+      <created>1730737797361</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1730737797361</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -535,6 +553,7 @@
     <MESSAGE value="Update - Improving gitignore" />
     <MESSAGE value="Update - Route management per service" />
     <MESSAGE value="Update - Route management per service - Adding order and inventory service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Route management per service - Adding order and inventory service" />
+    <MESSAGE value="Update - Adding a docker-compose.yml for keycloak and postgres" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Adding a docker-compose.yml for keycloak and postgres" />
   </component>
 </project>
