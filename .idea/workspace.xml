@@ -4,91 +4,249 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="Update - Adding a docker-compose.yml for keycloak and postgres">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/config/KeycloakSecurityConfig.java" afterDir="false" />
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/spring-boot-microservices-store.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/Routes.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/routes/Routes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/ApiGatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/config/KeycloakSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/routes/Routes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/test/java/com/sehkmet/gateway/ApiGatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/198c8cf8-dd23-405f-bfe3-d803fa288ea9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/26d24346-b5fe-411a-a3b4-13d294c88492-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/4cced3fc-7c31-43ee-b71a-d7cbaba465f6-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/64c57aec-7587-4835-927b-d0dd69929998-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/685f00f0-ee8a-4b4d-9e11-6b7b7f90607d-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/70644407-15a2-4719-a578-80d84622a91b-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/73166a68-d787-4e63-9998-eb2be99e9e31-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/806f54c9-455c-4b02-8ee2-dd23a6e67c6c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/8209c3b9-60e2-40c5-8d31-dce081494241-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/9cd87a02-236c-495c-ab92-176819a139f0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/a99c5867-ff4c-4e4b-bf8f-4b26813fb312-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/ad1ab1bd-872e-4c51-937e-c88cae9292ef-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/b99aba30-8b2b-4963-a64b-78cf0ff00484-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/ef4efa7e-d289-44bb-a2a6-1c9fce19d19e-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/allure-results/fbdb3b43-5d68-4215-9155-c573071c53c9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/docker/mysql/init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/InventoryServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/controller/InventoryCommandController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/InventoryCommandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/model/Inventory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/repository/InventoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/db/migration/V1__init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/db/migration/V2__add_inventory.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/TestInventoryServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/common/specification/InventoryServiceApiSpecification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/config/TestcontainersConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sehkmet/microservices/inventoryservice/service/InventoryServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/0a18f423-1087-4f0f-abd1-7e9d4e0c5aed-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/0d041d25-1482-4ed8-9110-658d822c09fc-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/1461ba52-ee01-48c2-85a7-fbcb70d14d78-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/149d56e1-9aba-4482-bae9-241d93a27ccf-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/15b63253-7269-41ae-b614-c9733df361d0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/26f4b6da-b95f-466e-8be4-dd797f1a878d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/3663ce21-3136-40b2-abb8-d2b0b21d5cf1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/3e5d9619-cbe7-469e-ab18-b519f99d5484-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/45db0122-725a-4ef2-9646-249ce045ba4c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/63dd37f7-36bf-46d7-8250-7ca89ee6057a-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/6bc748d9-2451-4974-995f-34245354c537-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/6bf2ead8-2203-4526-9e8b-c654d8b8962e-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/6d3086e7-4052-4118-bf61-1a57859820b1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/7457113e-4f57-41d2-913a-b3f7b25694fd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/7d0a6503-1738-4816-9929-04ee7b43c00e-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/8159f5d5-47bc-436c-ba0f-9996a4ff9275-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/88a6b6a7-6b36-4cd5-8e81-7aff2b466840-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/947aab71-ab92-4050-838e-0b7eaa951a62-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/a4892a47-b260-4365-acbf-d8c5340e48fd-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/af460bd9-0c24-42eb-b40e-3ffa09aefa87-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/b8b3a899-2fcc-4fe9-a841-19014e4354dd-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/df1e6def-d635-4724-870f-37212b518617-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/e976141e-41da-46a0-99f5-7f80bbf033bd-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/allure-results/f8194808-7e74-4e8c-ab44-b97277555b90-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/docker/mysql/init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/OrderServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/client/InventoryClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/controller/OrderCommandController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/dto/PlaceOrderRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/OrderCommandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/mapper/OrderMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/mapper/config/MapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/model/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/db/migration/V1__init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/TestOrderServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/client/InventoryClientStub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/common/request/CommandRequests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/common/specification/OrderServiceApiSpecification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/config/TestcontainersConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sehkmet/microservices/orderservice/services/OrderCommandServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/04b3d610-c537-4b47-9a10-788b320d80de-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/160ba619-6925-47e4-bcfd-234a82ec833a-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/301222bd-180a-4d45-b5be-ed3330dd0036-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/33c49e99-0b8e-486d-9efd-48baa2aa7abc-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/3c5a49fa-c000-4fc5-b4fe-8f6647224f05-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/47bd9055-8092-49db-962d-07c14797cd4f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/47d09764-405b-4334-8267-92f806d9db1f-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/569cc184-06d2-4b5f-bc42-ca11e7d034a1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/5e2c0a6f-0064-4ed5-b6cb-a741f4faa935-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/65ffefbb-e446-4681-8a85-d3bad07f96c6-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/7b020845-29b8-41b9-b616-14e7b0e8c8b4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/7d919be6-654f-4411-9a20-1454ff7d081c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/87f1d034-00f9-4d80-976e-0b359fb527c1-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/8f7b24fd-b268-47b9-83dd-4f0b73438798-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/a1afdfdd-6941-4510-908f-31c5a5ed8bc8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/a60c3f2a-2036-4e02-b281-8bc01927f7ca-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/a968c954-babc-44e1-925e-6d3ade6013ad-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/bb73c841-60c7-44fb-9776-a11fa215b051-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/cb51a3b2-b33c-4e56-9a90-e166cf7a56c8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/e081e48f-804c-492e-9e0a-99b9da8b0619-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/f380ccbc-da3c-47bf-9f86-9087a98cfcd0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/allure-results/f7e00436-1981-45ae-b1be-ccfbb0d640f9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/ProductServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/controller/ProductCommandController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/dto/request/CreateProductRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/dto/response/CreateProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/service/ProductCommandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/service/impl/ProductCommandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/component/Translator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/config/Internationalization.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/exception/runtime/ProductNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/listeners/MongoListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/mapper/ErrorMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/mapper/ProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/mapper/config/MapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/model/BaseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/query/controller/ProductQueryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/query/dto/GetProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/query/service/ProductQueryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/query/service/impl/ProductQueryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/response/GenericResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/utils/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/validation/ValidationGroups.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/validation/annotation/ProductIdPathVariableExists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/validation/annotation/ProductNameNotAlreadyExists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/validation/validator/ProductIdPathVariableExistsValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/validation/validator/ProductNameNotAlreadyExistsValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/lang/messages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/lang/messages_es.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/lang/messages_fr.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/TestProductServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/common/request/CommandRequests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/common/specification/ProductServiceApiSpecification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/config/TestcontainersConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sehkmet/microservices/productservice/services/ProductCommandServiceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/common-library/client">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/common-library/database">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JpbToolWindowState">
-    <option name="isToolWindowVisible" value="false" />
-  </component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
+  &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2kjj2qjO2Sdxd9IbM7DBe9vtXL1" />
+  <component name="ProjectId" id="2pWDzEIqkCCUC7NyZMlFbxwtT9V" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/code__revision&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Sehkmet/Web App/Online Store/spring-boot-microservices-store/api-gateway&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.21761219&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "android.gradle.sync.needed": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "22",
+    "last_opened_file_path": "E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservices-store\order-service\src\test\java\com\sehkmet\microservices\orderservice" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store" />
+      <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\.mvn" />
     </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn allure:report" />
-      <command value="mvn clean compile" />
-      <command value="mvn clean install" />
-    </option>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -97,83 +255,23 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OrderCommandServiceApplicationTests.shouldNotPlaceAnOrder">
-    <configuration name="InventoryServiceApplicationTests.shouldBeInStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sehkmet.microservices.inventoryservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sehkmet.microservices.inventoryservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sehkmet.microservices.inventoryservice.service.InventoryServiceApplicationTests" />
-      <option name="METHOD_NAME" value="shouldBeInStock" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager" selected="Spring Boot.CommonLibraryApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="client.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryServiceApplicationTests.shouldNotBeInStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sehkmet.microservices.inventoryservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sehkmet.microservices.inventoryservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sehkmet.microservices.inventoryservice.service.InventoryServiceApplicationTests" />
-      <option name="METHOD_NAME" value="shouldNotBeInStock" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="client.main" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderCommandServiceApplicationTests.shouldNotPlaceAnOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sehkmet.microservices.orderservice.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sehkmet.microservices.orderservice.services" />
-      <option name="MAIN_CLASS_NAME" value="com.sehkmet.microservices.orderservice.services.OrderCommandServiceApplicationTests" />
-      <option name="METHOD_NAME" value="shouldNotPlaceAnOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderCommandServiceApplicationTests.shouldPlaceAnOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sehkmet.microservices.orderservice.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sehkmet.microservices.orderservice.services" />
-      <option name="MAIN_CLASS_NAME" value="com.sehkmet.microservices.orderservice.services.OrderCommandServiceApplicationTests" />
-      <option name="METHOD_NAME" value="shouldPlaceAnOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductCommandServiceApplicationTests.shouldCreateProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="product-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sehkmet.microservices.productservice.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sehkmet.microservices.productservice.services" />
-      <option name="MAIN_CLASS_NAME" value="com.sehkmet.microservices.productservice.services.ProductCommandServiceApplicationTests" />
-      <option name="METHOD_NAME" value="shouldCreateProduct" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="ApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.api.ApiApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,9 +283,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ClientApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.client.ClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.client.ClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonLibraryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common-library" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.commonlibrary.CommonLibraryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="core" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.core.CoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="database" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.database.DatabaseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="inventory-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.microservices.inventoryservice.InventoryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoggingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="logging" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.logging.LoggingApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -206,317 +346,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.OrderCommandServiceApplicationTests.shouldNotPlaceAnOrder" />
-        <item itemvalue="JUnit.OrderCommandServiceApplicationTests.shouldPlaceAnOrder" />
-        <item itemvalue="JUnit.InventoryServiceApplicationTests.shouldNotBeInStock" />
-        <item itemvalue="JUnit.InventoryServiceApplicationTests.shouldBeInStock" />
-        <item itemvalue="JUnit.ProductCommandServiceApplicationTests.shouldCreateProduct" />
-      </list>
-    </recent_temporary>
+    <configuration name="UtilsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="utils" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.utils.UtilsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="910bc27c-302c-459a-a279-bd88d7263f21" name="Changes" comment="" />
-      <created>1723803675440</created>
+      <changelist id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="" />
+      <created>1732873200979</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1723803675440</updated>
-      <workItem from="1723803676522" duration="28000" />
-      <workItem from="1724924591255" duration="9092000" />
-      <workItem from="1724935917933" duration="37000" />
-      <workItem from="1724940921470" duration="601000" />
-      <workItem from="1725141174709" duration="981000" />
-      <workItem from="1725287182534" duration="1318000" />
-      <workItem from="1725361990740" duration="5567000" />
-      <workItem from="1725536056938" duration="1627000" />
-      <workItem from="1725547426316" duration="9000" />
-      <workItem from="1725612763142" duration="1234000" />
-      <workItem from="1725872932429" duration="17232000" />
-      <workItem from="1725954946474" duration="10262000" />
-      <workItem from="1726045927890" duration="820000" />
-      <workItem from="1726068858305" duration="68000" />
-      <workItem from="1726389875879" duration="604000" />
-      <workItem from="1726477931657" duration="596000" />
-      <workItem from="1726590096159" duration="600000" />
-      <workItem from="1726645885051" duration="501000" />
-      <workItem from="1726822914773" duration="12978000" />
-      <workItem from="1726875005189" duration="4166000" />
-      <workItem from="1726879390854" duration="447000" />
-      <workItem from="1729850727426" duration="13884000" />
-      <workItem from="1729873339586" duration="15000" />
-      <workItem from="1730105028628" duration="5371000" />
-      <workItem from="1730119527183" duration="16000" />
-      <workItem from="1730193466002" duration="7819000" />
-      <workItem from="1730212966179" duration="42000" />
-      <workItem from="1730276751811" duration="660000" />
-      <workItem from="1730297600810" duration="2234000" />
-      <workItem from="1730302049916" duration="3792000" />
-      <workItem from="1730364279787" duration="1599000" />
-      <workItem from="1730734728208" duration="375000" />
-      <workItem from="1730735120220" duration="2679000" />
-      <workItem from="1730794535993" duration="1406000" />
-      <workItem from="1730817582664" duration="6189000" />
-      <workItem from="1730881107298" duration="3999000" />
+      <updated>1732873200979</updated>
+      <workItem from="1732873202058" duration="1746000" />
+      <workItem from="1732876068736" duration="450000" />
+      <workItem from="1732876622069" duration="892000" />
     </task>
-    <task id="LOCAL-00001" summary="Updating - Removing idea folder from the repository">
-      <option name="closed" value="true" />
-      <created>1725141443455</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1725141443455</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Updating - updating code readability">
-      <option name="closed" value="true" />
-      <created>1725875678417</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1725875678417</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Updating - Adding validation annotation, adding mapstruct to the code and suppress ProductValidator">
-      <option name="closed" value="true" />
-      <created>1725899932661</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1725899932661</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Updating - Fixing commit warnings">
-      <option name="closed" value="true" />
-      <created>1725900039369</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1725900039369</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Updating - Adding a global advice controller">
-      <option name="closed" value="true" />
-      <created>1725961530718</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1725961530718</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Updating - Adding complementary test">
-      <option name="closed" value="true" />
-      <created>1725988370009</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1725988370009</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Updating - Fixing commit warnings">
-      <option name="closed" value="true" />
-      <created>1725988451089</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1725988451089</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Updating - Adding a general api response and making all endpoints of the product service to return a response entity">
-      <option name="closed" value="true" />
-      <created>1726842311962</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1726842311962</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Update - Fixing commit warnings">
-      <option name="closed" value="true" />
-      <created>1726842358694</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1726842358694</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Update - Fixing commit warnings">
-      <option name="closed" value="true" />
-      <created>1729777771092</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1729777771092</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Update - Code revision">
-      <option name="closed" value="true" />
-      <created>1729853647699</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1729853647699</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Update - Fixing commit warnings">
-      <option name="closed" value="true" />
-      <created>1729853718467</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1729853718467</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Update - Adding unversioned files">
-      <option name="closed" value="true" />
-      <created>1729853768129</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1729853768129</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Update - Refractoring some classes">
-      <option name="closed" value="true" />
-      <created>1729854904026</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1729854904026</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Update - Refractoring some classes">
-      <option name="closed" value="true" />
-      <created>1729854913486</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1729854913486</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Update - Fixing commit warnings">
-      <option name="closed" value="true" />
-      <created>1729854978340</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1729854978340</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Update - Adding basic tests and adjusting dto to place an order">
-      <option name="closed" value="true" />
-      <created>1729856707452</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1729856707452</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Update - Adding basic test to place an order">
-      <option name="closed" value="true" />
-      <created>1729866577412</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1729866577412</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Update - Cleaning code">
-      <option name="closed" value="true" />
-      <created>1729867184673</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1729867184673</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Update - Fixing dependency issues">
-      <option name="closed" value="true" />
-      <created>1729869812303</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1729869812304</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Update - Improving the inventory service">
-      <option name="closed" value="true" />
-      <created>1729871989831</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1729871989831</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Update - Finalizing basic test for the inventory service">
-      <option name="closed" value="true" />
-      <created>1729872784492</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1729872784492</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Update - Adding unversioned files">
-      <option name="closed" value="true" />
-      <created>1729872975144</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1729872975144</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Update - Code review">
-      <option name="closed" value="true" />
-      <created>1730117048976</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1730117048976</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Update - Starting integration test with wiremock">
-      <option name="closed" value="true" />
-      <created>1730119005677</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1730119005677</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Update - Fixing all the tests">
-      <option name="closed" value="true" />
-      <created>1730197924543</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1730197924543</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Update - Fixing commit warnings">
-      <option name="closed" value="true" />
-      <created>1730198002176</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1730198002176</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Update - Improving gitignore">
-      <option name="closed" value="true" />
-      <created>1730297892021</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1730297892021</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Update - Route management per service">
-      <option name="closed" value="true" />
-      <created>1730300747282</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1730300747282</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Update - Route management per service - Adding order and inventory service">
-      <option name="closed" value="true" />
-      <created>1730302830841</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1730302830841</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Update - Adding a docker-compose.yml for keycloak and postgres">
-      <option name="closed" value="true" />
-      <created>1730737797361</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1730737797361</updated>
-    </task>
-    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -528,32 +381,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updating - Removing idea folder from the repository" />
-    <MESSAGE value="Updating - updating code readability" />
-    <MESSAGE value="Updating - Adding validation annotation, adding mapstruct to the code and suppress ProductValidator" />
-    <MESSAGE value="Updating - Adding a global advice controller" />
-    <MESSAGE value="Updating - Adding complementary test" />
-    <MESSAGE value="Updating - Fixing commit warnings" />
-    <MESSAGE value="Updating - Adding a general api response and making all endpoints of the product service to return a response entity" />
-    <MESSAGE value="Update - Code revision" />
-    <MESSAGE value="Update - Refractoring some classes" />
-    <MESSAGE value="Update - Adding basic tests and adjusting dto to place an order" />
-    <MESSAGE value="Update - Adding basic test to place an order" />
-    <MESSAGE value="Update - Cleaning code" />
-    <MESSAGE value="Update - Fixing dependency issues" />
-    <MESSAGE value="Update - Improving the inventory service" />
-    <MESSAGE value="Update - Finalizing basic test for the inventory service" />
-    <MESSAGE value="Update - Adding unversioned files" />
-    <MESSAGE value="Update - Code review" />
-    <MESSAGE value="Update - Starting integration test with wiremock" />
-    <MESSAGE value="Update - Fixing all the tests" />
-    <MESSAGE value="Update - Fixing commit warnings" />
-    <MESSAGE value="Update - Improving gitignore" />
-    <MESSAGE value="Update - Route management per service" />
-    <MESSAGE value="Update - Route management per service - Adding order and inventory service" />
-    <MESSAGE value="Update - Adding a docker-compose.yml for keycloak and postgres" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Adding a docker-compose.yml for keycloak and postgres" />
   </component>
 </project>

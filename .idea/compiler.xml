@@ -2,24 +2,44 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="core" />
+        <module name="database" />
+        <module name="inventory-service" />
+        <module name="utils" />
         <module name="api-gateway" />
         <module name="product-service" />
+        <module name="logging" />
+        <module name="client" />
         <module name="order-service" />
-        <module name="inventory-service" />
+        <module name="api" />
+        <module name="common-library" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client.main" target="21" />
+      <module name="client.test" target="21" />
+      <module name="database.main" target="21" />
+      <module name="database.test" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
+      <module name="client" options="-parameters" />
+      <module name="common-library" options="-parameters" />
+      <module name="core" options="-parameters" />
+      <module name="database" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
+      <module name="logging" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
+      <module name="spring-boot-microservice-online-store" options="-parameters" />
+      <module name="utils" options="-parameters" />
     </option>
   </component>
 </project>
