@@ -16,7 +16,6 @@
         <module name="client" />
         <module name="order-service" />
         <module name="api" />
-        <module name="common-library" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,14 +30,14 @@
       <module name="api" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
       <module name="client" options="-parameters" />
-      <module name="common-library" options="-parameters" />
+      <module name="common-library" options="" />
       <module name="core" options="-parameters" />
       <module name="database" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
       <module name="logging" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
-      <module name="spring-boot-microservice-online-store" options="-parameters" />
+      <module name="spring-boot-microservice-online-store" options="" />
       <module name="utils" options="-parameters" />
     </option>
   </component>

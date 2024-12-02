@@ -11,6 +11,8 @@
     <groupId>com.sehkmet</groupId>
     <artifactId>common-library</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <name>common-library</name>
     <description>common-library</description>
 
