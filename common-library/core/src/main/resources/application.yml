@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: core
+  messages:
+    basename: lang/messages,config.i18n.messages
+    fallback-to-system-locale: false
+    encoding: UTF-8
+    cache-duration: 5

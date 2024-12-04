@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Adding a custom validation example">
-      <change afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/common/GenericResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/configuration/LocaleResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/validation/validator/OtpNotBlankIfAdminActivated2FAValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/validation/validator/OtpNotBlankIfAdminActivated2FAValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/utils/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +216,7 @@
       <workItem from="1733167615160" duration="67000" />
       <workItem from="1733214926113" duration="928000" />
       <workItem from="1733235397065" duration="215000" />
-      <workItem from="1733300750738" duration="1896000" />
+      <workItem from="1733300750738" duration="3815000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
