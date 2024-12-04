@@ -1,10 +1,10 @@
 package com.sehkmet.microservices.productservice.command.service.query.impl;
 
+import com.sehkmet.microservices.productservice.command.dto.query.response.GetProductResponse;
+import com.sehkmet.microservices.productservice.command.service.query.ProductQueryService;
 import com.sehkmet.microservices.productservice.exception.runtime.ProductNotFoundException;
 import com.sehkmet.microservices.productservice.mapper.ProductMapper;
 import com.sehkmet.microservices.productservice.model.Product;
-import com.sehkmet.microservices.productservice.command.dto.query.response.GetProductResponse;
-import com.sehkmet.microservices.productservice.command.service.query.ProductQueryService;
 import com.sehkmet.microservices.productservice.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.sehkmet.microservices.productservice.utils.Utils.translate;
+import static com.sehkmet.utils.utils.Utils.translate;
 
 @Service
 @Slf4j

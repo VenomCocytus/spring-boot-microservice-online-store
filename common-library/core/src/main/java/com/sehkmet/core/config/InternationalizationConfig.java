@@ -1,4 +1,4 @@
-package com.sehkmet.core.configuration;
+package com.sehkmet.core.config;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -15,7 +15,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 @Configuration
-public class LocaleResolver implements WebMvcConfigurer {
+public class InternationalizationConfig implements WebMvcConfigurer {
 
     /**
      * ReloadableResourceBundleMessageSource is the most common MessageSource implementation that

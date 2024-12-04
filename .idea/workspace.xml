@@ -5,13 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Adding a custom validation example">
+      <change afterPath="$PROJECT_DIR$/common-library/api/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-library/api/src/main/resources/lang/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/api/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/configuration/LocaleResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/config/InternationalizationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/resources/lang/messages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/resources/lang/messages_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/api/src/main/resources/lang/messages_es.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/resources/lang/messages_fr.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/api/src/main/resources/lang/messages_fr.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/database/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/logging/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/logging/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/utils/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/component/Translator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/config/Internationalization.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/mapper/ErrorMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/response/GenericResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/utils/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/controller/command/ProductCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/controller/command/ProductCommandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/controller/query/ProductQueryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/controller/query/ProductQueryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/service/command/impl/ProductCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/service/command/impl/ProductCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/service/query/impl/ProductQueryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/service/query/impl/ProductQueryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/validation/validator/OtpNotBlankIfAdminActivated2FAValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/validation/validator/OtpNotBlankIfAdminActivated2FAValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/lang/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/lang/messages_en.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +58,24 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;contexts&quot;: [
+    {
+      &quot;name&quot;: &quot;docker-desktop&quot;
+    }
+  ],
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="KubernetesSettings">
+    <option name="contextName" value="docker-desktop" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,24 +96,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "android.gradle.sync.needed": "true",
-    "git-widget-placeholder": "feature/code__revision",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "22",
-    "last_opened_file_path": "E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store/common-library",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/code__revision&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;22&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store/common-library&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store" />
@@ -104,7 +136,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CommonLibraryApplication">
+  <component name="RunManager" selected="Spring Boot.ApiApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="client.main" />
       <method v="2">
@@ -132,23 +164,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="client" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.client.ClientApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.client.ClientApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommonLibraryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="common-library" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sehkmet.commonlibrary.CommonLibraryApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -221,6 +239,8 @@
       <workItem from="1733214926113" duration="928000" />
       <workItem from="1733235397065" duration="215000" />
       <workItem from="1733300750738" duration="5179000" />
+      <workItem from="1733310827772" duration="4702000" />
+      <workItem from="1733324051257" duration="424000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />

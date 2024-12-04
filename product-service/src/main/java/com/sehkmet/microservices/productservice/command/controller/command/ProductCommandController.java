@@ -1,9 +1,9 @@
 package com.sehkmet.microservices.productservice.command.controller.command;
 
+import com.sehkmet.core.common.GenericResponse;
 import com.sehkmet.microservices.productservice.command.dto.command.request.CreateProductRequest;
 import com.sehkmet.microservices.productservice.command.dto.command.response.CreateProductResponse;
 import com.sehkmet.microservices.productservice.command.service.command.ProductCommandService;
-import com.sehkmet.microservices.productservice.response.GenericResponse;
 import com.sehkmet.microservices.productservice.validation.annotation.ProductIdPathVariableExists;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import static com.sehkmet.microservices.productservice.utils.Utils.translate;
+import static com.sehkmet.utils.utils.Utils.translate;
 
 @Validated
 @RestController

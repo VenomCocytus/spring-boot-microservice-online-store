@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import static com.sehkmet.microservices.productservice.utils.Utils.translate;
+import static com.sehkmet.utils.utils.Utils.translate;
 
 @Service
 @RequiredArgsConstructor

@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 import java.lang.reflect.Field;
 
-import static com.sehkmet.microservices.productservice.utils.Utils.translate;
+import static com.sehkmet.utils.utils.Utils.translate;
 
 @RequiredArgsConstructor
 public class OtpNotBlankIfAdminActivated2FAValidator implements ConstraintValidator<OtpNotBlankIfAdminActivated2FA, Object> {

@@ -1,7 +1,7 @@
-package com.sehkmet.core.exception;
+package com.sehkmet.api.exception;
 
-import com.sehkmet.core.component.ErrorBuilder;
 import com.sehkmet.core.common.GenericResponse;
+import com.sehkmet.core.component.ErrorBuilder;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
