@@ -2,6 +2,7 @@ package com.sehkmet.core.exception;
 
 import com.sehkmet.core.common.ErrorBuilder;
 import com.sehkmet.core.common.GenericResponse;
+import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import org.apache.catalina.connector.ClientAbortException;
@@ -15,6 +16,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+
+import static com.sehkmet.utils.utils.Utils.getStackTraceAsString;
+import static com.sehkmet.utils.utils.Utils.translate;
 
 @RestControllerAdvice
 @RequiredArgsConstructor

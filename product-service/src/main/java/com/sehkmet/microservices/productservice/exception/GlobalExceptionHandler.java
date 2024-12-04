@@ -1,7 +1,6 @@
 package com.sehkmet.microservices.productservice.exception;
 
 import com.sehkmet.microservices.productservice.exception.runtime.ProductNotFoundException;
-import com.sehkmet.microservices.productservice.mapper.ErrorMapper;
 import com.sehkmet.microservices.productservice.response.GenericResponse;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
