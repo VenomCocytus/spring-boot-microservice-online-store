@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Value;
 
 import java.lang.reflect.Field;
 
+import static com.sehkmet.microservices.productservice.utils.Utils.translate;
+
 @RequiredArgsConstructor
 public class OtpNotBlankIfAdminActivated2FAValidator implements ConstraintValidator<OtpNotBlankIfAdminActivated2FA, Object> {
 
@@ -35,58 +37,58 @@ public class OtpNotBlankIfAdminActivated2FAValidator implements ConstraintValida
                     }
                 } catch (IllegalAccessException e) {
                     constraintValidatorContext.disableDefaultConstraintViolation();
-                    constraintValidatorContext.buildConstraintViolationWithTemplate(trans("constraint.violation.template.illegal-access-annotation-alert"))
+                    constraintValidatorContext.buildConstraintViolationWithTemplate(translate("constraint.violation.template.illegal-access-annotation-alert"))
                             .addConstraintViolation();
                     return false;
                 }
             }
 
             // Getting some user information ot throw exception
-            User userToValidate = this.userRepository.findByUsername(username);
-            if(userToValidate == null) {
-                constraintValidatorContext.disableDefaultConstraintViolation();
-                constraintValidatorContext.buildConstraintViolationWithTemplate(trans("constraint.violation.template.user-not-exists-with-username"))
-                        .addConstraintViolation();
-                return false;
-            }
-
-            boolean isOtpActivatedByUser = userToValidate.isTotp();
-            boolean isUserFirstConnection = userToValidate.isFirstConnexion();
-            boolean canUserAccessAdminPortal = userToValidate.isAdmin();
-
-            // Checking if the user can access the admin portal
-            if(!canUserAccessAdminPortal) {
-                constraintValidatorContext.disableDefaultConstraintViolation();
-                constraintValidatorContext.buildConstraintViolationWithTemplate(trans("constraint.violation.template.user-not-admin-alert"))
-                        .addConstraintViolation();
-                return false;
-            }
-
-            // Checking if the otp has been activated by the user
-            if(isOtpActivatedByUser || isUserFirstConnection) {
-
-                // Checking if the otp is present
-                if (otp == null || otp.trim().isEmpty()) {
-                    constraintValidatorContext.disableDefaultConstraintViolation();
-                    constraintValidatorContext.buildConstraintViolationWithTemplate(trans("constraint.violation.template.otp-required-annotation-alert"))
-                            .addConstraintViolation();
-                    return false;
-                }
-                if(otp.length() != maxOtpLength) {
-                    constraintValidatorContext.disableDefaultConstraintViolation();
-                    constraintValidatorContext.buildConstraintViolationWithTemplate(trans("default.otp-length-validation-alert"))
-                            .addConstraintViolation();
-                    return false;
-                }
-            }
-
-            // Checking if the otp must be present for the user
-            if(!isOtpActivatedByUser && otp != null) {
-                constraintValidatorContext.disableDefaultConstraintViolation();
-                constraintValidatorContext.buildConstraintViolationWithTemplate(trans("constraint.violation.template.otp-not-required-annotation-alert"))
-                        .addConstraintViolation();
-                return false;
-            }
+//            User userToValidate = this.userRepository.findByUsername(username);
+//            if(userToValidate == null) {
+//                constraintValidatorContext.disableDefaultConstraintViolation();
+//                constraintValidatorContext.buildConstraintViolationWithTemplate(translate("constraint.violation.template.user-not-exists-with-username"))
+//                        .addConstraintViolation();
+//                return false;
+//            }
+//
+//            boolean isOtpActivatedByUser = userToValidate.isTotp();
+//            boolean isUserFirstConnection = userToValidate.isFirstConnexion();
+//            boolean canUserAccessAdminPortal = userToValidate.isAdmin();
+//
+//            // Checking if the user can access the admin portal
+//            if(!canUserAccessAdminPortal) {
+//                constraintValidatorContext.disableDefaultConstraintViolation();
+//                constraintValidatorContext.buildConstraintViolationWithTemplate(translate("constraint.violation.template.user-not-admin-alert"))
+//                        .addConstraintViolation();
+//                return false;
+//            }
+//
+//            // Checking if the otp has been activated by the user
+//            if(isOtpActivatedByUser || isUserFirstConnection) {
+//
+//                // Checking if the otp is present
+//                if (otp == null || otp.trim().isEmpty()) {
+//                    constraintValidatorContext.disableDefaultConstraintViolation();
+//                    constraintValidatorContext.buildConstraintViolationWithTemplate(translate("constraint.violation.template.otp-required-annotation-alert"))
+//                            .addConstraintViolation();
+//                    return false;
+//                }
+//                if(otp.length() != maxOtpLength) {
+//                    constraintValidatorContext.disableDefaultConstraintViolation();
+//                    constraintValidatorContext.buildConstraintViolationWithTemplate(translate("default.otp-length-validation-alert"))
+//                            .addConstraintViolation();
+//                    return false;
+//                }
+//            }
+//
+//            // Checking if the otp must be present for the user
+//            if(!isOtpActivatedByUser && otp != null) {
+//                constraintValidatorContext.disableDefaultConstraintViolation();
+//                constraintValidatorContext.buildConstraintViolationWithTemplate(translate("constraint.violation.template.otp-not-required-annotation-alert"))
+//                        .addConstraintViolation();
+//                return false;
+//            }
         }
 
         return true;
