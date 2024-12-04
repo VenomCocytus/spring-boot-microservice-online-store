@@ -1,8 +1,8 @@
-package com.sehkmet.microservices.productservice.query.controller;
+package com.sehkmet.microservices.productservice.command.controller.query;
 
 import com.sehkmet.microservices.productservice.exception.runtime.ProductNotFoundException;
-import com.sehkmet.microservices.productservice.query.dto.GetProductResponse;
-import com.sehkmet.microservices.productservice.query.service.ProductQueryService;
+import com.sehkmet.microservices.productservice.command.dto.query.response.GetProductResponse;
+import com.sehkmet.microservices.productservice.command.service.query.ProductQueryService;
 import com.sehkmet.microservices.productservice.response.GenericResponse;
 import com.sehkmet.microservices.productservice.validation.annotation.ProductIdPathVariableExists;
 import lombok.RequiredArgsConstructor;

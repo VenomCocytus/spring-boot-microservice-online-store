@@ -1,4 +1,4 @@
-package com.sehkmet.microservices.productservice.listeners;
+package com.sehkmet.microservices.productservice.component;
 
 import com.sehkmet.microservices.productservice.model.BaseModel;
 import org.apache.commons.lang3.StringUtils;

@@ -1,8 +1,8 @@
-package com.sehkmet.microservices.productservice.command.controller;
+package com.sehkmet.microservices.productservice.command.controller.command;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
-import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponse;
-import com.sehkmet.microservices.productservice.command.service.ProductCommandService;
+import com.sehkmet.microservices.productservice.command.dto.command.request.CreateProductRequest;
+import com.sehkmet.microservices.productservice.command.dto.command.response.CreateProductResponse;
+import com.sehkmet.microservices.productservice.command.service.command.ProductCommandService;
 import com.sehkmet.microservices.productservice.response.GenericResponse;
 import com.sehkmet.microservices.productservice.validation.annotation.ProductIdPathVariableExists;
 import jakarta.validation.Valid;

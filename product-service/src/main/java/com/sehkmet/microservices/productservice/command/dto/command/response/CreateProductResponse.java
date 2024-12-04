@@ -1,4 +1,4 @@
-package com.sehkmet.microservices.productservice.command.dto.response;
+package com.sehkmet.microservices.productservice.command.dto.command.response;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

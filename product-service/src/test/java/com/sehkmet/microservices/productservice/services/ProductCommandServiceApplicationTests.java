@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.productservice.services;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
+import com.sehkmet.microservices.productservice.command.dto.command.request.CreateProductRequest;
 import com.sehkmet.microservices.productservice.common.request.CommandRequests;
 import com.sehkmet.microservices.productservice.config.TestcontainersConfiguration;
 import io.qameta.allure.Description;

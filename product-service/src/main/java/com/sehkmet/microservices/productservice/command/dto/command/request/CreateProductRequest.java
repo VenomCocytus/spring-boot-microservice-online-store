@@ -1,4 +1,4 @@
-package com.sehkmet.microservices.productservice.command.dto.request;
+package com.sehkmet.microservices.productservice.command.dto.command.request;
 
 import com.sehkmet.microservices.productservice.validation.annotation.ProductNameNotAlreadyExists;
 import jakarta.validation.constraints.NotBlank;

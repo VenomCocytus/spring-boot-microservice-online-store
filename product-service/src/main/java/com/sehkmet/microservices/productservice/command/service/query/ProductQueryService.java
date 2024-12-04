@@ -1,7 +1,7 @@
-package com.sehkmet.microservices.productservice.query.service;
+package com.sehkmet.microservices.productservice.command.service.query;
 
 import com.sehkmet.microservices.productservice.exception.runtime.ProductNotFoundException;
-import com.sehkmet.microservices.productservice.query.dto.GetProductResponse;
+import com.sehkmet.microservices.productservice.command.dto.query.response.GetProductResponse;
 
 import java.util.List;
 

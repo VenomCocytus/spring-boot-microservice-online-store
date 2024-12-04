@@ -1,4 +1,4 @@
-package com.sehkmet.core.common;
+package com.sehkmet.core.component;
 
 import org.springframework.stereotype.Component;
 
@@ -8,6 +8,8 @@ import java.util.Map;
 @Component
 public class ErrorBuilder {
 
+    private final static String MESSAGE = "message";
+
     /**
      * Creates map with key: "message" and value: exception's message.
      *
@@ -16,7 +18,7 @@ public class ErrorBuilder {
      */
     public Map<String, String> createErrorMap(Throwable throwable) {
         Map<String, String> errorMessageMap = new HashMap<>();
-        errorMessageMap.put("message", throwable.getMessage());
+        errorMessageMap.put(MESSAGE, throwable.getMessage());
 
         return errorMessageMap;
     }
@@ -29,7 +31,7 @@ public class ErrorBuilder {
      */
     public Map<String, String> createErrorMap(String message) {
         Map<String, String> errorMessageMap = new HashMap<>();
-        errorMessageMap.put("message", message);
+        errorMessageMap.put(MESSAGE, message);
 
         return errorMessageMap;
     }
@@ -42,7 +44,7 @@ public class ErrorBuilder {
      */
     public Map<String, Object> createErrorMap(Map<String, String> messagesMap) {
         Map<String, Object> errorMessageMap = new HashMap<>();
-        errorMessageMap.put("message", messagesMap);
+        errorMessageMap.put(MESSAGE, messagesMap);
 
         return errorMessageMap;
     }

@@ -1,8 +1,8 @@
-package com.sehkmet.microservices.productservice.command.service.impl;
+package com.sehkmet.microservices.productservice.command.service.command.impl;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
-import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponse;
-import com.sehkmet.microservices.productservice.command.service.ProductCommandService;
+import com.sehkmet.microservices.productservice.command.dto.command.request.CreateProductRequest;
+import com.sehkmet.microservices.productservice.command.dto.command.response.CreateProductResponse;
+import com.sehkmet.microservices.productservice.command.service.command.ProductCommandService;
 import com.sehkmet.microservices.productservice.mapper.ProductMapper;
 import com.sehkmet.microservices.productservice.model.Product;
 import com.sehkmet.microservices.productservice.repository.ProductRepository;

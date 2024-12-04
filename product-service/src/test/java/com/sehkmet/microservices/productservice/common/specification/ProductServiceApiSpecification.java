@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.productservice.common.specification;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
+import com.sehkmet.microservices.productservice.command.dto.command.request.CreateProductRequest;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;

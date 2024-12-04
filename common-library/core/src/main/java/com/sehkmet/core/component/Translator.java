@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 
 import java.util.Locale;
 
+/**
+ * Utility class for internationalization (i18n) in a Spring application.
+ * This class provides methods to retrieve localized messages based on keys.
+ */
 @Component
 public class Translator {
 

@@ -1,9 +1,9 @@
 package com.sehkmet.microservices.productservice.mapper;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
-import com.sehkmet.microservices.productservice.command.dto.response.CreateProductResponse;
+import com.sehkmet.microservices.productservice.command.dto.command.request.CreateProductRequest;
+import com.sehkmet.microservices.productservice.command.dto.command.response.CreateProductResponse;
 import com.sehkmet.microservices.productservice.model.Product;
-import com.sehkmet.microservices.productservice.query.dto.GetProductResponse;
+import com.sehkmet.microservices.productservice.command.dto.query.response.GetProductResponse;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

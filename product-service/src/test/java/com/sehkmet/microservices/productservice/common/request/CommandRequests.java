@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.productservice.common.request;
 
-import com.sehkmet.microservices.productservice.command.dto.request.CreateProductRequest;
+import com.sehkmet.microservices.productservice.command.dto.command.request.CreateProductRequest;
 
 import java.math.BigDecimal;
 
