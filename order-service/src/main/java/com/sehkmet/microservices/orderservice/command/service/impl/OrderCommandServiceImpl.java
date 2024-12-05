@@ -1,6 +1,5 @@
 package com.sehkmet.microservices.orderservice.command.service.impl;
 
-import com.github.f4b6a3.uuid.UuidCreator;
 import com.sehkmet.microservices.orderservice.client.InventoryClient;
 import com.sehkmet.microservices.orderservice.command.dto.PlaceOrderRequest;
 import com.sehkmet.microservices.orderservice.command.dto.PlaceOrderResponse;
