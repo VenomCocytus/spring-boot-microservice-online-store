@@ -5,7 +5,7 @@ import jakarta.validation.constraints.*;
 
 public record VerifyStockRequest(
         @NotBlank(message = "{messages.inventory-sku-code-validation-not-blank-alert}")
-        @SkuCodeExists
+//        @SkuCodeExists
         String skuCode,
 
         @NotNull(message = "{messages.inventory-quantity-validation-not-null-alert}")

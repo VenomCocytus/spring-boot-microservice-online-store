@@ -1,11 +1,15 @@
 package com.sehkmet.microservices.inventoryservice.command.controller;
 
+import com.sehkmet.core.common.GenericResponse;
 import com.sehkmet.microservices.inventoryservice.command.dto.VerifyStockRequest;
 import com.sehkmet.microservices.inventoryservice.command.service.InventoryCommandService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import static com.sehkmet.utils.utils.Utils.translate;
 
 @RestController
 @RequestMapping("/api/inventory")
@@ -16,10 +20,16 @@ public class InventoryCommandController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public boolean isInStock(
+    public ResponseEntity<GenericResponse<Boolean>> isInStock(
             @Valid
             @RequestBody
             VerifyStockRequest verifyStockRequest) {
-        return inventoryCommandService.isInStock(verifyStockRequest);
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(GenericResponse.success(
+                        this.inventoryCommandService.isInStock(verifyStockRequest),
+                        translate("success.inventory-product-in-stock")
+                ))
+        ;
     }
 }
