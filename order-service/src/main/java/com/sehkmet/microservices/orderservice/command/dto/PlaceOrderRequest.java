@@ -13,7 +13,7 @@ public record PlaceOrderRequest(
                 integer = 6, fraction = 0)
         @PositiveOrZero(message = "{messages.order-price-positive-or-zero-validation-alert}")
         BigDecimal price,
-        @Min(value = 1, message = "{messages.order-quantity-min-validation-alert}")
+
         @Max(value = 999999, message = "{messages.order-quantity-max-validation-alert}")
         @NotNull(message = "{messages.order-quantity-validation-not-null-alert}")
         @Digits(message = "{messages.order-quantity-digits-validation-alert}",

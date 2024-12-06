@@ -1,5 +1,6 @@
 package com.sehkmet.microservices.inventoryservice.command.service.impl;
 
+import com.sehkmet.microservices.inventoryservice.command.dto.VerifyStockRequest;
 import com.sehkmet.microservices.inventoryservice.command.service.InventoryCommandService;
 import com.sehkmet.microservices.inventoryservice.repository.InventoryRepository;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +16,10 @@ public class InventoryCommandServiceImpl implements InventoryCommandService {
     private final InventoryRepository inventoryRepository;
 
     @Transactional(readOnly = true)
-    public boolean isInStock(String skuCode, Integer quantity) {
+    public boolean isInStock(VerifyStockRequest verifyStockRequest) {
+
+        String skuCode = verifyStockRequest.skuCode();
+        int quantity = Integer.parseInt(verifyStockRequest.quantity());
 
         // Find an inventory for a given skuCode where quantity is inferior or equal to the max available quantity
         log.info(" Start -- Received request to check stock for skuCode {}, with quantity {}", skuCode, quantity);
