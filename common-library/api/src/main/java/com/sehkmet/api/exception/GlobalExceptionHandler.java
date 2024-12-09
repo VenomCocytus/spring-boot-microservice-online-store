@@ -14,9 +14,7 @@ import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static com.sehkmet.utils.utils.Utils.getStackTraceAsString;
 import static com.sehkmet.utils.utils.Utils.translate;
@@ -78,7 +76,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<GenericResponse<Object>> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
 
-        Map<String, String> errorMessagesMap = new HashMap<>();
+        Map<String, List<String>> errorMessagesMap = new HashMap<>();
 
         exception.getBindingResult()
                 .getAllErrors()
@@ -92,7 +90,8 @@ public class GlobalExceptionHandler {
                     }
 
                     String errorMessage = error.getDefaultMessage();
-                    errorMessagesMap.put(fieldName, errorMessage);
+                    errorMessagesMap.computeIfAbsent(
+                            fieldName, k -> new ArrayList<>()).add(errorMessage);
                 });
 
         return ResponseEntity
@@ -106,12 +105,13 @@ public class GlobalExceptionHandler {
     public ResponseEntity<GenericResponse<Object>> handleConstraintViolationException(ConstraintViolationException exception) {
 
         Set<ConstraintViolation<?>> constraintViolations = exception.getConstraintViolations();
-        Map<String, String> errorMessagesMap = new HashMap<>();
+        Map<String, List<String>> errorMessagesMap = new HashMap<>();
 
         constraintViolations.forEach((constraintViolation -> {
             String fieldName =  String.format("%s", constraintViolation.getPropertyPath());
             String errorMessage = constraintViolation.getMessage();
-            errorMessagesMap.put(fieldName, errorMessage);
+            errorMessagesMap.computeIfAbsent(
+                    fieldName, k -> new ArrayList<>()).add(errorMessage);
         }));
 
         return ResponseEntity

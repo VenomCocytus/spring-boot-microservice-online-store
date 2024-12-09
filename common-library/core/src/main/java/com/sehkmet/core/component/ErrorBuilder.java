@@ -3,6 +3,7 @@ package com.sehkmet.core.component;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Component
@@ -42,7 +43,7 @@ public class ErrorBuilder {
      * @param messagesMap - A map of thrown exception
      * @return the created map
      */
-    public Map<String, Object> createErrorMap(Map<String, String> messagesMap) {
+    public Map<String, Object> createErrorMap(Map<String, List<String>> messagesMap) {
         Map<String, Object> errorMessageMap = new HashMap<>();
         errorMessageMap.put(MESSAGE, messagesMap);
 

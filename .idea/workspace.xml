@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Trying to debug the inventory service">
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Adjusting validation, exception handling and generic response">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/common/GenericResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/common/GenericResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/controller/InventoryCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/controller/InventoryCommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/dto/VerifyStockRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/dto/VerifyStockRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/component/ErrorBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/component/ErrorBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/InventoryExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/InventoryExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/validation/validator/SkuCodeExistsValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/validation/validator/SkuCodeExistsValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/lang/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/lang/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/lang/messages_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/lang/messages_es.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/lang/messages_fr.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/lang/messages_fr.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +236,7 @@
       <workItem from="1733474692382" duration="1054000" />
       <workItem from="1733477653921" duration="9000" />
       <workItem from="1733499183639" duration="4330000" />
-      <workItem from="1733733124626" duration="3855000" />
+      <workItem from="1733733124626" duration="5478000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -321,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733503452181</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update - Adjusting validation, exception handling and generic response">
+      <option name="closed" value="true" />
+      <created>1733741246241</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733741246241</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +354,8 @@
     <MESSAGE value="Update - Improving inventory service" />
     <MESSAGE value="Update - Fixing commit warnings" />
     <MESSAGE value="Update - Trying to debug the inventory service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Trying to debug the inventory service" />
+    <MESSAGE value="Update - Adjusting validation, exception handling and generic response" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Adjusting validation, exception handling and generic response" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -361,7 +367,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java</url>
-          <line>116</line>
+          <line>115</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
