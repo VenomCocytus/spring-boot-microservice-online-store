@@ -21,7 +21,6 @@ public class GenericResponse<T> {
                 .timestamp(LocalDateTime.now())
                 .success(false)
                 .message("")
-                .data(null)
                 .build();
     }
 
@@ -39,7 +38,6 @@ public class GenericResponse<T> {
                 .timestamp(LocalDateTime.now())
                 .success(true)
                 .message(message)
-                .data(null)
                 .build();
     }
 
@@ -59,6 +57,14 @@ public class GenericResponse<T> {
                 .success(false)
                 .message("error")
                 .data(data)
+                .build();
+    }
+
+    public static <T> GenericResponse<T> error(String message){
+        return GenericResponse.<T>builder()
+                .timestamp(LocalDateTime.now())
+                .success(false)
+                .message(message)
                 .build();
     }
 

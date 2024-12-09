@@ -15,9 +15,9 @@ public class SkuCodeExistsValidator implements ConstraintValidator<SkuCodeExists
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
         if(!StringUtils.isEmpty(value)) {
-            return !inventoryRepository.existsBySkuCode(value);
+            return inventoryRepository.existsBySkuCode(value);
         }
 
-        return true;
+        return false;
     }
 }

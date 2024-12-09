@@ -20,14 +20,15 @@ public class InventoryCommandController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<GenericResponse<Boolean>> isInStock(
+    public ResponseEntity<GenericResponse<Void>> isInStock(
             @Valid
             @RequestBody
             VerifyStockRequest verifyStockRequest) {
+        this.inventoryCommandService.isInStock(verifyStockRequest);
+
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(GenericResponse.success(
-                        this.inventoryCommandService.isInStock(verifyStockRequest),
                         translate("success.inventory-product-in-stock")
                 ))
         ;

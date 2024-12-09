@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Fixing commit warnings">
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/InventoryExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/runtime/ProductNotInStockException.java" afterDir="false" />
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Trying to debug the inventory service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/common/GenericResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/common/GenericResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/InventoryServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/controller/InventoryCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/controller/InventoryCommandController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/dto/VerifyStockRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/dto/VerifyStockRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/InventoryExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/InventoryExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/validation/validator/SkuCodeExistsValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/validation/validator/SkuCodeExistsValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/lang/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/lang/messages_en.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,29 +85,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "android.gradle.sync.needed": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "22",
-    "last_opened_file_path": "E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store/inventory-service/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;22&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store/inventory-service/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\inventory-service\src\main\resources" />
@@ -238,7 +238,8 @@
       <workItem from="1733390758166" duration="5608000" />
       <workItem from="1733474692382" duration="1054000" />
       <workItem from="1733477653921" duration="9000" />
-      <workItem from="1733499183639" duration="4078000" />
+      <workItem from="1733499183639" duration="4330000" />
+      <workItem from="1733733124626" duration="3855000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -312,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733502067090</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update - Trying to debug the inventory service">
+      <option name="closed" value="true" />
+      <created>1733503452181</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733503452181</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +348,8 @@
     <MESSAGE value="Adding validation for the order service" />
     <MESSAGE value="Update - Improving inventory service" />
     <MESSAGE value="Update - Fixing commit warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing commit warnings" />
+    <MESSAGE value="Update - Trying to debug the inventory service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Trying to debug the inventory service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

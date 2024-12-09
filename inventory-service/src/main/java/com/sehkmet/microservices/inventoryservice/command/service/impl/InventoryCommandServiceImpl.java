@@ -29,6 +29,8 @@ public class InventoryCommandServiceImpl implements InventoryCommandService {
         boolean isInStock = inventoryRepository.existsBySkuCodeAndQuantityIsGreaterThanEqual(skuCode, quantity);
         log.info(" End -- Product with skuCode {}, and quantity {}, is in stock - {}", skuCode, quantity, isInStock);
 
-        return isInStock;
+        if(!isInStock) throw new ProductNotInStockException(translate("exception.inventory-not-in-stock", skuCode));
+
+        return true;
     }
 }

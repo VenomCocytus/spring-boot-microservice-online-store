@@ -8,22 +8,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import static com.sehkmet.utils.utils.Utils.translate;
 
-@RestController
-@RequiredArgsConstructor
+@RestControllerAdvice
 public class InventoryExceptionHandler{
-
-    private final ErrorBuilder errorBuilder;
 
     @ExceptionHandler(ProductNotInStockException.class)
     public ResponseEntity<GenericResponse<Object>> handleProductNotInStockException(ProductNotInStockException exception) {
 
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
-                .body(GenericResponse.error(
-                        errorBuilder.createErrorMap(exception.getMessage()),
-                        translate("exception.general-content")));
+                .body(GenericResponse.error(exception.getMessage()));
     }
 }
