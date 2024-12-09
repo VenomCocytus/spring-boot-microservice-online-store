@@ -18,9 +18,9 @@ public class InventoryCommandController {
 
     private final InventoryCommandService inventoryCommandService;
 
-    @GetMapping
+    @PostMapping
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<GenericResponse<Void>> isInStock(
+    public ResponseEntity<GenericResponse<?>> isInStock(
             @Valid
             @RequestBody
             VerifyStockRequest verifyStockRequest) {

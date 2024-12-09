@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Adding more language correspondance, improving the create error map method to handle more messages per field">
-      <change afterPath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/client/InventoryClient.java" afterDir="false" />
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Moving the inventory client inside the client module of the common library">
+      <change afterPath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/inventory/dto/VerifyStockRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-library/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/client/InventoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/inventory/client/InventoryClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/utils/src/main/java/com/sehkmet/utils/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/utils/src/main/java/com/sehkmet/utils/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/controller/InventoryCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/controller/InventoryCommandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/OrderServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +239,7 @@
       <workItem from="1733474692382" duration="1054000" />
       <workItem from="1733477653921" duration="9000" />
       <workItem from="1733499183639" duration="4330000" />
-      <workItem from="1733733124626" duration="9315000" />
+      <workItem from="1733733124626" duration="14979000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -332,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733743043746</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update - Moving the inventory client inside the client module of the common library">
+      <option name="closed" value="true" />
+      <created>1733753888449</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733753888449</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +375,8 @@
     <MESSAGE value="Update - Trying to debug the inventory service" />
     <MESSAGE value="Update - Adjusting validation, exception handling and generic response" />
     <MESSAGE value="Update - Adding more language correspondance, improving the create error map method to handle more messages per field" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Adding more language correspondance, improving the create error map method to handle more messages per field" />
+    <MESSAGE value="Update - Moving the inventory client inside the client module of the common library" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Moving the inventory client inside the client module of the common library" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -374,7 +388,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java</url>
-          <line>116</line>
+          <line>127</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

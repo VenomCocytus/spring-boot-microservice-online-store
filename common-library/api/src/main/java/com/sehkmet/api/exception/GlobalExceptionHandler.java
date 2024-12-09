@@ -9,6 +9,7 @@ import org.apache.catalina.connector.ClientAbortException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -70,6 +71,16 @@ public class GlobalExceptionHandler {
                 .body(GenericResponse.error(
                         errorBuilder.createErrorMap(exception.getMessage()),
                         getStackTraceAsString(exception)
+                ));
+    }
+
+    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    public ResponseEntity<GenericResponse<Object>> handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException exception) {
+
+        return ResponseEntity
+               .status(HttpStatus.METHOD_NOT_ALLOWED)
+               .body(GenericResponse.error(
+                        errorBuilder.createErrorMap(exception.getMessage())
                 ));
     }
 

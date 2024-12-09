@@ -1,6 +1,8 @@
 package com.sehkmet.utils.utils;
 
+import com.sehkmet.core.common.GenericResponse;
 import com.sehkmet.core.component.Translator;
+import org.springframework.http.ResponseEntity;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -27,5 +29,9 @@ public abstract class Utils {
         exception.printStackTrace(printWriter);
 
         return stringWriter.toString();
+    }
+
+    public static boolean isResponseSuccess(ResponseEntity<GenericResponse<?>> clientResponse) {
+        return clientResponse.getBody().isSuccess();
     }
 }

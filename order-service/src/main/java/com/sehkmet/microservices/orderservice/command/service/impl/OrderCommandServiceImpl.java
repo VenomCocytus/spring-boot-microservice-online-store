@@ -1,6 +1,7 @@
 package com.sehkmet.microservices.orderservice.command.service.impl;
 
-import com.sehkmet.client.client.InventoryClient;
+import com.sehkmet.client.inventory.client.InventoryClient;
+import com.sehkmet.client.inventory.dto.VerifyStockRequest;
 import com.sehkmet.microservices.orderservice.command.dto.PlaceOrderRequest;
 import com.sehkmet.microservices.orderservice.command.dto.PlaceOrderResponse;
 import com.sehkmet.microservices.orderservice.command.service.OrderCommandService;
@@ -15,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
+import static com.sehkmet.utils.utils.Utils.isResponseSuccess;
 import static com.sehkmet.utils.utils.Utils.translate;
 
 @Service
@@ -30,10 +32,11 @@ public class OrderCommandServiceImpl implements OrderCommandService {
     @Override
     public PlaceOrderResponse placeOrder(PlaceOrderRequest placeOrderRequest) {
 
-        var isProductInStock = inventoryClient.isInStock(placeOrderRequest.skuCode(),
-                placeOrderRequest.quantity());
+        var clientResponse = inventoryClient.isInStock(
+                new VerifyStockRequest(placeOrderRequest.skuCode(),
+                        String.valueOf(placeOrderRequest.quantity())));
 
-        if(!isProductInStock)
+        if(!isResponseSuccess(clientResponse))
             throw new ProductNotInStockException(translate("exception.product-not-in-stock", placeOrderRequest.skuCode()));
 
         Order orderToSave = orderMapper.mapToOrder(placeOrderRequest);
