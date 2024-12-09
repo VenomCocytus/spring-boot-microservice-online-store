@@ -1,6 +1,6 @@
 package com.sehkmet.microservices.orderservice.command.service.impl;
 
-import com.sehkmet.microservices.orderservice.client.InventoryClient;
+import com.sehkmet.client.client.InventoryClient;
 import com.sehkmet.microservices.orderservice.command.dto.PlaceOrderRequest;
 import com.sehkmet.microservices.orderservice.command.dto.PlaceOrderResponse;
 import com.sehkmet.microservices.orderservice.command.service.OrderCommandService;

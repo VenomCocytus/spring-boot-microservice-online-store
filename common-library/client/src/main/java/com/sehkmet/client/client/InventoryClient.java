@@ -1,4 +1,4 @@
-package com.sehkmet.microservices.orderservice.client;
+package com.sehkmet.client.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
