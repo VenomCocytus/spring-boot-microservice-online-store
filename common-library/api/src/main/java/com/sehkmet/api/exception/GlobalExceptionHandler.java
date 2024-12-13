@@ -14,6 +14,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.*;
 
@@ -68,6 +69,17 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(GenericResponse.error(
+                        errorBuilder.createErrorMap(exception.getMessage()),
+                        getStackTraceAsString(exception)
+                ));
+    }
+
+    @ExceptionHandler(HttpClientErrorException.Unauthorized.class)
+    public ResponseEntity<GenericResponse<Object>> handleUnauthorized(Exception exception) {
+
+        return ResponseEntity
+                .status(HttpStatus.UNAUTHORIZED)
                 .body(GenericResponse.error(
                         errorBuilder.createErrorMap(exception.getMessage()),
                         getStackTraceAsString(exception)

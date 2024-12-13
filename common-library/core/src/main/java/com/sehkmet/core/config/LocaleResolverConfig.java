@@ -15,7 +15,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 @Configuration
-public class InternationalizationConfig implements WebMvcConfigurer {
+public class LocaleResolverConfig implements WebMvcConfigurer {
 
     /**
      * ReloadableResourceBundleMessageSource is the most common MessageSource implementation that
