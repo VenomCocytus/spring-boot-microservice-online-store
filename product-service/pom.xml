@@ -20,6 +20,7 @@
         <mapstruct.version>1.6.2</mapstruct.version>
         <rest-assured.version>5.3.2</rest-assured.version>
         <allure.version>2.25.0</allure.version>
+        <open-api.version>2.7.0</open-api.version>
     </properties>
 
     <dependencies>
@@ -107,13 +108,25 @@
             <scope>provided</scope>
         </dependency>
 
+        <!--Open api-->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${open-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+            <version>${open-api.version}</version>
+        </dependency>
+
+        <!--Common library-->
         <dependency>
             <groupId>com.sehkmet.common-library</groupId>
             <artifactId>utils</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
             <groupId>com.sehkmet.common-library</groupId>
             <artifactId>api</artifactId>

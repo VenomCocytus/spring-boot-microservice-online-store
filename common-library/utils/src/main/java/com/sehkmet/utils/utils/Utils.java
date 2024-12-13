@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.Objects;
 
 public abstract class Utils {
 
@@ -32,6 +33,6 @@ public abstract class Utils {
     }
 
     public static boolean isResponseSuccess(ResponseEntity<GenericResponse<?>> clientResponse) {
-        return clientResponse.getBody().isSuccess();
+        return Objects.requireNonNull(clientResponse.getBody()).isSuccess();
     }
 }
