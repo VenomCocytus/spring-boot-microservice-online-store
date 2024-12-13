@@ -8,6 +8,9 @@ import org.springframework.web.servlet.function.RequestPredicates;
 import org.springframework.web.servlet.function.RouterFunction;
 import org.springframework.web.servlet.function.ServerResponse;
 
+import java.net.URI;
+
+import static org.springframework.cloud.gateway.server.mvc.filter.CircuitBreakerFilterFunctions.circuitBreaker;
 import static org.springframework.cloud.gateway.server.mvc.filter.FilterFunctions.setPath;
 
 @Configuration
@@ -19,6 +22,9 @@ public class OrderServiceRoutes {
         return GatewayRouterFunctions.route("order_service")
                 .route(RequestPredicates.path("/api/order"), HandlerFunctions.http("http://localhost:8081/api/order"))
                 .route(RequestPredicates.POST("/api/order"), HandlerFunctions.http("http://localhost:8081/api/order"))
+
+                .filter(circuitBreaker("orderServiceApiCircuitBreaker", URI.create("forward:/fallbackRoute")))
+
                 .build();
     }
 
@@ -27,7 +33,10 @@ public class OrderServiceRoutes {
 
         return GatewayRouterFunctions.route("order_service_swagger")
                 .route(RequestPredicates.path("/aggregate/order-service/v3/api-docs"), HandlerFunctions.http("http://localhost:8081/api/product"))
+
+                .filter(circuitBreaker("orderServiceSwaggerCircuitBreaker", URI.create("forward:/fallbackRoute")))
                 .filter(setPath("/api-docs"))
+
                 .build();
     }
 }
