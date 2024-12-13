@@ -14,7 +14,31 @@ spring:
     fallback-to-system-locale: false
     encoding: UTF-8
     cache-duration: 5
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+
+service-data:
+  info:
+    title: Order Service API
+    description: This service provides endpoints to order products.
+    version: 0.0.1
+    license:
+      name: MIT License
+      url: https://opensource.org/licenses/MIT
+    contact:
+      name: Allan Elong - Software Engineer - Content Creator
+      url: https://github.com/VenomCocytus
+  external-documentation:
+    description: Find more info about our order service.
+    url: https://github.com/VenomCocytus/spring-boot-microservice-online-store
+
 server:
   port: 8081
+
 inventory:
   url: "http://localhost:8082"

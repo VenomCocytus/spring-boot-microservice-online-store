@@ -15,6 +15,23 @@ springdoc:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
+    operations-sorter: method
+
+service-data:
+  info:
+    title: Product Service API
+    description: This service provides endpoints for managing products.
+    version: 0.0.1
+    license:
+      name: MIT License
+      url: https://opensource.org/licenses/MIT
+    contact:
+      name: Allan Elong - Software Engineer - Content Creator
+      url: https://github.com/VenomCocytus
+  external-documentation:
+    description: Find more info about our product service.
+    url: https://github.com/VenomCocytus/spring-boot-microservice-online-store
+
 
 server:
   port: 8080

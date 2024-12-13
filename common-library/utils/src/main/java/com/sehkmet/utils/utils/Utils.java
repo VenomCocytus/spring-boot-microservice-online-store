@@ -32,7 +32,7 @@ public abstract class Utils {
         return stringWriter.toString();
     }
 
-    public static boolean isResponseSuccess(ResponseEntity<GenericResponse<?>> clientResponse) {
+    public static boolean isResponseSuccessful(ResponseEntity<GenericResponse<?>> clientResponse) {
         return Objects.requireNonNull(clientResponse.getBody()).isSuccess();
     }
 }

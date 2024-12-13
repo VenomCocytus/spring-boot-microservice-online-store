@@ -10,5 +10,29 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+
+service-data:
+  info:
+    title: Inventory Service API
+    description: This service provides endpoints for managing inventories.
+    version: 0.0.1
+    license:
+      name: MIT License
+      url: https://opensource.org/licenses/MIT
+    contact:
+      name: Allan Elong - Software Engineer - Content Creator
+      url: https://github.com/VenomCocytus
+  external-documentation:
+    description: Find more info about our inventory service.
+    url: https://github.com/VenomCocytus/spring-boot-microservice-online-store
+
+
 server:
   port: 8082

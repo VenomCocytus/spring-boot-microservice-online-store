@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
-import static com.sehkmet.utils.utils.Utils.isResponseSuccess;
+import static com.sehkmet.utils.utils.Utils.isResponseSuccessful;
 import static com.sehkmet.utils.utils.Utils.translate;
 
 @Service
@@ -36,7 +36,7 @@ public class OrderCommandServiceImpl implements OrderCommandService {
                 new VerifyStockRequest(placeOrderRequest.skuCode(),
                         String.valueOf(placeOrderRequest.quantity())));
 
-        if(!isResponseSuccess(clientResponse))
+        if(!isResponseSuccessful(clientResponse))
             throw new ProductNotInStockException(translate("exception.product-not-in-stock", placeOrderRequest.skuCode()));
 
         Order orderToSave = orderMapper.mapToOrder(placeOrderRequest);
