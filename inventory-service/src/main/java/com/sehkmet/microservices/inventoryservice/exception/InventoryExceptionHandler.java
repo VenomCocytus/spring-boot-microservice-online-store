@@ -5,12 +5,14 @@ import com.sehkmet.microservices.inventoryservice.exception.runtime.ProductNotIn
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class InventoryExceptionHandler{
 
     @ExceptionHandler(ProductNotInStockException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<GenericResponse<Object>> handleProductNotInStockException(ProductNotInStockException exception) {
 
         return ResponseEntity

@@ -13,6 +13,7 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.client.HttpClientErrorException;
 
@@ -28,6 +29,7 @@ public class GlobalExceptionHandler {
     private final ErrorBuilder errorBuilder;
 
     @ExceptionHandler(Throwable.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<GenericResponse<Object>> handleThrowableException(Throwable throwable){
 
         // Socket is closed, cannot return any response
@@ -44,6 +46,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(RuntimeException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<GenericResponse<Object>> handleRuntimeException(String errorMessage) {
 
         return ResponseEntity
@@ -54,6 +57,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(ServletRequestBindingException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<GenericResponse<Object>> handleServletRequestBindingException(ServletRequestBindingException exception) {
 
         return ResponseEntity
@@ -65,6 +69,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<GenericResponse<Object>> handleException(Exception exception) {
 
         return ResponseEntity
@@ -76,6 +81,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(HttpClientErrorException.Unauthorized.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public ResponseEntity<GenericResponse<Object>> handleUnauthorized(Exception exception) {
 
         return ResponseEntity
@@ -87,6 +93,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
     public ResponseEntity<GenericResponse<Object>> handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException exception) {
 
         return ResponseEntity
@@ -97,6 +104,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<GenericResponse<Object>> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
 
         Map<String, List<String>> errorMessagesMap = new HashMap<>();
@@ -125,6 +133,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<GenericResponse<Object>> handleConstraintViolationException(ConstraintViolationException exception) {
 
         Set<ConstraintViolation<?>> constraintViolations = exception.getConstraintViolations();

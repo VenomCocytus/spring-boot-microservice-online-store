@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import static com.sehkmet.utils.utils.Utils.translate;
@@ -17,6 +18,7 @@ public class OrderServiceExceptionHandler {
     private final ErrorBuilder errorBuilder;
 
     @ExceptionHandler(ProductNotInStockException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<GenericResponse<Object>> handleProductNotInStockException(ProductNotInStockException exception) {
 
         return ResponseEntity

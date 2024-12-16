@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Aggregate swagger in the gateway">
-      <change afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/config/KeycloakSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sehkmet/gateway/config/KeycloakSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/config/InternationalizationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/config/LocaleResolverConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/InventoryExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/InventoryExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/exception/OrderServiceExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/exception/OrderServiceExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/exception/ProductServiceExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/exception/ProductServiceExceptionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,6 +242,8 @@
       <workItem from="1733839492067" duration="627000" />
       <workItem from="1733845915115" duration="602000" />
       <workItem from="1734082770969" duration="12903000" />
+      <workItem from="1734336517992" duration="357000" />
+      <workItem from="1734339106200" duration="505000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -406,21 +408,5 @@
     <MESSAGE value="Update - Adding swagger to each microservice" />
     <MESSAGE value="Update - Aggregate swagger in the gateway" />
     <option name="LAST_COMMIT_MESSAGE" value="Update - Aggregate swagger in the gateway" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/exception/ProductServiceExceptionHandler.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java</url>
-          <line>139</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
