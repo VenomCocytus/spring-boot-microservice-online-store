@@ -21,6 +21,7 @@
         <open-api.version>2.5.0</open-api.version>
         <spring-starter-web.version>3.4.0</spring-starter-web.version>
         <spring-starter-test.version>3.4.0</spring-starter-test.version>
+        <spring-webmvc.version>6.2.1</spring-webmvc.version>
     </properties>
 
     <dependencies>
@@ -45,6 +46,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-webmvc.version}</version>
         </dependency>
 
         <!--Open api-->

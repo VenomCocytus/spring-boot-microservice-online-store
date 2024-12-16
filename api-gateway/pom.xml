@@ -21,6 +21,7 @@
 		<spring-cloud.version>2023.0.3</spring-cloud.version>
 		<spring-starter-test.version>3.4.0</spring-starter-test.version>
 		<xml-unit-core.version>2.10.0</xml-unit-core.version>
+		<spring-webmvc.version>6.2.1</spring-webmvc.version>
 	</properties>
 
 	<dependencies>
@@ -45,6 +46,12 @@
 			<groupId>org.xmlunit</groupId>
 			<artifactId>xmlunit-core</artifactId>
 			<version>${xml-unit-core.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring-webmvc.version}</version>
 		</dependency>
 
 		<dependency>
