@@ -118,6 +118,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
             <groupId>com.sehkmet.common-library</groupId>
             <artifactId>core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
