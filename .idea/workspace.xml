@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Generating documentation using @RestControllerAdvice">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/dto/command/request/CreateProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/dto/command/request/CreateProductRequest.java" afterDir="false" />
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Adding open api documentation for the product command controller">
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/controller/query/ProductQueryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/controller/query/ProductQueryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +238,7 @@
       <workItem from="1733845915115" duration="602000" />
       <workItem from="1734082770969" duration="12903000" />
       <workItem from="1734336517992" duration="357000" />
-      <workItem from="1734339106200" duration="1971000" />
+      <workItem from="1734339106200" duration="2331000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -377,7 +376,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734339653209</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update - Adding open api documentation for the product command controller">
+      <option name="closed" value="true" />
+      <created>1734343282129</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1734343282129</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,6 +419,7 @@
     <MESSAGE value="Update - Adding swagger to each microservice" />
     <MESSAGE value="Update - Aggregate swagger in the gateway" />
     <MESSAGE value="Update - Generating documentation using @RestControllerAdvice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Generating documentation using @RestControllerAdvice" />
+    <MESSAGE value="Update - Adding open api documentation for the product command controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Adding open api documentation for the product command controller" />
   </component>
 </project>
