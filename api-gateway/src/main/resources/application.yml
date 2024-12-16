@@ -1,6 +1,7 @@
 spring:
   application:
     name: api-gateway
+
   security:
     oauth2:
       resourceserver:
@@ -11,6 +12,11 @@ spring:
     fallback-to-system-locale: false
     encoding: UTF-8
     cache-duration: 5
+
+  cloud:
+    circuitbreaker:
+      resilience4j:
+        enabled: true
 
 springdoc:
   api-docs:

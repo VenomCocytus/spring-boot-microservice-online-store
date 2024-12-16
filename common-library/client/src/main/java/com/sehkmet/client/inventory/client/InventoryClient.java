@@ -2,6 +2,8 @@ package com.sehkmet.client.inventory.client;
 
 import com.sehkmet.client.inventory.dto.VerifyStockRequest;
 import com.sehkmet.core.common.GenericResponse;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.openfeign.FeignClient;
