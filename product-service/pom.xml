@@ -11,6 +11,7 @@
     <groupId>com.sehkmet.microservices</groupId>
     <artifactId>product-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>product-service</name>
     <description>product-service</description>
 
@@ -20,6 +21,11 @@
         <mapstruct.version>1.6.2</mapstruct.version>
         <rest-assured.version>5.3.2</rest-assured.version>
         <allure.version>2.25.0</allure.version>
+        <spring-starter-test.version>3.4.0</spring-starter-test.version>
+        <spring-starter-web.version>3.4.0</spring-starter-web.version>
+        <xml-unit-core.version>2.10.0</xml-unit-core.version>
+        <spring-generic-component.version>6.2.1</spring-generic-component.version>
+        <commons-compress.version>1.27.1</commons-compress.version>
     </properties>
 
     <dependencies>
@@ -31,10 +37,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-starter-web.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-starter-test.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -111,6 +119,48 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
+        </dependency>
+
+        <!--To avoid vulnerabilities-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-generic-component.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring-generic-component.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>${spring-generic-component.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-generic-component.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring-generic-component.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-generic-component.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.xmlunit</groupId>
+            <artifactId>xmlunit-core</artifactId>
+            <version>${xml-unit-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>${commons-compress.version}</version>
         </dependency>
 
         <!--Common library-->
