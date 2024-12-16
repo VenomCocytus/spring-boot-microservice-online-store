@@ -17,6 +17,7 @@ public record CreateProductRequest(
                 message = "{messages.product-name-validation-size-alert}")
         @ProductNameNotAlreadyExists
         String name,
+
         @Schema(description = "The description of the product", example = "This is an amazing product", requiredMode = AUTO)
         @Size(min = 3, max = 500,
                 message = "{messages.product-description-validation-size-alert}")
