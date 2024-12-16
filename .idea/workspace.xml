@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Aggregate swagger in the gateway">
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Generating documentation using @RestControllerAdvice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/core/src/main/java/com/sehkmet/core/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/InventoryExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/exception/InventoryExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/exception/OrderServiceExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/exception/OrderServiceExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/exception/ProductServiceExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/exception/ProductServiceExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/dto/command/request/CreateProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sehkmet/microservices/productservice/command/dto/command/request/CreateProductRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +239,7 @@
       <workItem from="1733845915115" duration="602000" />
       <workItem from="1734082770969" duration="12903000" />
       <workItem from="1734336517992" duration="357000" />
-      <workItem from="1734339106200" duration="505000" />
+      <workItem from="1734339106200" duration="1971000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -373,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734090001771</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update - Generating documentation using @RestControllerAdvice">
+      <option name="closed" value="true" />
+      <created>1734339653209</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1734339653209</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,6 +411,7 @@
     <MESSAGE value="Update - Adding exception handling for method not supported, improving order command controller with newly implemented inventory logic" />
     <MESSAGE value="Update - Adding swagger to each microservice" />
     <MESSAGE value="Update - Aggregate swagger in the gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Aggregate swagger in the gateway" />
+    <MESSAGE value="Update - Generating documentation using @RestControllerAdvice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Generating documentation using @RestControllerAdvice" />
   </component>
 </project>
