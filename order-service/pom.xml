@@ -26,6 +26,20 @@
         <commons-compress.version>1.27.1</commons-compress.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <name>confluent repository</name>
+            <url>https://packages.confluent.io/maven/</url>
+        </repository>
+
+        <repository>
+            <id>maven-central</id>
+            <name>maven central</name>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!--Starter Pack-->
         <dependency>
@@ -139,12 +153,7 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-
+        <!--Common library-->
         <dependency>
             <groupId>com.sehkmet.common-library</groupId>
             <artifactId>core</artifactId>
@@ -166,7 +175,38 @@
             <scope>compile</scope>
         </dependency>
 
+        <!--Kafka-->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-schema-registry-client</artifactId>
+            <version>7.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+            <version>1.11.3</version>
+        </dependency>
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
+            <version>7.8.0</version>
+        </dependency>
+
         <!--To avoid vulnerabilities-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -254,6 +294,26 @@
                     <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
                     <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
                 </configuration>
+            </plugin>
+
+            <!--Avro Maven plugin configuration-->
+            <plugin>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro-maven-plugin</artifactId>
+                <version>1.12.0</version>
+                <executions>
+                    <execution>
+                        <id>schemas</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>schema</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/resources/avro</sourceDirectory>
+                            <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

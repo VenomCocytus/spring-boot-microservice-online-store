@@ -1,23 +1,39 @@
 spring:
   application:
     name: order-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/order_service
     username: root
     password: mysql
+
   # To do all the migration using flyway
   jpa:
     hibernate:
       ddl-auto: none
+
   messages:
     basename: lang/messages,config.i18n.messages
     fallback-to-system-locale: false
     encoding: UTF-8
     cache-duration: 5
+
   cloud:
     circuitbreaker:
       resilience4j:
         enabled: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    template:
+      default-topic: order-placed
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      properties:
+        schema:
+          registry:
+            url: http://localhost:8085
 
 springdoc:
   api-docs:
@@ -72,3 +88,7 @@ resilience4j:
         max-attempts: 3
         wait-duration:
           seconds: 2
+
+# Kafka Properties
+spring:
+  kafka:

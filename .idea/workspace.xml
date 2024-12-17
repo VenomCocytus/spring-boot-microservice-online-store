@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Resolving dependencies vulnerabilities in the product-service, order-service and inventory-service pom.xml" />
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Fixing commit warnings">
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/avro/order-placed.avsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/utils/src/main/java/com/sehkmet/utils/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/utils/src/main/java/com/sehkmet/utils/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +96,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/event-driven-architecture&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;22&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store/inventory-service/src/main/resources&quot;,
@@ -94,7 +105,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -104,6 +115,7 @@
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\order-service\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\order-service\src\main\resources\avro" />
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store" />
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\.mvn" />
     </key>
@@ -111,6 +123,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean" />
+      <command value="mvn clean compile" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -237,6 +250,9 @@
       <workItem from="1734082770969" duration="12903000" />
       <workItem from="1734336517992" duration="357000" />
       <workItem from="1734339106200" duration="15694000" />
+      <workItem from="1734424501951" duration="181000" />
+      <workItem from="1734445625441" duration="4499000" />
+      <workItem from="1734450595691" duration="3260000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -471,7 +487,6 @@
     <MESSAGE value="Update - Updating message source" />
     <MESSAGE value="Adding validation for the order service" />
     <MESSAGE value="Update - Improving inventory service" />
-    <MESSAGE value="Update - Fixing commit warnings" />
     <MESSAGE value="Update - Trying to debug the inventory service" />
     <MESSAGE value="Update - Adjusting validation, exception handling and generic response" />
     <MESSAGE value="Update - Adding more language correspondance, improving the create error map method to handle more messages per field" />
@@ -489,6 +504,7 @@
     <MESSAGE value="Update - Resolving vulnerabilities in api gateway, core and client" />
     <MESSAGE value="Update - Improving properties readability" />
     <MESSAGE value="Update - Resolving dependencies vulnerabilities in the product-service, order-service and inventory-service pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Resolving dependencies vulnerabilities in the product-service, order-service and inventory-service pom.xml" />
+    <MESSAGE value="Update - Fixing commit warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing commit warnings" />
   </component>
 </project>
