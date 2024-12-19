@@ -63,6 +63,19 @@ server:
 inventory:
   url: "http://localhost:8082"
 
+# Actuator Endpoints
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
 # Resilience4j Properties
 resilience4j:
   circuitbreaker:
@@ -88,7 +101,3 @@ resilience4j:
         max-attempts: 3
         wait-duration:
           seconds: 2
-
-# Kafka Properties
-spring:
-  kafka:

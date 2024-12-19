@@ -189,7 +189,7 @@
         <dependency>
             <groupId>org.apache.avro</groupId>
             <artifactId>avro</artifactId>
-            <version>1.11.3</version>
+            <version>1.11.4</version>
         </dependency>
         <dependency>
             <groupId>io.confluent</groupId>
@@ -198,6 +198,11 @@
         </dependency>
 
         <!--To avoid vulnerabilities-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-common</artifactId>
+            <version>4.1.116.Final</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>

@@ -38,6 +38,19 @@ springdoc:
 server:
   port: 9000
 
+# Actuator Endpoints
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
 # Resilience4j Properties
 resilience4j:
   circuitbreaker:

@@ -29,7 +29,7 @@ import static com.sehkmet.utils.utils.Utils.translate;
 @RequiredArgsConstructor
 public class OrderCommandServiceImpl implements OrderCommandService {
 
-    private static final Logger logger = (Logger) LoggerFactory.getLogger(OrderCommandServiceImpl.class);
+//    private static final Logger logger = (Logger) LoggerFactory.getLogger(OrderCommandServiceImpl.class);
 
     private final OrderRepository orderRepository;
     private final InventoryClient inventoryClient;
@@ -54,12 +54,12 @@ public class OrderCommandServiceImpl implements OrderCommandService {
                 .multiply(BigDecimal.valueOf(placeOrderRequest.quantity())));
         orderRepository.save(orderToSave);
 
-        var orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(), orderRequest.userDetails()
-                .email(),
-                orderRequest.userDetails()
-                        .firstName(),
-                orderRequest.userDetails()
-                        .lastName());
+//        var orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(), orderRequest.userDetails()
+//                .email(),
+//                orderRequest.userDetails()
+//                        .firstName(),
+//                orderRequest.userDetails()
+//                        .lastName());
 
         return orderMapper.mapToOrderResponse(orderToSave);
     }

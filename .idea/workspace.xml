@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Fixing commit warnings">
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Switching from openfeign to Rest client. To synchronize calls between services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +119,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean" />
+      <command value="mvn clean install" />
       <command value="mvn clean compile" />
     </option>
   </component>
@@ -124,7 +130,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="client.main" />
       <method v="2">
@@ -246,6 +252,8 @@
       <workItem from="1734450595691" duration="3260000" />
       <workItem from="1734509512592" duration="1418000" />
       <workItem from="1734519501239" duration="140000" />
+      <workItem from="1734596526362" duration="7864000" />
+      <workItem from="1734605489226" duration="2458000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -455,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734366299861</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Update - Switching from openfeign to Rest client. To synchronize calls between services">
+      <option name="closed" value="true" />
+      <created>1734600954750</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1734600954750</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +489,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update - Fixing parent pom" />
     <MESSAGE value="Update - Adding a custom validation example" />
     <MESSAGE value="Update - Trying to make the common library works as well" />
     <MESSAGE value="Update - Commenting unused annotation" />
@@ -498,6 +513,17 @@
     <MESSAGE value="Update - Improving properties readability" />
     <MESSAGE value="Update - Resolving dependencies vulnerabilities in the product-service, order-service and inventory-service pom.xml" />
     <MESSAGE value="Update - Fixing commit warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing commit warnings" />
+    <MESSAGE value="Update - Switching from openfeign to Rest client. To synchronize calls between services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Switching from openfeign to Rest client. To synchronize calls between services" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

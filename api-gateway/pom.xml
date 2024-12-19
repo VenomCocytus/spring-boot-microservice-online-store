@@ -19,9 +19,9 @@
 	<properties>
 		<java.version>21</java.version>
 		<spring-cloud.version>2023.0.3</spring-cloud.version>
-		<spring-starter-test.version>3.4.0</spring-starter-test.version>
 		<xml-unit-core.version>2.10.0</xml-unit-core.version>
-		<spring-webmvc.version>6.2.1</spring-webmvc.version>
+		<spring-boot-general.version>3.4.0</spring-boot-general.version>
+		<spring-webmvc.version>6.1.16</spring-webmvc.version>
 	</properties>
 
 	<dependencies>
@@ -32,13 +32,20 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring-boot-general.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+			<version>${spring-boot-general.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>${spring-starter-test.version}</version>
+			<version>${spring-boot-general.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -49,19 +56,15 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring-webmvc.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>${spring-boot-general.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+			<version>3.2.0</version>
 		</dependency>
 
 		<!--Common library-->
@@ -84,6 +87,13 @@
 			<artifactId>utils</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>compile</scope>
+		</dependency>
+
+		<!--To avoid vulnerabilities-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring-webmvc.version}</version>
 		</dependency>
 	</dependencies>
 
