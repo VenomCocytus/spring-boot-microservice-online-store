@@ -35,9 +35,9 @@ public class ProductServiceRoutes {
 
         return GatewayRouterFunctions.route("product_service_swagger")
                 .route(RequestPredicates.path("/aggregate/product-service/v3/api-docs"), HandlerFunctions.http("http://localhost:8080/api/product"))
+                .filter(setPath("/api-docs"))
 
                 .filter(circuitBreaker("productServiceSwaggerCircuitBreaker", URI.create("forward:/fallbackRoute")))
-                .filter(setPath("/api-docs"))
 
                 .build();
     }
