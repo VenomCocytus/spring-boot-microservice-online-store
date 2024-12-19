@@ -12,14 +12,12 @@ import com.sehkmet.microservices.orderservice.model.Order;
 import com.sehkmet.microservices.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.UUID;
-import java.util.logging.Logger;
 
 import static com.sehkmet.utils.utils.Utils.translate;
 
