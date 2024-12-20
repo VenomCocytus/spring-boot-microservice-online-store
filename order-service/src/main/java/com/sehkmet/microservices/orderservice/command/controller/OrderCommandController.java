@@ -61,7 +61,6 @@ public class OrderCommandController {
             @RequestBody
             @Valid
             PlaceOrderRequest placeOrderRequest) {
-        this.orderCommandService.placeOrder(placeOrderRequest);
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)

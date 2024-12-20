@@ -79,8 +79,8 @@ management:
 # Resilience4j Properties
 resilience4j:
   circuitbreaker:
-    configs:
-      default:
+    instances:
+      inventory:
         register-health-indicator: true
         sliding-window-type: COUNT_BASED
         sliding-window-size: 10

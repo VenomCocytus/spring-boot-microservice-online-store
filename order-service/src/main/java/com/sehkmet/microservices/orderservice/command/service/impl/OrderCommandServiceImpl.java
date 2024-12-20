@@ -40,7 +40,7 @@ public class OrderCommandServiceImpl implements OrderCommandService {
 
         var clientResponse = inventoryClient.isInStock(
                 new VerifyStockRequest(placeOrderRequest.skuCode(),
-                        String.valueOf(placeOrderRequest.quantity())));
+                        placeOrderRequest.quantity()));
 
         if(!clientResponse.getStatusCode().is2xxSuccessful())
             throw new ProductNotInStockException(
@@ -49,7 +49,7 @@ public class OrderCommandServiceImpl implements OrderCommandService {
         Order orderToSave = orderMapper.mapToOrder(placeOrderRequest);
         orderToSave.setOrderNumber(UUID.randomUUID().toString());
         orderToSave.setPrice(placeOrderRequest.price()
-                .multiply(BigDecimal.valueOf(placeOrderRequest.quantity())));
+                .multiply(BigDecimal.valueOf(Long.parseLong(placeOrderRequest.quantity()))));
         orderRepository.save(orderToSave);
 
 //        var orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(), orderRequest.userDetails()

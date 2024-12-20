@@ -4,6 +4,6 @@ import com.sehkmet.microservices.inventoryservice.command.dto.VerifyStockRequest
 
 public interface InventoryCommandService {
 
-    boolean isInStock(VerifyStockRequest verifyStockRequest);
+    void isInStock(VerifyStockRequest verifyStockRequest);
 
 }

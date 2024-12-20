@@ -19,7 +19,7 @@ public class InventoryCommandServiceImpl implements InventoryCommandService {
     private final InventoryRepository inventoryRepository;
 
     @Transactional(readOnly = true)
-    public boolean isInStock(VerifyStockRequest verifyStockRequest) {
+    public void isInStock(VerifyStockRequest verifyStockRequest) {
 
         String skuCode = verifyStockRequest.skuCode();
         int quantity = Integer.parseInt(verifyStockRequest.quantity());
@@ -31,6 +31,5 @@ public class InventoryCommandServiceImpl implements InventoryCommandService {
 
         if(!isInStock) throw new ProductNotInStockException(translate("exception.inventory-not-in-stock", skuCode));
 
-        return true;
     }
 }

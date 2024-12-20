@@ -26,5 +26,5 @@ public record PlaceOrderRequest(
         @Digits(message = "{messages.order-quantity-digits-validation-alert}",
                 integer = 6, fraction = 0)
         @Positive(message = "{messages.order-quantity-positive-validation-alert}")
-        Integer quantity) {
+        String quantity) {
 }
