@@ -17,16 +17,16 @@ import static com.sehkmet.utils.utils.Utils.translate;
 public interface InventoryClient {
     Logger LOGGER = LoggerFactory.getLogger(InventoryClient.class);
 
-    @PostExchange("http://localhost:8082/api/inventory")
-//    @CircuitBreaker(name = "inventory", fallbackMethod = "fallbackMethod")
-//    @Retry(name = "inventoryRetry")
+    @PostExchange("/api/inventory")
+    @CircuitBreaker(name = "inventory", fallbackMethod = "fallbackMethod")
+    @Retry(name = "inventoryRetry")
     ResponseEntity<GenericResponse<?>> isInStock(@RequestBody VerifyStockRequest verifyStockRequest);
 
-//    default ResponseEntity<GenericResponse<?>> fallbackMethod(VerifyStockRequest verifyStockRequest, Throwable throwable) {
-//        LOGGER.info("Cannot get inventory for skuCode {}, failure reason: {}", verifyStockRequest.skuCode(), throwable.getMessage());
-//        return ResponseEntity
-//                .status(HttpStatus.NOT_FOUND)
-//                .body(GenericResponse.error(
-//                        translate("exception.product-not-in-stock", verifyStockRequest.skuCode())));
-//    }
+    default ResponseEntity<GenericResponse<?>> fallbackMethod(VerifyStockRequest verifyStockRequest, Throwable throwable) {
+        LOGGER.info("Cannot get inventory for skuCode {}, failure reason: {}", verifyStockRequest.skuCode(), throwable.getMessage());
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(GenericResponse.error(
+                        translate("exception.product-not-in-stock", verifyStockRequest.skuCode())));
+    }
 }

@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Fixing commit warnings">
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Trying to fix the rest client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/inventory/client/InventoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/inventory/client/InventoryClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/inventory/config/RestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/inventory/config/RestClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/InventoryCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/InventoryCommandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sehkmet/microservices/inventoryservice/command/service/impl/InventoryCommandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/controller/OrderCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/controller/OrderCommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/dto/PlaceOrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/dto/PlaceOrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +257,7 @@
       <workItem from="1734605489226" duration="4632000" />
       <workItem from="1734616395381" duration="53000" />
       <workItem from="1734617044779" duration="487000" />
-      <workItem from="1734683274310" duration="2465000" />
+      <workItem from="1734683274310" duration="4187000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -498,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734608387113</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Update - Trying to fix the rest client">
+      <option name="closed" value="true" />
+      <created>1734686048749</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1734686048749</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update - Trying to make the common library works as well" />
     <MESSAGE value="Update - Commenting unused annotation" />
     <MESSAGE value="Update - Updating message source" />
     <MESSAGE value="Adding validation for the order service" />
@@ -541,7 +541,8 @@
     <MESSAGE value="Update - Switching from openfeign to Rest client. To synchronize calls between services" />
     <MESSAGE value="Update - Adding actuator configuration in the api gateway and the order service" />
     <MESSAGE value="Update - Fixing commit warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing commit warnings" />
+    <MESSAGE value="Update - Trying to fix the rest client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Trying to fix the rest client" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -550,20 +551,6 @@
           <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
-          <option name="timeStamp" value="12" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/service/impl/OrderCommandServiceImpl.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
