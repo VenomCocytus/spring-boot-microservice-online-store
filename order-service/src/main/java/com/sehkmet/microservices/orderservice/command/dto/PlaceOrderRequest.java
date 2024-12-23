@@ -26,5 +26,19 @@ public record PlaceOrderRequest(
         @Digits(message = "{messages.order-quantity-digits-validation-alert}",
                 integer = 6, fraction = 0)
         @Positive(message = "{messages.order-quantity-positive-validation-alert}")
-        String quantity) {
+        String quantity,
+
+        @Schema(description = "User information", requiredMode = AUTO)
+        @NotNull(message = "{messages.user-info-not-null-alert}")
+        UserInfo userInfo) {
+
+        public record UserInfo(
+                @Email(message = "{messages.user-info-email-not-valid-alert}")
+                @NotBlank(message = "{messages.order-user-email-alert}")
+                String email,
+                @NotBlank(message = "{messages.order-user-first-name-alert}")
+                String firstName,
+                @NotBlank(message = "{messages.order-user-last-name-alert}")
+                String lastName
+        ){}
 }

@@ -12,6 +12,8 @@ import com.sehkmet.microservices.orderservice.model.Order;
 import com.sehkmet.microservices.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,7 +29,7 @@ import static com.sehkmet.utils.utils.Utils.translate;
 @RequiredArgsConstructor
 public class OrderCommandServiceImpl implements OrderCommandService {
 
-//    private static final Logger logger = (Logger) LoggerFactory.getLogger(OrderCommandServiceImpl.class);
+    private static final Logger logger = (Logger) LoggerFactory.getLogger(OrderCommandServiceImpl.class);
 
     private final OrderRepository orderRepository;
     private final InventoryClient inventoryClient;
@@ -52,12 +54,16 @@ public class OrderCommandServiceImpl implements OrderCommandService {
                 .multiply(BigDecimal.valueOf(Long.parseLong(placeOrderRequest.quantity()))));
         orderRepository.save(orderToSave);
 
-//        var orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(), orderRequest.userDetails()
-//                .email(),
-//                orderRequest.userDetails()
-//                        .firstName(),
-//                orderRequest.userDetails()
-//                        .lastName());
+        // Send the message to Kafka Topic
+        OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent(
+                orderToSave.getOrderNumber(),
+                placeOrderRequest.userInfo().email(),
+                placeOrderRequest.userInfo().firstName(),
+                placeOrderRequest.userInfo().lastName());
+
+        log.info("Start - Sending OrderPlacedEvent {} to Kafka topic order-placed", orderPlacedEvent);
+        kafkaTemplate.send("order-placed", orderPlacedEvent);
+        log.info("End - Sending OrderPlacedEvent {} to Kafka topic order-placed", orderPlacedEvent);
 
         return orderMapper.mapToOrderResponse(orderToSave);
     }
