@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Fixing compilation warnings and kafka topics">
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/exception/NotificationServiceExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/exception/runtime/MailNotSentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/service/NotificationListenerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/service/impl/NotificationListenerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/avro/order-placed.avsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Adding a notification service consuming kafka topics to send mails" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -278,7 +265,7 @@
       <workItem from="1734683274310" duration="5773000" />
       <workItem from="1735212021796" duration="3779000" />
       <workItem from="1735223583909" duration="4178000" />
-      <workItem from="1735297889092" duration="6833000" />
+      <workItem from="1735297889092" duration="7260000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -544,7 +531,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735298204507</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Update - Adding a notification service consuming kafka topics to send mails">
+      <option name="closed" value="true" />
+      <created>1735315629407</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1735315629407</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +557,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding validation for the order service" />
     <MESSAGE value="Update - Improving inventory service" />
     <MESSAGE value="Update - Trying to debug the inventory service" />
     <MESSAGE value="Update - Adjusting validation, exception handling and generic response" />
@@ -587,6 +581,7 @@
     <MESSAGE value="Update - Fixing api calls with the rest client and adding a timeout to test the circuit breaker" />
     <MESSAGE value="Update - Fixing commit warnings" />
     <MESSAGE value="Update - Fixing compilation warnings and kafka topics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing compilation warnings and kafka topics" />
+    <MESSAGE value="Update - Adding a notification service consuming kafka topics to send mails" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Adding a notification service consuming kafka topics to send mails" />
   </component>
 </project>

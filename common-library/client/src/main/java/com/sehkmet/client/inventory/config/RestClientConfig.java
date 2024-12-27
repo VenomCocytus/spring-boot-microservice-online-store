@@ -33,13 +33,13 @@ public class RestClientConfig {
     }
 
     // To add a timeout to the response of the client
-    private ClientHttpRequestFactory getClientHttpRequestFactory() {
-        ClientHttpRequestFactorySettings clientHttpRequestFactorySettings =
-                ClientHttpRequestFactorySettings
-                        .defaults()
-                        .withConnectTimeout(Duration.ofSeconds(3))
-                        .withReadTimeout(Duration.ofSeconds(3));
-
-        return ClientHttpRequestFactoryBuilder.simple().build(clientHttpRequestFactorySettings);
-    }
+//    private ClientHttpRequestFactory getClientHttpRequestFactory() {
+//        ClientHttpRequestFactorySettings clientHttpRequestFactorySettings =
+//                ClientHttpRequestFactorySettings
+//                        .defaults()
+//                        .withConnectTimeout(Duration.ofSeconds(3))
+//                        .withReadTimeout(Duration.ofSeconds(3));
+//
+//        return ClientHttpRequestFactoryBuilder.simple().build(clientHttpRequestFactorySettings);
+//    }
 }
