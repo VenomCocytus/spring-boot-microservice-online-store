@@ -17,6 +17,7 @@
         <module name="client" />
         <module name="order-service" />
         <module name="api" />
+        <module name="notification-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -36,6 +37,7 @@
       <module name="database" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
       <module name="logging" options="-parameters" />
+      <module name="notification-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
       <module name="spring-boot-microservice-online-store" options="" />

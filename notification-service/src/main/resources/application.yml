@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: notification-service
+
+  messages:
+    basename: lang/messages,config.i18n.messages
+    fallback-to-system-locale: false
+    encoding: UTF-8
+    cache-duration: 5
+
+# Mail properties
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    protocol: smtp
+
+# Kafka configuration
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notificationService
+      key-deserializer: org.apache.kafka.common.serialization.StringSerializer
+      value-deserializer: org.apache.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        spring:
+          deserializer:
+            key:
+              delegate:
+                class: org.apache.kafka.common.serialization.StringDeserializer
+            value:
+              delegate:
+                class: io.confluent.kafka.serializers.KafkaAvroDeserializer
+        schema:
+          registry:
+            url: http://localhost:8085
+        specific:
+          avro:
+            reader: true
