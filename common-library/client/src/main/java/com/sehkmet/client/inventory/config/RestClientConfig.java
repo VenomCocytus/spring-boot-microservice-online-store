@@ -23,7 +23,7 @@ public class RestClientConfig {
     public InventoryClient inventoryClient() {
         RestClient restClient = RestClient.builder()
                 .baseUrl(inventoryServiceUrl)
-                .requestFactory(getClientHttpRequestFactory())
+//                .requestFactory(getClientHttpRequestFactory())
                 .build();
 
         var restClientAdapter = RestClientAdapter.create(restClient);
@@ -32,9 +32,11 @@ public class RestClientConfig {
         return httpServiceProxyFactory.createClient(InventoryClient.class);
     }
 
+    // To add a timeout to the response of the client
     private ClientHttpRequestFactory getClientHttpRequestFactory() {
         ClientHttpRequestFactorySettings clientHttpRequestFactorySettings =
-                ClientHttpRequestFactorySettings.defaults()
+                ClientHttpRequestFactorySettings
+                        .defaults()
                         .withConnectTimeout(Duration.ofSeconds(3))
                         .withReadTimeout(Duration.ofSeconds(3));
 

@@ -1,6 +1,7 @@
 package com.sehkmet.microservices.orderservice.command.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
@@ -28,6 +29,7 @@ public record PlaceOrderRequest(
         @Positive(message = "{messages.order-quantity-positive-validation-alert}")
         String quantity,
 
+        @Valid
         @Schema(description = "User information", requiredMode = AUTO)
         @NotNull(message = "{messages.user-info-not-null-alert}")
         UserInfo userInfo) {

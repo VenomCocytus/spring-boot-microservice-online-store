@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Fixing commit warnings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/inventory/config/RestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/client/src/main/java/com/sehkmet/client/inventory/config/RestClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/dto/PlaceOrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sehkmet/microservices/orderservice/command/dto/PlaceOrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/lang/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/lang/messages_en.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +134,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="client.main" />
       <method v="2">
@@ -257,6 +261,8 @@
       <workItem from="1734616395381" duration="53000" />
       <workItem from="1734617044779" duration="487000" />
       <workItem from="1734683274310" duration="5773000" />
+      <workItem from="1735212021796" duration="3779000" />
+      <workItem from="1735223583909" duration="4178000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -558,15 +564,5 @@
     <MESSAGE value="Update - Fixing api calls with the rest client and adding a timeout to test the circuit breaker" />
     <MESSAGE value="Update - Fixing commit warnings" />
     <option name="LAST_COMMIT_MESSAGE" value="Update - Fixing commit warnings" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
