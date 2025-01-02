@@ -1,10 +1,11 @@
-package com.sehkmet.notificationservice.service.impl;
+package com.sehkmet.microservices.notificationservice.service.impl;
 
-import com.sehkmet.notificationservice.event.OrderPlacedEvent;
-import com.sehkmet.notificationservice.exception.runtime.MailNotSentException;
-import com.sehkmet.notificationservice.service.NotificationListenerService;
+import com.sehkmet.microservices.notificationservice.exception.runtime.MailNotSentException;
+import com.sehkmet.microservices.notificationservice.service.NotificationListenerService;
+import com.sehkmet.microservices.orderservice.event.OrderPlacedEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -19,6 +20,8 @@ import static com.sehkmet.utils.utils.Utils.translate;
 @RequiredArgsConstructor
 public class NotificationListenerServiceImpl implements NotificationListenerService {
 
+    @Value("${mail.sender.email}")
+    private String senderMail;
     private final JavaMailSender javaMailSender;
 
     @Override
@@ -29,16 +32,16 @@ public class NotificationListenerServiceImpl implements NotificationListenerServ
         // Building mail body
         MimeMessagePreparator messageBoiler = mimeMessage -> {
             MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
-            messageHelper.setFrom("venomshop@email.com");
+            messageHelper.setFrom(senderMail);
             messageHelper.setTo(orderPlacedEvent.getEmail().toString());
-            messageHelper.setSubject(String.format("Your Order with OrderNumber %s is placed successfully",
+            messageHelper.setSubject(String.format("Your Order with order number %s is placed successfully",
                     orderPlacedEvent.getOrderNumber()));
             messageHelper.setText(String.format("""
-                            Hi %s,%s
+                            Hi %s, %s
 
                             Your order with order number %s is now placed successfully.
 
-                            Best Regards
+                            Best Regard,
                             Venom Shop
                             """,
                     orderPlacedEvent.getFirstName().toString(),
@@ -46,7 +49,7 @@ public class NotificationListenerServiceImpl implements NotificationListenerServ
                     orderPlacedEvent.getOrderNumber()));
         };
 
-        // Try to send the mail
+        // Sending the mail
         try {
             javaMailSender.send(messageBoiler);
             log.info("Order Notification email sent successfully!!!");

@@ -1,4 +1,4 @@
-package com.sehkmet.notificationservice.exception.runtime;
+package com.sehkmet.microservices.notificationservice.exception.runtime;
 
 public class MailNotSentException extends RuntimeException{
 

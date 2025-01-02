@@ -1,5 +1,6 @@
 package com.sehkmet.notificationservice;
 
+import com.sehkmet.microservices.notificationservice.NotificationServiceApplication;
 import org.springframework.boot.SpringApplication;
 
 public class TestNotificationServiceApplication {

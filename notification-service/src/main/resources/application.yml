@@ -12,17 +12,17 @@ spring:
   mail:
     host: sandbox.smtp.mailtrap.io
     port: 2525
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    username: 1606e8202983e6
+    password: 4279cf74784175
     protocol: smtp
 
 # Kafka configuration
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
-      group-id: notificationService
-      key-deserializer: org.apache.kafka.common.serialization.StringSerializer
-      value-deserializer: org.apache.kafka.support.serializer.ErrorHandlingDeserializer
+      group-id: notification-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
       properties:
         spring:
           deserializer:
@@ -38,3 +38,11 @@ spring:
         specific:
           avro:
             reader: true
+
+# Mail Information
+mail:
+  sender:
+    email: "venomshop@email.com"
+
+server:
+  port: 8083
