@@ -43,6 +43,7 @@ spring:
 mail:
   sender:
     email: "venomshop@email.com"
+    signature: Venom Shop
 
 server:
   port: 8083

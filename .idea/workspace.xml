@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Cleaning project files and resetting the generated avro classe">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-library/logging/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/microservices/notificationservice/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/event/OrderPlacedEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/exception/NotificationServiceExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/microservices/notificationservice/exception/NotificationServiceExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/exception/runtime/MailNotSentException.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/microservices/notificationservice/exception/runtime/MailNotSentException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/service/NotificationListenerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/microservices/notificationservice/service/NotificationListenerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/notificationservice/service/impl/NotificationListenerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/microservices/notificationservice/service/impl/NotificationListenerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/logging/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/logging/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/logging/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/logging/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/microservices/notificationservice/service/impl/NotificationListenerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sehkmet/microservices/notificationservice/service/impl/NotificationListenerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/avro/order-placed.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/avro/order-placed.avsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/test/java/com/sehkmet/notificationservice/TestNotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/test/java/com/sehkmet/notificationservice/TestNotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sehkmet/springbootmicroserviceonlinestore/SpringBootMicroserviceOnlineStoreApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sehkmet/springbootmicroserviceonlinestore/SpringBootMicroserviceOnlineStoreApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,6 +287,7 @@
       <workItem from="1735641893883" duration="948000" />
       <workItem from="1735809599663" duration="5293000" />
       <workItem from="1735814914113" duration="979000" />
+      <workItem from="1735829725219" duration="2236000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />

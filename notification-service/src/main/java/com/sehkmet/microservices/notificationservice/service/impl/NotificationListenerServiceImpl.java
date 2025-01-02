@@ -22,6 +22,10 @@ public class NotificationListenerServiceImpl implements NotificationListenerServ
 
     @Value("${mail.sender.email}")
     private String senderMail;
+
+    @Value("${mail.sender.signature}")
+    private String senderSignature;
+
     private final JavaMailSender javaMailSender;
 
     @Override
@@ -42,11 +46,12 @@ public class NotificationListenerServiceImpl implements NotificationListenerServ
                             Your order with order number %s is now placed successfully.
 
                             Best Regard,
-                            Venom Shop
+                            %s
                             """,
                     orderPlacedEvent.getFirstName().toString(),
                     orderPlacedEvent.getLastName().toString(),
-                    orderPlacedEvent.getOrderNumber()));
+                    orderPlacedEvent.getOrderNumber(),
+                    senderSignature));
         };
 
         // Sending the mail
