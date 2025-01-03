@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Starting to add observability with grafana stack">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/docker/mysql/init-order.sql" afterDir="false" />
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Refactoring docker compose configuration file">
+      <change afterPath="$PROJECT_DIR$/common-library/logging/src/main/java/com/sehkmet/logging/config/LokiLoggingConfigurer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/docker/mysql/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/docker/mysql/init-inventory.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/docker/mysql/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker/mysql/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/api/src/main/java/com/sehkmet/api/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/logging/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/logging/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/logging/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/logging/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/logging/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/logging/src/main/java/com/sehkmet/logging/config/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,7 @@
     "git-widget-placeholder": "feature/event-driven-architecture",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "22",
-    "last_opened_file_path": "E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store/docker",
+    "last_opened_file_path": "E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store/product-service/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,12 +115,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\product-service\src\main\resources" />
+      <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\common-library\logging\src\main\java\com\sehkmet\logging\config" />
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\docker" />
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\notification-service\src\main\resources" />
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\inventory-service\src\main\resources" />
-      <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\order-service\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\docker\keycloak\realms" />
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\order-service\src\main\resources\avro" />
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store" />
       <recent name="E:\Sehkmet\Web App\Online Store\spring-boot-microservice-online-store\.mvn" />
@@ -138,7 +142,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotificationServiceApplication (1)">
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="client.main" />
       <method v="2">
@@ -288,7 +292,8 @@
       <workItem from="1735814914113" duration="979000" />
       <workItem from="1735829725219" duration="2236000" />
       <workItem from="1735831996712" duration="2330000" />
-      <workItem from="1735891306412" duration="1557000" />
+      <workItem from="1735891306412" duration="2044000" />
+      <workItem from="1735901761324" duration="8506000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -578,7 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735834462668</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Update - Refactoring docker compose configuration file">
+      <option name="closed" value="true" />
+      <created>1735895396843</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1735895396843</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +609,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update - Trying to debug the inventory service" />
     <MESSAGE value="Update - Adjusting validation, exception handling and generic response" />
     <MESSAGE value="Update - Adding more language correspondance, improving the create error map method to handle more messages per field" />
     <MESSAGE value="Update - Moving the inventory client inside the client module of the common library" />
@@ -621,6 +633,7 @@
     <MESSAGE value="Update - Adding a notification service consuming kafka topics to send mails" />
     <MESSAGE value="Update - Fixing commit warnings" />
     <MESSAGE value="Update - Starting to add observability with grafana stack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Starting to add observability with grafana stack" />
+    <MESSAGE value="Update - Refactoring docker compose configuration file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Refactoring docker compose configuration file" />
   </component>
 </project>

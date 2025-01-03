@@ -46,6 +46,13 @@
             <artifactId>loki-logback-appender</artifactId>
             <version>1.6.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.sehkmet.common-library</groupId>
+            <artifactId>api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <repositories>

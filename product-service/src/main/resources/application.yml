@@ -32,6 +32,8 @@ service-data:
     description: Find more info about our product service.
     url: https://github.com/VenomCocytus/spring-boot-microservice-online-store
 
-
 server:
   port: 8080
+
+loki:
+  url: http://localhost:3100/loki/api/v1/push

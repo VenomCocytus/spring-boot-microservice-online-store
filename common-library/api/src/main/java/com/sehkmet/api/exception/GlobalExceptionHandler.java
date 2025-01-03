@@ -1,5 +1,6 @@
 package com.sehkmet.api.exception;
 
+import ch.qos.logback.core.joran.spi.JoranException;
 import com.sehkmet.core.common.GenericResponse;
 import com.sehkmet.core.component.ErrorBuilder;
 import jakarta.validation.ConstraintViolation;
@@ -151,5 +152,16 @@ public class GlobalExceptionHandler {
                 .body(GenericResponse.error(
                         errorBuilder.createErrorMap(errorMessagesMap),
                         translate("exception.general-content")));
+    }
+
+    @ExceptionHandler(JoranException.class)
+    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    public ResponseEntity<GenericResponse<Object>> handleJoranException(JoranException exception) {
+
+        return ResponseEntity
+                .status(HttpStatus.UNPROCESSABLE_ENTITY)
+                .body(GenericResponse.error(
+                        errorBuilder.createErrorMap(exception.getMessage())
+                ));
     }
 }
