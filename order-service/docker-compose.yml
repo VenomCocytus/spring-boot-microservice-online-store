@@ -9,7 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: mysql
     volumes:
       - ../../Databases/mysql-order-service:/var/lib/mysql
-      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./docker/mysql/init-order.sql:/docker-entrypoint-initdb.d/init-order.sql
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.0
