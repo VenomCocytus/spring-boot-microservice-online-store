@@ -18,7 +18,9 @@ import static org.springframework.http.HttpMethod.*;
 public class KeycloakSecurityConfig {
 
     private final String[] freeResourceUrls = {
-            "/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/aggregate/**"};
+            "/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/aggregate/**",
+            "/actuator/prometheus"
+    };
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {

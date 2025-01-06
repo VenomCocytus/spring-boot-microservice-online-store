@@ -33,6 +33,27 @@ service-data:
     description: Find more info about our inventory service.
     url: https://github.com/VenomCocytus/spring-boot-microservice-online-store
 
+# Actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+  tracing:
+    sampling:
+      probability: 1.0
+  observations:
+    key-values:
+      application: inventory-service
 
 server:
   port: 8082
+
+loki:
+  url: http://localhost:3100/loki/api/v1/push

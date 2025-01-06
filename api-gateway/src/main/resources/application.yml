@@ -50,6 +50,18 @@ management:
   endpoint:
     health:
       show-details: always
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+  tracing:
+    sampling:
+      probability: 1.0
+  observations:
+    key-values:
+      application: api-gateway
 
 # Resilience4j Properties
 resilience4j:
@@ -76,3 +88,16 @@ resilience4j:
         max-attempts: 3
         wait-duration:
           seconds: 2
+
+loki:
+  url: http://localhost:3100/loki/api/v1/push
+
+product:
+  service:
+    url: http://localhost:8080/api/product
+order:
+  service:
+    url: http://localhost:8081/api/order
+inventory:
+  service:
+    url: http://localhost:8082/api/inventory

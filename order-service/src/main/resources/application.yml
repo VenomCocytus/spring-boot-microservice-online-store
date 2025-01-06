@@ -69,12 +69,23 @@ management:
     circuitbreakers:
       enabled: true
   endpoints:
+    health:
+      show-details: always
     web:
       exposure:
         include: "*"
-  endpoint:
-    health:
-      show-details: always
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+  tracing:
+    sampling:
+      probability: 1.0
+  observations:
+    key-values:
+      application: order-service
 
 # Resilience4j Properties
 resilience4j:
@@ -101,3 +112,6 @@ resilience4j:
         max-attempts: 3
         wait-duration:
           seconds: 2
+
+loki:
+  url: http://localhost:3100/loki/api/v1/push

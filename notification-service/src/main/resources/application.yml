@@ -39,6 +39,25 @@ spring:
           avro:
             reader: true
 
+# Actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+  tracing:
+    sampling:
+      probability: 1.0
+  observations:
+    key-values:
+      application: notification-service
+
 # Mail Information
 mail:
   sender:
@@ -47,3 +66,6 @@ mail:
 
 server:
   port: 8083
+
+loki:
+  url: http://localhost:3100/loki/api/v1/push

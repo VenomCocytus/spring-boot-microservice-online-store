@@ -1,5 +1,6 @@
 package com.sehkmet.gateway.routes;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.server.mvc.handler.GatewayRouterFunctions;
 import org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions;
 import org.springframework.context.annotation.Bean;
@@ -16,12 +17,15 @@ import static org.springframework.cloud.gateway.server.mvc.filter.FilterFunction
 @Configuration
 public class OrderServiceRoutes {
 
+    @Value("${order.service.url}")
+    private String orderServiceUrl;
+
     @Bean
     public RouterFunction<ServerResponse> orderServiceApiRoute(){
 
         return GatewayRouterFunctions.route("order_service")
-                .route(RequestPredicates.path("/api/order"), HandlerFunctions.http("http://localhost:8081/api/order"))
-                .route(RequestPredicates.POST("/api/order"), HandlerFunctions.http("http://localhost:8081/api/order"))
+                .route(RequestPredicates.path("/api/order"), HandlerFunctions.http(orderServiceUrl))
+                .route(RequestPredicates.POST("/api/order"), HandlerFunctions.http(orderServiceUrl))
 
                 .filter(circuitBreaker("orderServiceApiCircuitBreaker", URI.create("forward:/fallbackRoute")))
 
@@ -32,7 +36,7 @@ public class OrderServiceRoutes {
     public RouterFunction<ServerResponse> orderServiceSwaggerRoute() {
 
         return GatewayRouterFunctions.route("order_service_swagger")
-                .route(RequestPredicates.path("/aggregate/order-service/v3/api-docs"), HandlerFunctions.http("http://localhost:8081/api/product"))
+                .route(RequestPredicates.path("/aggregate/order-service/v3/api-docs"), HandlerFunctions.http(orderServiceUrl))
 
                 .filter(circuitBreaker("orderServiceSwaggerCircuitBreaker", URI.create("forward:/fallbackRoute")))
                 .filter(setPath("/api-docs"))
