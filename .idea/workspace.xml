@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Adding an exception handler for Joran Exception and configure a new path for the loki4j appender xml config">
-      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
+    <list default="true" id="ac1609d8-8e62-4853-bb6b-578cc72b85df" name="Changes" comment="Update - Observe datasource and rest client, Adding a fallback method for the order service">
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,7 @@
     "git-widget-placeholder": "feature/event-driven-architecture",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "22",
-    "last_opened_file_path": "E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store/product-service/src/main/resources",
+    "last_opened_file_path": "E:/Sehkmet/Web App/Online Store/spring-boot-microservice-online-store/order-service/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -286,6 +288,8 @@
       <workItem from="1735831996712" duration="2330000" />
       <workItem from="1735891306412" duration="2044000" />
       <workItem from="1735901761324" duration="9062000" />
+      <workItem from="1736156984120" duration="6994000" />
+      <workItem from="1736176480425" duration="1235000" />
     </task>
     <task id="LOCAL-00001" summary="Update - changing project structure to use a common library">
       <option name="closed" value="true" />
@@ -591,7 +595,31 @@
       <option name="project" value="LOCAL" />
       <updated>1735920360635</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Update - Configuring observability for all the service">
+      <option name="closed" value="true" />
+      <created>1736161792530</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1736161792530</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Update - Fixing commit warnings">
+      <option name="closed" value="true" />
+      <created>1736162029915</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1736162029915</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Update - Observe datasource and rest client, Adding a fallback method for the order service">
+      <option name="closed" value="true" />
+      <created>1736163377431</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1736163377431</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,8 +637,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update - Adding more language correspondance, improving the create error map method to handle more messages per field" />
-    <MESSAGE value="Update - Moving the inventory client inside the client module of the common library" />
     <MESSAGE value="Update - Adding exception handling for method not supported, improving order command controller with newly implemented inventory logic" />
     <MESSAGE value="Update - Adding swagger to each microservice" />
     <MESSAGE value="Update - Aggregate swagger in the gateway" />
@@ -630,10 +656,12 @@
     <MESSAGE value="Update - Fixing api calls with the rest client and adding a timeout to test the circuit breaker" />
     <MESSAGE value="Update - Fixing compilation warnings and kafka topics" />
     <MESSAGE value="Update - Adding a notification service consuming kafka topics to send mails" />
-    <MESSAGE value="Update - Fixing commit warnings" />
     <MESSAGE value="Update - Starting to add observability with grafana stack" />
     <MESSAGE value="Update - Refactoring docker compose configuration file" />
     <MESSAGE value="Update - Adding an exception handler for Joran Exception and configure a new path for the loki4j appender xml config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Adding an exception handler for Joran Exception and configure a new path for the loki4j appender xml config" />
+    <MESSAGE value="Update - Configuring observability for all the service" />
+    <MESSAGE value="Update - Fixing commit warnings" />
+    <MESSAGE value="Update - Observe datasource and rest client, Adding a fallback method for the order service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Observe datasource and rest client, Adding a fallback method for the order service" />
   </component>
 </project>
