@@ -17,6 +17,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.CompletableFuture;
+
 import static com.sehkmet.utils.utils.Utils.translate;
 
 @RestController
@@ -68,5 +70,12 @@ public class OrderCommandController {
                         this.orderCommandService.placeOrder(placeOrderRequest),
                         translate("success.order-created-successfully")
                 ));
+    }
+
+    public ResponseEntity<GenericResponse<CompletableFuture<String>>> fallbackMethod(PlaceOrderRequest placeOrderRequest, RuntimeException runtimeException) {
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(GenericResponse.error(
+                        CompletableFuture.supplyAsync(() -> translate("exception.order-creation-failed"))));
     }
 }
