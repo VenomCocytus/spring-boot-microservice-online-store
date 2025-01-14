@@ -1,12 +1,9 @@
 package com.sehkmet.utils.utils;
 
-import com.sehkmet.core.common.GenericResponse;
 import com.sehkmet.core.component.Translator;
-import org.springframework.http.ResponseEntity;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.Objects;
 
 public abstract class Utils {
 
